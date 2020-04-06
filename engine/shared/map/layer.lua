@@ -144,10 +144,7 @@ function layer:parse()
 		if ( _SERVER ) then
 			require( "engine.shared.entities" )
 			local map = self:getMap()
-			local entities = entities.initialize( map, data[ "objects" ] )
-			for _, entity in ipairs( entities ) do
-				entity:setMap( map )
-			end
+			entities.initialize( map, data[ "objects" ] )
 		end
 
 		return

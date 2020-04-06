@@ -22,16 +22,13 @@ _entities = _entities or {}
 _classes  = _classes  or {}
 
 function initialize( map, mapEntities )
-	local t = {}
 	for i, entityData in ipairs( mapEntities ) do
 		local entity = createFromMapData( map, entityData )
 		if ( entity ) then
 			entity:setMap( map )
 			entity:spawn()
-			table.insert( t, entity )
 		end
 	end
-	return t
 end
 
 local modules = {
