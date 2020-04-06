@@ -81,7 +81,7 @@ function createFromMapData( map, entityData )
 	end
 
 	local x = map:getX() + entityData.x
-	local y = map:getY() + entityData.y + entityData.height
+	local y = map:getY() + entityData.y
 	entity:setNetworkVar( "position", _G.vector( x, y ) )
 
 	local hasWidth = entity:hasNetworkVar( "width" )
