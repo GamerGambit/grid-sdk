@@ -10,6 +10,7 @@ local pairs      = pairs
 local print      = print
 local string     = string
 local table      = table
+local tostring   = tostring
 local _G         = _G
 
 module( "bind" )
@@ -132,9 +133,9 @@ function keyreleased( key, scancode )
 end
 
 function mousepressed( x, y, button, istouch )
-	keypressed( button, nil, false )
+	keypressed( "mouse" .. tostring(button), nil, false )
 end
 
 function mousereleased( x, y, button, istouch )
-	keyreleased( button )
+	keyreleased( "mouse" .. tostring(button) )
 end

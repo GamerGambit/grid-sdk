@@ -101,9 +101,9 @@ function wheelmoved( x, y )
 	local mx, my = love.mouse.getPosition()
 	local button = nil
 	if ( y < 0 ) then
-		button = "wd"
+		button = "wheeldown"
 	elseif ( y > 0 ) then
-		button = "wu"
+		button = "wheelup"
 	end
 
 	require( "engine.client.input" )
