@@ -71,7 +71,8 @@ if ( _CLIENT ) then
 		if ( bl ) then
 			by = by + bl.y
 		end
-		return ay < by
+		-- TODO figure out how to sort these properly
+		return --[[ay < by]] a.entIndex < b.entIndex
 	end
 
 	local r_draw_bounding_boxes = convar( "r_draw_bounding_boxes", "0", nil,
