@@ -1,31 +1,21 @@
---=========== Copyright © 2019, Planimeter, All rights reserved. ===========--
---
--- Purpose:
---
---==========================================================================--
-
 require( "engine.shared.hook" )
-
-_VADVENTURE       = true
 
 local game        = game or {}
 _G.game           = game
 
 local hook        = hook
-local _CLIENT     = _CLIENT
-local _SERVER     = _SERVER
-local _VADVENTURE = _VADVENTURE
 local _G          = _G
+local love        = love
+local math        = math
 
 module( "game" )
 
-tileSize   = 16
-initialMap = "test_01"
+tileSize   = 32
+initialMap = "box"
 
-function conf( c )
-	c.title  = "Vertex Adventure"
-	c.author = "Planimeter"
-	return c
+local start = love.timer.getTime()
+function curtime()
+	return math.floor(love.timer.getTime() - start)
 end
 
 function call( universe, event, ... )
@@ -42,15 +32,6 @@ function call( universe, event, ... )
 	return interface[ event ]( ... )
 end
 
-function onAddonMounted( addon )
-end
-
-function onAddonUnmounted( addon )
-end
-
-function onNPCSpawn( npc )
-end
-
 function onPlayerConnect( player )
 	if ( _SERVER ) then
 		_G.player.sendTextAll( player:getName() .. " has joined the game." )
@@ -58,31 +39,9 @@ function onPlayerConnect( player )
 end
 
 function onPlayerDisconnect( player )
-	if ( _SERVER ) then
-		_G.player.sendTextAll( player:getName() .. " has disconnected." )
-	end
-end
-
-if ( _VADVENTURE ) then
-	function onPlayerGainedExperience( player, stat, xp )
-	end
-
-	function onPlayerGotItem( player, item, count )
-	end
-
-	function onPlayerRemovedItem( player, item, count )
-	end
 end
 
 function onPlayerInitialSpawn( player )
-	if ( _CLIENT and player == _G.localplayer ) then
-		game.client.createDefaultPanels()
-	end
-end
-
-if ( _VADVENTURE ) then
-	function onPlayerLeveledUp( player, stat, level )
-	end
 end
 
 function onPlayerSpawn( player )
