@@ -7,14 +7,15 @@
 class( "sprite" )
 
 function sprite:sprite( spriteSheet )
-	local data       = require( spriteSheet )
-	local image      = love.graphics.newImage( data[ "image" ] )
-	self.spriteSheet = image
-	self.width       = data[ "width" ]
-	self.height      = data[ "height" ]
-	self.frametime   = data[ "frametime" ]
-	self.animations  = data[ "animations" ] or {}
-	self.events      = data[ "events" ]     or {}
+	if (spriteSheet) then
+		self:setSpriteSheet(spriteSheet)
+	else
+		self.width       = 0
+		self.height      = 0
+		self.frametime   = 0
+		self.animations  = {}
+		self.events      = {}
+	end
 
 	self.curtime     = 0
 	self.frame       = 1
@@ -22,6 +23,8 @@ end
 
 function sprite:draw()
 	local image = self:getSpriteSheet()
+	if (not image) then return end
+
 	love.graphics.draw( image, self:getQuad() )
 end
 
@@ -33,11 +36,13 @@ accessor( sprite, "frametime" )
 
 function sprite:setFilter( ... )
 	local image = self:getSpriteSheet()
+	if (not image) then return end
+
 	image:setFilter( ... )
 end
 
 function sprite:getQuad()
-	if ( self.quad == nil ) then
+	if ( self.quad == nil and self.spriteSheet) then
 		local image = self:getSpriteSheet()
 		self.quad = love.graphics.newQuad(
 			0,
@@ -127,4 +132,15 @@ function sprite:__tostring()
 	local s = string.gsub( tostring( self ), "table", "sprite" )
 	setmetatable( self, t )
 	return s
+end
+
+function sprite:setSpriteSheet(spriteSheet)
+	local data       = require( spriteSheet )
+	self.spriteSheet = love.graphics.newImage( data[ "image" ] )
+
+	self.width       = data[ "width" ]
+	self.height      = data[ "height" ]
+	self.frametime   = data[ "frametime" ]
+	self.animations  = data[ "animations" ] or {}
+	self.events      = data[ "events" ]     or {}
 end
