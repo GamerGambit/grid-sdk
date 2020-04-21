@@ -113,6 +113,10 @@ function string.stripfilename( path )
 	return match( path, "(.+/)[^/]*$" ) or ""
 end
 
+function string.stripextension( path )
+	return match( path, "(.+)%.[^%.]*$" ) or ""
+end
+
 function string.striptrailingslash( path )
 	local len = len( path )
 	if ( len > 0 ) then
