@@ -33,9 +33,9 @@ end
 local function reload( filename )
 	print( "Updating " .. filename .. "..." )
 
-	local status, ret = pcall( love.audio.newSource, filename, "stream" )
+	local status, ret = pcall( assets.loadSound, filename, "stream" )
 	if ( status == true ) then
-		local info = love.filesystem.getInfo( filename )
+		local info = love.filesystem.getInfo( string.format("sounds/%s", filename) )
 		source._sources[ filename ].source  = ret
 		source._sources[ filename ].modtime = info.modtime
 
@@ -51,7 +51,7 @@ end
 
 function source.update( dt )
 	for k, v in pairs( source._sources ) do
-		local info = love.filesystem.getInfo( k )
+		local info = love.filesystem.getInfo( string.format("sounds/%s", k) )
 		if ( info.modtime ~= v.modtime ) then
 			reload( k )
 		end
@@ -83,8 +83,8 @@ accessor( source, "filename" )
 function source:parse()
 	local filename = self:getFilename()
 	source._sources[ filename ] = {
-		source  = love.audio.newSource( filename, "stream" ),
-		modtime = love.filesystem.getInfo( filename ).modtime
+		source  = assets.loadSound( filename, "stream" ),
+		modtime = love.filesystem.getInfo( string.format("sounds/%s", filename) ).modtime
 	}
 
 	local data = self:getData()

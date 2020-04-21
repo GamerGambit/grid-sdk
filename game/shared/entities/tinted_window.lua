@@ -6,8 +6,7 @@ function tinted_window:tinted_window()
 	entity.entity(self)
 
 	if (_CLIENT) then
-		local filename = "images/entities/tinted_window.png"
-		local sprite = love.graphics.newImage(filename)
+		local sprite = assets.loadImage("entities/tinted_window.png")
 		sprite:setFilter("nearest", "nearest")
 		self:setSprite(sprite)
 	end

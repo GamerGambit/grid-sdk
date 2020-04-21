@@ -36,7 +36,7 @@ t.button                      = {
 }
 
 t.checkbox                    = {
-    icon                      = love.graphics.newImage( "images/gui/check.png" ),
+    icon                      = assets.loadImage( "gui/check.png" ),
     iconColor                 = color( 163, 167, 168,         255 ),
     borderColor               = color( t.colors.gray,  0.66 * 255 ),
     textColor                 = color( 163, 167, 168,         255 ),
@@ -56,7 +56,7 @@ t.checkbox                    = {
 }
 
 t.closebutton                 = {
-    icon                      = love.graphics.newImage( "images/gui/close.png" ),
+    icon                      = assets.loadImage( "gui/close.png" ),
     iconColor                 = t.colors.white,
 
     mouseover                 = {
@@ -78,7 +78,7 @@ t.commandbuttongroup          = {
 }
 
 t.dropdownlist                = {
-    icon                      = love.graphics.newImage( "images/gui/arrow_down.png" ),
+    icon                      = assets.loadImage( "gui/arrow_down.png" ),
 }
 
 t.dropdownlistitem            = {
@@ -161,8 +161,8 @@ t.label                       = {
 
 t.mainmenu                    = {
     backgroundColor           = color( t.colors.black, 0.70 * 255 ),
-    logo                      = love.graphics.newImage( "images/gui/logo.png" ),
-    logoSmall                 = love.graphics.newImage( "images/gui/logo_small.png" )
+    logo                      = assets.loadImage( "gui/logo.png" ),
+    logoSmall                 = assets.loadImage( "gui/logo_small.png" )
 }
 
 t.mainmenubutton              = {
@@ -196,7 +196,7 @@ t.mainmenubutton              = {
 }
 
 t.mainmenuclosebutton         = {
-    icon                      = love.graphics.newImage( "images/gui/close_large.png" ),
+    icon                      = assets.loadImage( "gui/close_large.png" ),
 
     t                         = {
         iconColor             = t.colors.gray,
@@ -229,8 +229,8 @@ t.progressbar                 = {
 }
 
 t.radiobutton                 = {
-    foreground                = love.graphics.newImage( "images/gui/radiobutton_foreground.png" ),
-    icon                      = love.graphics.newImage( "images/gui/selection_dot.png" ),
+    foreground                = assets.loadImage( "gui/radiobutton_foreground.png" ),
+    icon                      = assets.loadImage( "gui/selection_dot.png" ),
     iconColor                 = color( 163, 167, 168,         255 ),
     borderColor               = color( t.colors.gray,  0.86 * 255 ),
     textColor                 = color( 163, 167, 168,         255 ),
@@ -296,37 +296,12 @@ t.bindlistheader              = {
     borderColor               = color(  15,  15,  15,         255 ),
 }
 
--- NOTE: The following arguments to `newFont` are undocumented.
-local dpiscale = love.graphics.getDPIScale()
-local r_window_highdpi = convar.getConvar( "r_window_highdpi" )
-if ( r_window_highdpi:getNumber() == 2 ) then
-    dpiscale = 1
-end
-
-t.mainmenuFont                = love.graphics.newFont(
-    "fonts/SourceSansPro-Regular.otf", 24, "normal", dpiscale
-)
-t.titleFont                   = love.graphics.newFont(
-    "fonts/SourceSansPro-Bold.otf", 18, "normal", dpiscale
-)
-t.font                        = love.graphics.newFont(
-    "fonts/SourceSansPro-Regular.otf", 14, "normal", dpiscale
-)
-t.fontBold                    = love.graphics.newFont(
-    "fonts/SourceSansPro-Bold.otf", 14, "normal", dpiscale
-)
-t.fontSmall                   = love.graphics.newFont(
-    "fonts/SourceSansPro-Regular.otf", 12, "normal", dpiscale
-)
-t.consoleFont                 = love.graphics.newFont(
-    "fonts/SourceCodePro-Light.otf", 12, "normal", dpiscale
-)
-t.chatFont                    = love.graphics.newFont(
-    "fonts/SourceCodePro-Light.otf", 14, "normal", dpiscale
-)
-t.entityFont                  = love.graphics.newFont(
-    "fonts/SourceSansPro-Regular.otf", 24, "normal", dpiscale
-)
-t.itemCountFont               = love.graphics.newFont(
-    "fonts/SourceSansPro-Regular.otf", 12, "normal", dpiscale
-)
+t.mainmenuFont                = assets.loadFont("SourceSansPro-Regular.otf", 24, "normal")
+t.titleFont                   = assets.loadFont("SourceSansPro-Bold.otf", 18, "normal")
+t.font                        = assets.loadFont("SourceSansPro-Regular.otf", 14, "normal")
+t.fontBold                    = assets.loadFont("SourceSansPro-Bold.otf", 14, "normal")
+t.fontSmall                   = assets.loadFont("SourceSansPro-Regular.otf", 12, "normal")
+t.consoleFont                 = assets.loadFont("SourceCodePro-Light.otf", 12, "normal")
+t.chatFont                    = assets.loadFont("SourceCodePro-Light.otf", 14, "normal")
+t.entityFont                  = assets.loadFont("SourceSansPro-Regular.otf", 24, "normal")
+t.itemCountFont               = assets.loadFont("SourceSansPro-Regular.otf", 12, "normal")

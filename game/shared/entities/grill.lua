@@ -6,8 +6,7 @@ function grill:grill()
 	entity.entity(self)
 
 	if (_CLIENT) then
-		local filename = "images/entities/grill.png"
-		local sprite = love.graphics.newImage(filename)
+		local sprite = assets.loadImage("entities/grill.png")
 		sprite:setFilter("nearest", "nearest")
 		self:setSprite(sprite)
 	end

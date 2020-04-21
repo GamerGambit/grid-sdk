@@ -6,8 +6,7 @@ function wooden_table:wooden_table()
 	entity.entity(self)
 
 	if (_CLIENT) then
-		local filename = "images/entities/wooden_table.png"
-		local sprite = love.graphics.newImage(filename)
+		local sprite = assets.loadImage("entities/wooden_table.png")
 		sprite:setFilter("nearest", "nearest")
 		self:setSprite(sprite)
 	end

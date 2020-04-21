@@ -11,6 +11,7 @@ require( "engine.shared.mathlib" )
 
 if ( _CLIENT ) then
 	require( "engine.client.graphics" )
+	require( "engine.client.assets" )
 	require( "engine.client.gui" )
 end
 

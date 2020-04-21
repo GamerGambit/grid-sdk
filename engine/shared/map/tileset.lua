@@ -46,10 +46,11 @@ function tileset:parse()
 	if ( _CLIENT ) then
 		local mapsDir = "maps/"
 		local map     = self:getMap()
-		local path       = string.stripfilename( map:getFilename() )
+		local path    = string.stripfilename( map:getFilename() )
 		mapsDir       = mapsDir .. path
-		path             = mapsDir .. data[ "image" ]
-		path             = string.stripdotdir( path )
+		path          = mapsDir .. data[ "image" ]
+		path          = string.stripdotdir( path )
+		path          = string.gsub(path, "^images/", "") -- `assets.loadImage` is relative to /images/
 		self:setImage( path )
 	end
 	self:setImageWidth( data[ "imagewidth" ] )
@@ -66,7 +67,7 @@ function tileset:parse()
 end
 
 function tileset:setImage( image )
-	self.image = love.graphics.newImage( image )
+	self.image = assets.loadImage( image )
 	self.image:setFilter( "nearest", "nearest" )
 end
 

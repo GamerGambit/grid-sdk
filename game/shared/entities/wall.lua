@@ -6,8 +6,7 @@ function wall:wall()
 	entity.entity(self)
 
 	if (_CLIENT) then
-		local filename = "images/entities/wall.png"
-		local sprite = love.graphics.newImage(filename)
+		local sprite = assets.loadImage("entities/wall.png")
 		sprite:setFilter("nearest", "nearest")
 		self:setSprite(sprite)
 	end

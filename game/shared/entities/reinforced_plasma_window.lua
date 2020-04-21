@@ -6,8 +6,7 @@ function reinforced_plasma_window:reinforced_plasma_window()
 	entity.entity(self)
 
 	if (_CLIENT) then
-		local filename = "images/entities/reinforced_plasma_window.png"
-		local sprite = love.graphics.newImage(filename)
+		local sprite = assets.loadImage("entities/reinforced_plasma_window.png")
 		sprite:setFilter("nearest", "nearest")
 		self:setSprite(sprite)
 	end

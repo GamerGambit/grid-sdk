@@ -103,7 +103,7 @@ end
 
 function sprite:setSpriteSheet(spriteSheet)
 	local data       = require( spriteSheet )
-	self.spriteSheet = love.graphics.newImage( data[ "image" ] )
+	self.spriteSheet = assets.loadImage( data[ "image" ] )
 
 	self.animator = spriteAnimator(self)
 	self.animator:setAnimations(data[ "animations" ] or {})

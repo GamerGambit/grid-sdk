@@ -53,7 +53,7 @@ function imagepanel:setImage( image )
 	if ( type( image ) == "image" ) then
 		self.imageDatum = image
 	elseif ( image ~= nil and love.filesystem.getInfo( image ) ~= nil ) then
-		self.imageDatum = love.graphics.newImage( image )
+		self.imageDatum = assets.loadImage( image )
 	else
 		self.imageDatum = nil
 	end

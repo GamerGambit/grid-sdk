@@ -1,5 +1,5 @@
 return {
-	image = "images/entities/airlock_fill.png",
+	image = "entities/airlock_fill.png",
 	width = 32,
 	height = 32,
 	frametime = 0.15,

@@ -22,13 +22,4 @@ console.textbox     = {
     }
 }
 
--- NOTE: The following arguments to `newFont` are undocumented.
-local dpiscale = love.graphics.getDPIScale()
-local r_window_highdpi = convar.getConvar( "r_window_highdpi" )
-if ( r_window_highdpi:getNumber() == 2 ) then
-    dpiscale = 1
-end
-
-console.font        = love.graphics.newFont(
-    "fonts/SourceCodePro-Light.otf", 12, "normal", dpiscale
-)
+console.font        = assets.loadFont("SourceCodePro-Light.otf", 12, "normal")

@@ -1,4 +1,4 @@
 return {
-	source = "sounds/airlock.ogg",
+	source = "airlock.ogg",
 	volume = 1
 }

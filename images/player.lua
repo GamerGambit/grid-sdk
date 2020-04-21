@@ -1,5 +1,5 @@
 return {
-	image = "images/player.png",
+	image = "player.png",
 	width = 16,
 	height = 32,
 	frametime = 0.25,

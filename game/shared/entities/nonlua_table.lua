@@ -9,8 +9,7 @@ function nonlua_table:nonlua_table()
 	entity.entity(self)
 
 	if (_CLIENT) then
-		local filename = "images/entities/table.png"
-		local sprite = love.graphics.newImage(filename)
+		local sprite = assets.loadImage("entities/table.png")
 		sprite:setFilter("nearest", "nearest")
 		self:setSprite(sprite)
 	end
