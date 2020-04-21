@@ -1,3 +1,5 @@
+require( "engine.client.sprite" )
+
 entities.require("entity")
 
 class "airlock" ("entity")
@@ -13,6 +15,16 @@ local setPhysics = function(airlock, bool)
 	fixture:setFilterData(1, (bool and 65535) or 0, (bool and 1) or 0)
 end
 
+local setAnimation = function(airlock, animName)
+	if (not airlock.skin) then return end
+
+	airlock:setAnimation(airlock.skin .. '.' .. animName)
+
+	if (_CLIENT and airlock.fillType) then
+		airlock.fillSprite:setAnimation(airlock.fillType .. '.' .. animName)
+	end
+end
+
 local states = {
 	open = 1,
 	closed = 2,
@@ -26,7 +38,8 @@ function airlock:airlock()
 	self.state = states.closed
 	self.openTime = 0
 	self.autoCloseTime = 3
-	self.nextThink = 0
+	self.skin = nil
+	self.fillType = nil
 end
 
 function airlock:spawn()
@@ -44,11 +57,11 @@ function airlock:use(activator, value)
 end
 
 function airlock:onAnimationEnd( animation )
-	if (animation == "close") then
-		self:setAnimation("idleclosed")
+	if (string.find(animation, "closing")) then
+		setAnimation(self, "idleclosed")
 		self.state = states.closed
-	elseif (animation == "open") then
-		self:setAnimation("idleopen")
+	elseif (string.find(animation, "opening")) then
+		setAnimation(self, "idleopen")
 		setPhysics(self, false)
 		self.state = states.open
 		self.openTime = game.curtime()
@@ -57,13 +70,17 @@ end
 
 function airlock:startTouch( other, contact )
 	if (not typeof(other, "player")) then return end
-	self:toggle()
+	self:open()
 end
 
 function airlock:think()
 	if (self.openTime > 0 and game.curtime() >= self.openTime + self.autoCloseTime) then
+		table.print(self:getBody():getContacts())
 		self:close()
+		self.nextThink = nil
+		return
 	end
+
 	self.nextThink = 0
 end
 
@@ -79,25 +96,28 @@ function airlock:setProperties(properties)
 		end
 	end
 
-	fillType = (fillType == "solid" and skin) or (fillType == "glass" and "glass") or nil
-	if (skin) then
-		require( "engine.client.sprite" )
-		local spr = sprite("images.entities.airlocks." .. skin)
-		spr:setFilter("nearest", "nearest")
-		self:setSprite(spr)
+	assert(skin, "Airlocks must have a skin")
+	self.skin = skin
 
-		if (fillType) then
-			self.fillSprite = sprite("images.entities.airlocks.fill." .. fillType)
-			self.fillSprite:setFilter("nearest", "nearest")
-		end
+	fillType = (fillType == skin and skin) or ((fillType == "glass" or fillType == "glass2") and fillType) or nil
+	local spr = sprite("images.entities.airlocks")
+	spr:setFilter("nearest", "nearest")
+	self:setSprite(spr)
 
-		-- set the animation after so it automatically sets the fillSprite's animation too
-		self:setAnimation("idleclosed")
+	if (fillType) then
+		self.fillType = fillType
+		self.fillSprite = sprite("images.entities.airlock_fill")
+		self.fillSprite:setFilter("nearest", "nearest")
 	end
 
-	if (not skin or not fillType) then
-		local x, y = self:getDrawPosition()
-		print(string.format("Invalid airlock at %i, %i", x, y))
+	-- set the animation after so it automatically sets the fillSprite's animation too
+	setAnimation(self, "idleclosed")
+
+	-- Not useful in production and will "error" for airlock skins that dont have a fill like vault and highsecurity.
+	-- This is mostly so I know if I missed setting the fill on a skin that needs it
+	if (_DEBUG and not fillType) then
+		local pos = self:getPosition()
+		print(string.format("Airlock missing fill type (%s) at %i, %i", skin, pos.x, pos.y))
 	end
 end
 
@@ -106,14 +126,6 @@ function airlock:draw()
 
 	if (type(self.fillSprite) == "sprite") then
 		self.fillSprite:draw()
-	end
-end
-
-function airlock:setAnimation(animation)
-	entity.setAnimation(self, animation)
-
-	if (type(self.fillSprite) == "sprite") then
-		self.fillSprite:setAnimation(animation)
 	end
 end
 
@@ -137,14 +149,15 @@ end
 
 function airlock:open()
 	if (self.state ~= states.closed) then return end
-	self:setAnimation("open")
+	setAnimation(self, "opening")
 	self.state = states.opening
 	self:emitSound("sounds/airlock_open")
+	self.nextThink = 0
 end
 
 function airlock:close()
 	if (self.state ~= states.open) then return end
-	self:setAnimation("close")
+	setAnimation(self, "closing")
 	setPhysics(self, true)
 	self.state = states.closing
 	self.openTime = 0
