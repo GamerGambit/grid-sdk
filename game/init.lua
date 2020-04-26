@@ -15,7 +15,7 @@ initialMap = "box"
 
 local start = love.timer.getTime()
 function curtime()
-	return math.floor(love.timer.getTime() - start)
+	return love.timer.getTime() - start
 end
 
 function call( universe, event, ... )
