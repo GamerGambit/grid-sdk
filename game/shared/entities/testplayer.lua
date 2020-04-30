@@ -1,10 +1,22 @@
 entities.require("player")
 
+require("game.shared.access")
+
 class "testplayer" ("player")
 
 function testplayer:testplayer()
 	player.player(self)
 	self:networkNumber( "moveSpeed", ( 32 * 10 ) / 3 )
+end
+
+function testplayer:getAccess()
+	-- TODO replace this with and ID slot lookup (for PDA/ID card), followed by the item in the active hand
+	if (not self.access) then
+		self.access = access()
+		self.access.list = access._names -- give all access
+	end
+
+	return self.access
 end
 
 function testplayer:spawn()

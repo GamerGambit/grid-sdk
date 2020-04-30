@@ -1,4 +1,5 @@
 require( "engine.client.sprite" )
+require( "game.shared.access" )
 
 entities.require("entity")
 
@@ -40,11 +41,14 @@ function airlock:airlock()
 	self.autoCloseTime = 3
 	self.skin = nil
 	self.fillType = nil
+
+	self.required_access = {}     -- all access listed is required
+	self.required_one_access = {} -- a single access listed is required
 end
 
 function airlock:spawn()
 	entity.spawn( self )
-	
+
 	local tileSize = game.tileSize
 	local min      = vector()
 	local max      = vector( tileSize, -tileSize )
@@ -53,7 +57,17 @@ function airlock:spawn()
 end
 
 function airlock:use(activator, value)
-	self:toggle()
+	if (#self.required_access > 0 or #self.required_one_access  > 0) then
+		if (type(activator.getAccess) ~= "function") then return end -- Not entirely sure what entities would be trying to open doors that dont have an access function?
+		local a = activator:getAccess()
+		if (not a:canAccess(self.required_access, self.required_one_access)) then return end
+	end
+
+	if (self.state == states.open) then
+		self:close()
+	elseif (self.state == states.closed) then
+		self:open()
+	end
 end
 
 function airlock:onAnimationEnd( animation )
@@ -70,7 +84,7 @@ end
 
 function airlock:startTouch( other, contact )
 	if (not typeof(other, "player")) then return end
-	self:open()
+	self:use(other)
 end
 
 function airlock:think()
@@ -92,6 +106,15 @@ function airlock:setProperties(properties)
 				skin = value
 			elseif (key == "fillType") then
 				fillType = value
+			end
+		end
+
+		if (key == "required_access" or key == "required_one_access") then
+			local split = string.split(value, ';')
+
+			for i, accessPath in ipairs(split) do
+				assert(access.exists(accessPath), string.format("Access type \"%s\" does not exist for entity at %s", accessPath, self:getPosition()))
+				table.insert(self[key], accessPath)
 			end
 		end
 	end
@@ -134,16 +157,6 @@ function airlock:update(dt)
 
 	if (_CLIENT and type(self.fillSprite) == "sprite") then
 		self.fillSprite:update(dt)
-	end
-end
-
-function airlock:toggle()
-	local curAnim = self:getAnimation()
-
-	if (curAnim == "idleopen") then
-		self:close()
-	elseif (curAnim == "idleclosed") then
-		self:open()
 	end
 end
 
