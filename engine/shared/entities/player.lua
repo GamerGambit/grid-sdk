@@ -14,6 +14,8 @@ player._players      = player._players      or {}
 player._lastPlayerId = player._lastPlayerId or 0
 
 function player.initialize( peer )
+	-- TODO I have not wrapped this in `pcall` because I dont know what a good fallback/default is, so we let it error.
+	-- Maybe ship the engine with a default player class?
 	local player = _G.game.server.getPlayerClass()()
 	player.peer  = peer
 	return player
@@ -190,7 +192,8 @@ function player:initialSpawn()
 		self:send( payload )
 	end
 
-	game.call( "shared", "onPlayerInitialSpawn", self )
+	local status, ret = pcall(game.call, "shared", "onPlayerInitialSpawn", self )
+	if (not status) then print(ret) end
 end
 
 local buttonKeys = {
@@ -371,11 +374,13 @@ if ( _CLIENT ) then
 end
 
 function player:onConnect()
-	game.call( "shared", "onPlayerConnect", self )
+	local status, ret = pcall(game.call, "shared", "onPlayerConnect", self )
+	if (not status) then print(ret) end
 end
 
 function player:onDisconnect()
-	game.call( "shared", "onPlayerDisconnect", self )
+	local status, ret = pcall(game.call, "shared", "onPlayerDisconnect", self )
+	if (not status) then print(ret) end
 
 	for i, player in ipairs( player._players ) do
 		if ( player == self ) then
@@ -459,14 +464,19 @@ if ( _SERVER ) then
 		local activator = payload:getPlayer()
 		local value     = payload:get( "value" )
 
-		local canUse = game.call(
-			"server", "onPlayerUse", activator, entity, value
-		)
+		local status, ret = pcall(game.call,"server", "onPlayerUse", activator, entity, value)
+		if (not status) then
+			print(ret)
+			return
+		end
+
+		local canUse = ret
 		if ( canUse == false ) then
 			return
 		end
 
-		entity:use( activator, value )
+		local status, ret = pcall(entity.use, entity, activator, value )
+		if (not status) then print(ret) end
 	end
 
 	payload.setHandler( onPlayerUse, "playerUse" )
@@ -573,7 +583,9 @@ function player:tick( timestep )
 
 	-- Let the game do the movement.
 	if ( movement ) then
-		self:updateAnimation( timestep, movement )
+		local status, ret = pcall(self.updateAnimation, self, timestep, movement )
+		if (not status) then print(ret) end
+
 		self:updateMovement( timestep, movement )
 		self._idle = movement == vector.origin or nil
 	end
@@ -603,7 +615,13 @@ concommand( "say", "Display player message",
 			return
 		end
 
-		local canSay = game.call( "server", "onPlayerSay", player, argString )
+		local status, ret = pcall(game.call, "server", "onPlayerSay", player, argString )
+		if (not status) then
+			print(ret)
+			return
+		end
+
+		local canSay = ret
 		if ( canSay == false ) then
 			return
 		end
@@ -658,7 +676,8 @@ function player:spawn()
 		body:setMass( 89.76593 )
 	end
 
-	game.call( "shared", "onPlayerSpawn", self )
+	local status, ret = pcall(game.call, "shared", "onPlayerSpawn", self )
+	if (not status) then print(ret) end
 end
 
 function player:updateAnimation( timestep, movement )

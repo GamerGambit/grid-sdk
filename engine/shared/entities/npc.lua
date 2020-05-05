@@ -30,7 +30,8 @@ function npc:spawn()
 	self:initializePhysics( "dynamic" )
 	self:setCollisionBounds( min, max )
 
-	game.call( "shared", "onNPCSpawn", self )
+	local status, ret = pcall(game.call, "shared", "onNPCSpawn", self )
+	if (not status) then print(ret) end
 end
 
 function npc:__tostring()

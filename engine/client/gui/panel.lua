@@ -579,7 +579,8 @@ function panel:remove()
 
 	self:removeCanvas()
 
-	self:onRemove()
+	local status, ret = pcall(self.onRemove, self)
+	if (not status) then print(ret) end
 end
 
 function panel:removeChildren()

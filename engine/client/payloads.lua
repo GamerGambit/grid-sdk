@@ -32,7 +32,9 @@ local function onReceiveServerInfo( payload )
 
 		require( "game" )
 		require( "game.client" )
-		game.client.load( args )
+
+		local status, ret = pcall(game.client.load, args ) -- TODO `args` doesnt exist here?
+		if (not status) then print(ret) end
 
 		engine.client.sendClientInfo()
 	end

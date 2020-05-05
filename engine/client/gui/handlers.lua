@@ -11,6 +11,8 @@ local convar  = convar
 local gui     = gui
 local input   = input
 local love    = love
+local pcall   = pcall
+local print   = print
 local require = require
 local _G      = _G
 
@@ -156,7 +158,10 @@ local function updateMouseOver()
 		local oldPanel = nil
 		oldPanel, _topPanel = _topPanel, nil
 		oldPanel.mouseover = false
-		oldPanel:onMouseLeave()
+
+		local status, ret = pcall(oldPanel.onMouseLeave, oldPanel)
+		if (not status) then print(ret) end
+
 		oldPanel:invalidate()
 	end
 

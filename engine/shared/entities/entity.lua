@@ -1014,7 +1014,10 @@ if ( _CLIENT ) then
 		networkVars:deserialize()
 		for k, v in pairs( networkVars:getData() ) do
 			-- Should we reject the network var update?
-			if ( self:onNetworkVarReceived( k, v ) ~= false ) then
+			local status, ret = pcall(self.onNetworkVarReceived, self, k, v)
+			if (not status) then
+				print(ret)
+			elseif ( ret ~= false ) then
 				self:setNetworkVar( k, v )
 			end
 		end

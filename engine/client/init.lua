@@ -158,7 +158,10 @@ function onDisconnect( event )
 			gui._viewportCanvas:remove()
 			gui._viewportCanvas = nil
 			gui._translucencyCanvas = nil
-			game.shutdown()
+
+			local status, ret = pcall(game.shutdown)
+			if (not status) then print(ret) end
+
 			unrequire( "game.client" )
 			_G.game.client = nil
 		end
@@ -264,12 +267,14 @@ function tick( timestep )
 		return
 	end
 
-	game.tick( timestep )
+	local status, ret = pcall(game.tick, timestep )
+	if (not status) then print(ret) end
 
 	if ( entity ) then
 		local entities = entity.getAll()
 		for _, entity in ipairs( entities ) do
-			entity:tick( timestep )
+			local status, ret = pcall(entity.tick, entity,timestep )
+			if (not status) then print(ret) end
 		end
 	end
 
@@ -278,7 +283,8 @@ function tick( timestep )
 	if ( entity ) then
 		local entities = entity.getAll()
 		for _, entity in ipairs( entities ) do
-			entity:onPostWorldUpdate( timestep )
+			local status, ret = pcall(entity.onPostWorldUpdate, entity, timestep )
+			if (not status) then print(ret) end
 		end
 	end
 end

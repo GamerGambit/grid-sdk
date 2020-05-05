@@ -40,7 +40,8 @@ local function reload( filename )
 		source._sources[ filename ].modtime = info.modtime
 
 		if ( game ) then
-			game.call( "client", "onReloadSound", filename )
+			local status, ret = pcall(game.call, "client", "onReloadSound", filename )
+			if (not status) then print(ret) end
 		else
 			hook.call( "client", "onReloadSound", filename )
 		end

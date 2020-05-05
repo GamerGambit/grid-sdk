@@ -374,11 +374,13 @@ local function beginContact( a, b, contact )
 	a = a:getUserData()
 	b = b:getUserData()
 	if ( a ) then
-		a:startTouch( b, contact )
+		local status, ret = pcall(a.startTouch, a, b, contact )
+		if (not status) then print(ret) end
 	end
 
 	if ( b ) then
-		b:startTouch( a, contact )
+		local status, ret = pcall(b.startTouch, b, a, contact )
+		if (not status) then print(ret) end
 	end
 end
 
@@ -386,11 +388,13 @@ local function endContact( a, b, contact )
 	a = a:getUserData()
 	b = b:getUserData()
 	if ( a ) then
-		a:endTouch( b, contact )
+		local status, ret = pcall(a.endTouch, a, b, contact )
+		if (not status) then print(ret) end
 	end
 
 	if ( b ) then
-		b:endTouch( a, contact )
+		local status, ret = pcall(b.endTouch, b, a, contact )
+		if (not status) then print(ret) end
 	end
 end
 

@@ -10,6 +10,7 @@ local convar   = convar
 local engine   = engine
 local ipairs   = ipairs
 local payload  = payload
+local pcall    = pcall
 local print    = print
 local map      = map
 local require  = require
@@ -42,7 +43,10 @@ function onPostConnect( event )
 	player:onConnect()
 
 	-- Set spawn point
-	local spawnPoint = _G.game.server.getSpawnPoint( player )
+	local status, ret = pcall(_G.game.server.getSpawnPoint, player )
+	if (not status) then print(ret) end
+
+	local spawnPoint = status and ret or nil
 	local position = _G.vector.origin + _G.vector( 0, _G.game.tileSize )
 	if ( spawnPoint ) then
 		position = spawnPoint:getPosition()
@@ -86,12 +90,14 @@ function tick( timestep )
 		return
 	end
 
-	game.tick( timestep )
+	local status, ret = pcall(game.tick, timestep )
+	if (not status) then print(ret) end
 
 	if ( entity ) then
 		local entities = entity.getAll()
 		for _, entity in ipairs( entities ) do
-			entity:tick( timestep )
+			local status, ret = pcall(entity.tick, entity, timestep )
+			if (not status) then print(ret) end
 		end
 	end
 
@@ -100,7 +106,8 @@ function tick( timestep )
 	if ( entity ) then
 		local entities = entity.getAll()
 		for _, entity in ipairs( entities ) do
-			entity:onPostWorldUpdate( timestep )
+			local status, ret = pcall(entity.onPostWorldUpdate, entity, timestep )
+			if (not status) then print(ret) end
 		end
 	end
 

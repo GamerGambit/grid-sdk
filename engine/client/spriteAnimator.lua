@@ -77,7 +77,8 @@ function spriteAnimator:update( dt )
 		if ( self.frameIndex > #self.animation ) then
 			self.frameIndex = 1
 			local name = self:getAnimationName()
-			self.sprite:onAnimationEnd( name )
+			local status, ret = pcall(self.sprite.onAnimationEnd, self.sprite, name )
+			if (not status) then print(ret) end
 		end
 
 		self.sprite:updateQuad()
@@ -88,5 +89,6 @@ function spriteAnimator:checkEvents()
 	local event = self.events[self.animation[self.frameIndex]]
 	if (not event) then return end
 
-	self.sprite:onAnimationEvent( event )
+	local status, ret = pcall(self.sprite.onAnimationEvent, self.sprite, event )
+	if (not status) then print(ret) end
 end

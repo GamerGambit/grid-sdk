@@ -53,7 +53,8 @@ function mainmenu:activate()
 	self:setVisible( true )
 
 	if ( game and game.client ) then
-		game.call( "client", "onMainMenuActivate" )
+		local status, ret = pcall(game.call, "client", "onMainMenuActivate" )
+		if (not status) then print(ret) end
 	else
 		hook.call( "client", "onMainMenuActivate" )
 	end
@@ -84,7 +85,8 @@ function mainmenu:close()
 	} )
 
 	if ( game ) then
-		game.call( "client", "onMainMenuClose" )
+		local status, ret = pcall(game.call, "client", "onMainMenuClose" )
+		if (not status) then print(ret) end
 	end
 end
 

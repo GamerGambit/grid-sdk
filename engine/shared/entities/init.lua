@@ -95,7 +95,8 @@ function createFromMapData( map, entityData )
 	end
 
 	if ( table.len( entityData.properties ) > 0 ) then
-		entity:setProperties( entityData.properties )
+		local status, ret = pcall(entity.setProperties, entity, entityData.properties )
+		if (not status) then print(ret) end
 	end
 
 	return entity

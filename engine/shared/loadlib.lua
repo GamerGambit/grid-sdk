@@ -68,7 +68,8 @@ local function reload( modname, filename )
 	local status, err = pcall( require, modname )
 	if ( status == true ) then
 		if ( game ) then
-			game.call( "shared", "onReloadScript", modname )
+			local status, ret = pcall(game.call, "shared", "onReloadScript", modname )
+			if (not status) then print(ret) end
 		else
 			hook.call( "shared", "onReloadScript", modname )
 		end

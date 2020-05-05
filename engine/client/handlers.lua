@@ -11,6 +11,8 @@ local engine  = engine
 local gui     = gui
 local ipairs  = ipairs
 local love    = love
+local pcall   = pcall
+local print   = print
 local require = require
 local _CLIENT = _CLIENT
 local _SERVER = _SERVER
@@ -160,12 +162,14 @@ function update( dt )
 		local entity = _G.entity
 
 		if ( game ) then
-			game.update( dt )
+			local status, ret = pcall(game.update, dt )
+			if (not status) then print(ret) end
 
 			if ( entity ) then
 				local entities = entity.getAll()
 				for _, entity in ipairs( entities ) do
-					entity:update( dt )
+					local status, ret = pcall(entity.update, entity, dt )
+					if (not status) then print(ret) end
 				end
 			end
 		end
@@ -196,7 +200,8 @@ function draw()
 
 		gui._viewportCanvas:renderTo( function()
 			love.graphics.clear()
-			_G.game.client.draw()
+			local status, ret = pcall(_G.game.client.draw)
+			if (not status) then print(ret) end
 		end )
 
 		love.graphics.setColor( _G.color.white )

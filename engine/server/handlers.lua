@@ -8,6 +8,7 @@ local debug     = debug
 local engine    = engine
 local ipairs    = ipairs
 local love      = love
+local pcall     = pcall
 local print     = print
 local require   = require
 local tostring  = tostring
@@ -31,7 +32,8 @@ function load( arg )
 	require( "game.server" )
 
 	local game = _G.game.server
-	game.load( arg )
+	local status, ret = pcall(game.load, arg )
+	if (not status) then print(ret) end
 
 	return true
 end
@@ -40,7 +42,9 @@ function quit()
 	-- Shutdown game
 	local game = _G.game and _G.game.server or nil
 	if ( game ) then
-		game.shutdown()
+		local status, ret = pcall(game.shutdown)
+		if (not status) then print(ret) end
+
 		unrequire( "game.server" )
 		_G.game.server = nil
 	end
@@ -65,12 +69,14 @@ function update( dt )
 	local entity = _G.entity
 
 	if ( game ) then
-		game.update( dt )
+		local status, ret = pcall(game.update, dt )
+		if (not status) then print(ret) end
 
 		if ( entity ) then
 			local entities = entity.getAll()
 			for _, entity in ipairs( entities ) do
-				entity:update( dt )
+				local status, ret = pcall(entity.update, entity, dt )
+				if (not status) then print(ret) end
 			end
 		end
 	end
