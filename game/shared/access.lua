@@ -11,6 +11,30 @@ function access.exists(name)
 	return table.hasvalue(access._names, name)
 end
 
+function access.getAllHabitat()
+	local all = {
+		"security", "sec_doors", "brig", "armory", "forensics_lockers", "court",
+		"medical", "genetics", "morgue", "rd",
+		"tox", "tox_storage", "chemistry", "engine", "engine_equip", "maint_tunnels",
+		"external_airlocks", "change_ids", "ai_upload",
+		"teleporter", "eva", "heads", "captain", "all_personal_lockers",
+		"tech_storage", "chapel_office", "atmospherics", "kitchen",
+		"bar", "janitor", "crematorium", "robotics", "cargo", "construction",
+		"hydroponics", "library", "lawyer", "virology", "cmo", "qm", "surgery",
+		"theatre", "research", "mining", "mailsorting", "weapons",
+		"vault", "mining_station", "xenobiology", "ce", "hop", "hos", "rc_announce",
+		"keycard_auth", "tcomsat", "gateway", "mineral_storeroom", "minisat", "network", "cloning"
+	}
+
+	if (_DEBUG) then
+		for _, v in ipairs(all) do
+			assert(access.exists(v), string.format("Access name %q does not exist", v))
+		end
+	end
+
+	return all
+end
+
 function access:access()
 	self.list = {}
 end

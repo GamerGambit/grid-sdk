@@ -13,7 +13,7 @@ function testplayer:getAccess()
 	-- TODO replace this with and ID slot lookup (for PDA/ID card), followed by the item in the active hand
 	if (not self.access) then
 		self.access = access()
-		self.access.list = access._names -- give all access
+		self.access.list = access.getAllHabitat() -- give all access
 	end
 
 	return self.access
