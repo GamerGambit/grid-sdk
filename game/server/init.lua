@@ -1,4 +1,5 @@
 local _G = _G
+local require = require
 
 module( "game.server" )
 
@@ -19,6 +20,7 @@ function getSpawnPoint( player )
 end
 
 function load( arg )
+	require "game.shared"
 end
 
 function onPlayerConnect( player )

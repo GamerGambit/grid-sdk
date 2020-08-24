@@ -3,6 +3,7 @@ require( "engine.client.camera" )
 local gui       = gui
 local map       = map
 local _G        = _G
+local require   = require
 
 local r_draw_position = convar( "r_draw_position", "0", nil, nil,
                                 "Draws position" )
@@ -22,6 +23,7 @@ function draw()
 end
 
 function load( arg )
+	require "game.shared"
 end
 
 function onMainMenuActivate()
