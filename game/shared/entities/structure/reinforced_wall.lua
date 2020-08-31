@@ -1,9 +1,13 @@
-entities.require("entity")
+entities.require("structure")
 
-class "reinforced_wall" ("entity")
+class "structure.reinforced_wall" ("structure")
+
+entities.linkToClassname(structure.reinforced_wall, "structure.reinforced_wall")
+
+local reinforced_wall = structure.reinforced_wall
 
 function reinforced_wall:reinforced_wall()
-	entity.entity(self)
+	structure.structure(self)
 
 	if (_CLIENT) then
 		local sprite = assets.loadImage("entities/reinforced_wall.png")
@@ -21,5 +25,3 @@ function reinforced_wall:spawn()
 	self:initializePhysics()
 	self:setCollisionBounds( min, max )
 end
-
-entities.linkToClassname(reinforced_wall, "reinforced_wall")

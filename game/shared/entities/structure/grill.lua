@@ -1,9 +1,13 @@
-entities.require("entity")
+entities.require("structure")
 
-class "grill" ("entity")
+class "structure.grill" ("structure")
+
+entities.linkToClassname(structure.grill, "structure.grill")
+
+local grill = structure.grill
 
 function grill:grill()
-	entity.entity(self)
+	structure.structure(self)
 
 	if (_CLIENT) then
 		local sprite = assets.loadImage("entities/grill.png")
@@ -21,5 +25,3 @@ function grill:spawn()
 	self:initializePhysics()
 	self:setCollisionBounds( min, max )
 end
-
-entities.linkToClassname(grill, "grill")

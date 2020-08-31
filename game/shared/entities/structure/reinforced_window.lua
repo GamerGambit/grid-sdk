@@ -1,9 +1,13 @@
-entities.require("entity")
+entities.require("structure")
 
-class "reinforced_window" ("entity")
+class "structure.reinforced_window" ("structure")
+
+entities.linkToClassname(structure.reinforced_window, "structure.reinforced_window")
+
+local reinforced_window = structure.reinforced_window
 
 function reinforced_window:reinforced_window()
-	entity.entity(self)
+	structure.structure(self)
 
 	if (_CLIENT) then
 		local sprite = assets.loadImage("entities/reinforced_window.png")
@@ -21,5 +25,3 @@ function reinforced_window:spawn()
 	self:initializePhysics()
 	self:setCollisionBounds( min, max )
 end
-
-entities.linkToClassname(reinforced_window, "reinforced_window")

@@ -1,9 +1,11 @@
 require( "engine.client.sprite" )
 require( "game.shared.access" )
+entities.require("machine")
 
-entities.require("entity")
+class "machine.airlock" ("machine")
+entities.linkToClassname(machine.airlock, "machine.airlock")
 
-class "airlock" ("entity")
+local airlock = machine.airlock
 
 local setPhysics = function(airlock, bool)
 	local body = airlock:getBody()
@@ -34,7 +36,7 @@ local states = {
 }
 
 function airlock:airlock()
-	entity.entity(self)
+	machine.machine(self)
 
 	self.state = states.closed
 	self.openTime = 0
@@ -176,5 +178,3 @@ function airlock:close()
 	self.openTime = 0
 	self:emitSound("sounds/airlock_close")
 end
-
-entities.linkToClassname(airlock, "airlock")

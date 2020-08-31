@@ -1,12 +1,13 @@
-entities.require("entity")
+entities.require("structure")
 
--- due to the way the class system works, I cant name this "table"
--- otherwise it will be merged with the Lua table library and break
+class "structure.table" ("structure")
 
-class "nonlua_table" ("entity")
+entities.linkToClassname(structure.table, "structure.table")
 
-function nonlua_table:nonlua_table()
-	entity.entity(self)
+local nonlua_table = structure.table
+
+function nonlua_table:table()
+	structure.structure(self)
 
 	if (_CLIENT) then
 		local sprite = assets.loadImage("entities/table.png")
@@ -24,5 +25,3 @@ function nonlua_table:spawn()
 	self:initializePhysics()
 	self:setCollisionBounds( min, max )
 end
-
-entities.linkToClassname(nonlua_table, "nonlua_table")

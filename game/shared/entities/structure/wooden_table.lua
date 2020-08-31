@@ -1,9 +1,13 @@
-entities.require("entity")
+entities.require("structure")
 
-class "wooden_table" ("entity")
+class "structure.wooden_table" ("structure")
+
+entities.linkToClassname(structure.wooden_table, "structure.wooden_table")
+
+local wooden_table = structure.wooden_table
 
 function wooden_table:wooden_table()
-	entity.entity(self)
+	structure.structure(self)
 
 	if (_CLIENT) then
 		local sprite = assets.loadImage("entities/wooden_table.png")
@@ -21,5 +25,3 @@ function wooden_table:spawn()
 	self:initializePhysics()
 	self:setCollisionBounds( min, max )
 end
-
-entities.linkToClassname(wooden_table, "wooden_table")

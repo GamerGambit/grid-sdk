@@ -1,9 +1,13 @@
-entities.require("entity")
+entities.require("structure")
 
-class "reinforced_plasma_window" ("entity")
+class "structure.reinforced_plasma_window" ("structure")
+
+entities.linkToClassname(structure.reinforced_plasma_window, "structure.reinforced_plasma_window")
+
+local reinforced_plasma_window = structure.reinforced_plasma_window
 
 function reinforced_plasma_window:reinforced_plasma_window()
-	entity.entity(self)
+	structure.structure(self)
 
 	if (_CLIENT) then
 		local sprite = assets.loadImage("entities/reinforced_plasma_window.png")
@@ -21,5 +25,3 @@ function reinforced_plasma_window:spawn()
 	self:initializePhysics()
 	self:setCollisionBounds( min, max )
 end
-
-entities.linkToClassname(reinforced_plasma_window, "reinforced_plasma_window")

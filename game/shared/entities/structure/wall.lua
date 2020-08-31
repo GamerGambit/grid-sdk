@@ -1,18 +1,22 @@
-entities.require("entity")
+entities.require("structure")
 
-class "tinted_window" ("entity")
+class "structure.wall" ("structure")
 
-function tinted_window:tinted_window()
-	entity.entity(self)
+entities.linkToClassname(structure.wall, "structure.wall")
+
+local wall = structure.wall
+
+function wall:wall()
+	structure.structure(self)
 
 	if (_CLIENT) then
-		local sprite = assets.loadImage("entities/tinted_window.png")
+		local sprite = assets.loadImage("entities/wall.png")
 		sprite:setFilter("nearest", "nearest")
 		self:setSprite(sprite)
 	end
 end
 
-function tinted_window:spawn()
+function wall:spawn()
 	entity.spawn( self )
 
 	local tileSize = game.tileSize
@@ -21,5 +25,3 @@ function tinted_window:spawn()
 	self:initializePhysics()
 	self:setCollisionBounds( min, max )
 end
-
-entities.linkToClassname(tinted_window, "tinted_window")

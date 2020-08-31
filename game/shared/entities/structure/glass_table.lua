@@ -1,9 +1,13 @@
-entities.require("entity")
+entities.require("structure")
 
-class "glass_table" ("entity")
+class "structure.glass_table" ("structure")
+
+entities.linkToClassname(structure.glass_table, "structure.glass_table")
+
+local glass_table = structure.glass_table
 
 function glass_table:glass_table()
-	entity.entity(self)
+	structure.structure(self)
 
 	if (_CLIENT) then
 		local sprite = assets.loadImage("entities/glass_table.png")
@@ -21,5 +25,3 @@ function glass_table:spawn()
 	self:initializePhysics()
 	self:setCollisionBounds( min, max )
 end
-
-entities.linkToClassname(glass_table, "glass_table")
