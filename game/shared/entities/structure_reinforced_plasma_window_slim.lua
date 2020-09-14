@@ -1,12 +1,12 @@
 entities.require("structure")
 
-class "structure.reinforced_plasma_window_slim" ("structure")
+class "structure_reinforced_plasma_window_slim" ("structure")
 
-entities.linkToClassname(structure.reinforced_plasma_window_slim, "structure.reinforced_plasma_window_slim")
+entities.linkToClassname(structure_reinforced_plasma_window_slim, "structure_reinforced_plasma_window_slim")
 
-local reinforced_plasma_window_slim = structure.reinforced_plasma_window_slim
+local reinforced_plasma_window_slim = structure_reinforced_plasma_window_slim
 
-function reinforced_plasma_window_slim:reinforced_plasma_window_slim()
+function reinforced_plasma_window_slim:structure_reinforced_plasma_window_slim()
 	structure.structure(self)
 
 	if (_CLIENT) then

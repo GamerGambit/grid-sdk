@@ -1,12 +1,12 @@
 entities.require("structure")
 
-class "structure.reinforced_window" ("structure")
+class "structure_reinforced_window" ("structure")
 
-entities.linkToClassname(structure.reinforced_window, "structure.reinforced_window")
+entities.linkToClassname(structure_reinforced_window, "structure_reinforced_window")
 
-local reinforced_window = structure.reinforced_window
+local reinforced_window = structure_reinforced_window
 
-function reinforced_window:reinforced_window()
+function reinforced_window:structure_reinforced_window()
 	structure.structure(self)
 
 	if (_CLIENT) then

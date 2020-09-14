@@ -1,22 +1,22 @@
 entities.require("structure")
 
-class "structure.window" ("structure")
+class "structure_reinforced_table" ("structure")
 
-entities.linkToClassname(structure.window, "structure.window")
+entities.linkToClassname(structure_reinforced_table, "structure_reinforced_table")
 
-local window = structure.window
+local reinforced_table = structure_reinforced_table
 
-function window:window()
+function reinforced_table:structure_reinforced_table()
 	structure.structure(self)
 
 	if (_CLIENT) then
-		local sprite = assets.loadImage("entities/window.png")
+		local sprite = assets.loadImage("entities/reinforced_table.png")
 		sprite:setFilter("nearest", "nearest")
 		self:setSprite(sprite)
 	end
 end
 
-function window:spawn()
+function reinforced_table:spawn()
 	entity.spawn( self )
 
 	local tileSize = game.tileSize

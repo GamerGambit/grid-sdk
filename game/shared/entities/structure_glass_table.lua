@@ -1,22 +1,22 @@
 entities.require("structure")
 
-class "structure.wall" ("structure")
+class "structure_glass_table" ("structure")
 
-entities.linkToClassname(structure.wall, "structure.wall")
+entities.linkToClassname(structure_glass_table, "structure_glass_table")
 
-local wall = structure.wall
+local glass_table = structure_glass_table
 
-function wall:wall()
+function glass_table:structure_glass_table()
 	structure.structure(self)
 
 	if (_CLIENT) then
-		local sprite = assets.loadImage("entities/wall.png")
+		local sprite = assets.loadImage("entities/glass_table.png")
 		sprite:setFilter("nearest", "nearest")
 		self:setSprite(sprite)
 	end
 end
 
-function wall:spawn()
+function glass_table:spawn()
 	entity.spawn( self )
 
 	local tileSize = game.tileSize

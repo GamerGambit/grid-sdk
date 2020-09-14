@@ -1,22 +1,22 @@
 entities.require("structure")
 
-class "structure.tinted_window" ("structure")
+class "structure_grill" ("structure")
 
-entities.linkToClassname(structure.tinted_window, "structure.tinted_window")
+entities.linkToClassname(structure_grill, "structure_grill")
 
-local tinted_window = structure.tinted_window
+local grill = structure_grill
 
-function tinted_window:tinted_window()
+function grill:structure_grill()
 	structure.structure(self)
 
 	if (_CLIENT) then
-		local sprite = assets.loadImage("entities/tinted_window.png")
+		local sprite = assets.loadImage("entities/grill.png")
 		sprite:setFilter("nearest", "nearest")
 		self:setSprite(sprite)
 	end
 end
 
-function tinted_window:spawn()
+function grill:spawn()
 	entity.spawn( self )
 
 	local tileSize = game.tileSize

@@ -1,22 +1,22 @@
 entities.require("structure")
 
-class "structure.glass_table" ("structure")
+class "structure_table" ("structure")
 
-entities.linkToClassname(structure.glass_table, "structure.glass_table")
+entities.linkToClassname(structure_table, "structure_table")
 
-local glass_table = structure.glass_table
+local nonlua_table = structure_table
 
-function glass_table:glass_table()
+function nonlua_table:structure_table()
 	structure.structure(self)
 
 	if (_CLIENT) then
-		local sprite = assets.loadImage("entities/glass_table.png")
+		local sprite = assets.loadImage("entities/table.png")
 		sprite:setFilter("nearest", "nearest")
 		self:setSprite(sprite)
 	end
 end
 
-function glass_table:spawn()
+function nonlua_table:spawn()
 	entity.spawn( self )
 
 	local tileSize = game.tileSize

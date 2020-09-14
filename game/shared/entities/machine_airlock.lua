@@ -2,10 +2,10 @@ require( "engine.client.sprite" )
 require( "game.shared.access" )
 entities.require("machine")
 
-class "machine.airlock" ("machine")
-entities.linkToClassname(machine.airlock, "machine.airlock")
+class "machine_airlock" ("machine")
+entities.linkToClassname(machine_airlock, "machine_airlock")
 
-local airlock = machine.airlock
+local airlock = machine_airlock
 
 local setPhysics = function(airlock, bool)
 	local body = airlock:getBody()
@@ -35,7 +35,7 @@ local states = {
 	closing = 4
 }
 
-function airlock:airlock()
+function airlock:machine_airlock()
 	machine.machine(self)
 
 	self.state = states.closed

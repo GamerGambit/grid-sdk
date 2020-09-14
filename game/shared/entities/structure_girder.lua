@@ -1,10 +1,10 @@
 require( "engine.client.sprite" )
 entities.require("structure")
 
-class "structure.girder" ("structure")
-entities.linkToClassname(structure.girder, "structure.girder")
+class "structure_girder" ("structure")
+entities.linkToClassname(structure_girder, "structure_girder")
 
-local girder = structure.girder
+local girder = structure_girder
 
 girder.state = {
 	normal = 0,
@@ -12,7 +12,7 @@ girder.state = {
 	reinforced = 2
 }
 
-function girder:girder()
+function girder:structure_girder()
 	structure.structure(self)
 
 	if (_CLIENT) then

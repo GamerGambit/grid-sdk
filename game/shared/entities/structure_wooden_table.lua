@@ -1,22 +1,22 @@
 entities.require("structure")
 
-class "structure.grill" ("structure")
+class "structure_wooden_table" ("structure")
 
-entities.linkToClassname(structure.grill, "structure.grill")
+entities.linkToClassname(structure_wooden_table, "structure_wooden_table")
 
-local grill = structure.grill
+local wooden_table = structure_wooden_table
 
-function grill:grill()
+function wooden_table:structure_wooden_table()
 	structure.structure(self)
 
 	if (_CLIENT) then
-		local sprite = assets.loadImage("entities/grill.png")
+		local sprite = assets.loadImage("entities/wooden_table.png")
 		sprite:setFilter("nearest", "nearest")
 		self:setSprite(sprite)
 	end
 end
 
-function grill:spawn()
+function wooden_table:spawn()
 	entity.spawn( self )
 
 	local tileSize = game.tileSize

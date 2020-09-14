@@ -1,22 +1,22 @@
 entities.require("structure")
 
-class "structure.table" ("structure")
+class "structure_tinted_window" ("structure")
 
-entities.linkToClassname(structure.table, "structure.table")
+entities.linkToClassname(structure_tinted_window, "structure_tinted_window")
 
-local nonlua_table = structure.table
+local tinted_window = structure_tinted_window
 
-function nonlua_table:table()
+function tinted_window:structure_tinted_window()
 	structure.structure(self)
 
 	if (_CLIENT) then
-		local sprite = assets.loadImage("entities/table.png")
+		local sprite = assets.loadImage("entities/tinted_window.png")
 		sprite:setFilter("nearest", "nearest")
 		self:setSprite(sprite)
 	end
 end
 
-function nonlua_table:spawn()
+function tinted_window:spawn()
 	entity.spawn( self )
 
 	local tileSize = game.tileSize

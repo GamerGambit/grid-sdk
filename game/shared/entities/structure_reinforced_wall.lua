@@ -1,12 +1,12 @@
 entities.require("structure")
 
-class "structure.reinforced_wall" ("structure")
+class "structure_reinforced_wall" ("structure")
 
-entities.linkToClassname(structure.reinforced_wall, "structure.reinforced_wall")
+entities.linkToClassname(structure_reinforced_wall, "structure_reinforced_wall")
 
-local reinforced_wall = structure.reinforced_wall
+local reinforced_wall = structure_reinforced_wall
 
-function reinforced_wall:reinforced_wall()
+function reinforced_wall:structure_reinforced_wall()
 	structure.structure(self)
 
 	if (_CLIENT) then
