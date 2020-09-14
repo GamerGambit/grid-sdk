@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <tileset firstgid="1" source="../tilesets/obj/structures.tsx"/>
+ <object type="structure_girder" gid="1" width="32" height="32">
+  <properties>
+   <property name="state" value="normal"/>
+  </properties>
+ </object>
+</template>

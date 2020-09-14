@@ -1,0 +1,10 @@
+{
+    "automappingRulesFile": "",
+    "commands": [
+    ],
+    "extensionsPath": "box/extensions",
+    "folders": [
+        "box"
+    ],
+    "objectTypesFile": "box/objecttypes.xml"
+}
