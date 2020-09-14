@@ -34,7 +34,8 @@ function concommand.dispatch( player, name, argString, argTable )
 		end
 	end
 
-	concommand:callback( player, name, argString, argTable )
+	local status, ret = pcall(concommand.callback, concommand, player, name, argString, argTable)
+	if (not status) then print(ret) end
 
 	if ( flags ) then
 		local networked = table.hasvalue( flags, "network" )
