@@ -15,13 +15,3 @@ function reinforced_table:structure_reinforced_table()
 		self:setSprite(sprite)
 	end
 end
-
-function reinforced_table:spawn()
-	entity.spawn( self )
-
-	local tileSize = game.tileSize
-	local min      = vector()
-	local max      = vector( tileSize, -tileSize )
-	self:initializePhysics()
-	self:setCollisionBounds( min, max )
-end

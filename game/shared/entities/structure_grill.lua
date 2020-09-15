@@ -15,13 +15,3 @@ function grill:structure_grill()
 		self:setSprite(sprite)
 	end
 end
-
-function grill:spawn()
-	entity.spawn( self )
-
-	local tileSize = game.tileSize
-	local min      = vector()
-	local max      = vector( tileSize, -tileSize )
-	self:initializePhysics()
-	self:setCollisionBounds( min, max )
-end

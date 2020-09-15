@@ -15,13 +15,3 @@ function wall:structure_wall()
 		self:setSprite(sprite)
 	end
 end
-
-function wall:spawn()
-	entity.spawn( self )
-
-	local tileSize = game.tileSize
-	local min      = vector()
-	local max      = vector( tileSize, -tileSize )
-	self:initializePhysics()
-	self:setCollisionBounds( min, max )
-end

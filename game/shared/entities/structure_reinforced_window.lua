@@ -15,13 +15,3 @@ function reinforced_window:structure_reinforced_window()
 		self:setSprite(sprite)
 	end
 end
-
-function reinforced_window:spawn()
-	entity.spawn( self )
-
-	local tileSize = game.tileSize
-	local min      = vector()
-	local max      = vector( tileSize, -tileSize )
-	self:initializePhysics()
-	self:setCollisionBounds( min, max )
-end

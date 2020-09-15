@@ -15,13 +15,3 @@ function tinted_window:structure_tinted_window()
 		self:setSprite(sprite)
 	end
 end
-
-function tinted_window:spawn()
-	entity.spawn( self )
-
-	local tileSize = game.tileSize
-	local min      = vector()
-	local max      = vector( tileSize, -tileSize )
-	self:initializePhysics()
-	self:setCollisionBounds( min, max )
-end

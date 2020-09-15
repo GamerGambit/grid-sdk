@@ -49,13 +49,3 @@ function girder:setState(state)
 
 	self:setAnimation(state)
 end
-
-function girder:spawn()
-	entity.spawn( self )
-
-	local tileSize = game.tileSize
-	local min      = vector()
-	local max      = vector( tileSize, -tileSize )
-	self:initializePhysics()
-	self:setCollisionBounds( min, max )
-end

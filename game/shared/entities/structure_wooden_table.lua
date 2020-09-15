@@ -15,13 +15,3 @@ function wooden_table:structure_wooden_table()
 		self:setSprite(sprite)
 	end
 end
-
-function wooden_table:spawn()
-	entity.spawn( self )
-
-	local tileSize = game.tileSize
-	local min      = vector()
-	local max      = vector( tileSize, -tileSize )
-	self:initializePhysics()
-	self:setCollisionBounds( min, max )
-end

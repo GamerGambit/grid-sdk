@@ -48,16 +48,6 @@ function airlock:machine_airlock()
 	self.required_one_access = {} -- a single access listed is required
 end
 
-function airlock:spawn()
-	entity.spawn( self )
-
-	local tileSize = game.tileSize
-	local min      = vector()
-	local max      = vector( tileSize, -tileSize )
-	self:initializePhysics()
-	self:setCollisionBounds( min, max )
-end
-
 function airlock:use(activator, value)
 	if (#self.required_access > 0 or #self.required_one_access  > 0) then
 		if (type(activator.getAccess) ~= "function") then return end -- Not entirely sure what entities would be trying to open doors that dont have an access function?

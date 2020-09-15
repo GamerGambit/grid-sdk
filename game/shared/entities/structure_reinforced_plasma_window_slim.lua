@@ -17,11 +17,10 @@ function reinforced_plasma_window_slim:structure_reinforced_plasma_window_slim()
 end
 
 function reinforced_plasma_window_slim:spawn()
-	entity.spawn( self )
+	structure.spawn( self )
 
 	local tileSize = game.tileSize
 	local min      = vector()
 	local max      = vector( tileSize, -7 )
-	self:initializePhysics()
 	self:setCollisionBounds( min, max )
 end
