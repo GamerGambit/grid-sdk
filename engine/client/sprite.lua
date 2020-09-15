@@ -12,11 +12,12 @@ function sprite:sprite( spriteSheet )
 	if (spriteSheet) then
 		self:setSpriteSheet(spriteSheet)
 	else
-		self.width       = 0
-		self.height      = 0
-		self.frametime   = 0
-		self.animations  = {}
-		self.events      = {}
+		self.spriteSheetName = ""
+		self.width           = 0
+		self.height          = 0
+		self.frametime       = 0
+		self.animations      = {}
+		self.events          = {}
 	end
 
 	self.curtime     = 0
@@ -56,6 +57,7 @@ function sprite:getQuad()
 end
 
 accessor( sprite, "spriteSheet" )
+accessor( sprite, "spriteSheetName" )
 accessor( sprite, "width" )
 accessor( sprite, "height" )
 
@@ -102,8 +104,9 @@ function sprite:__tostring()
 end
 
 function sprite:setSpriteSheet(spriteSheet)
-	local data       = require( spriteSheet )
-	self.spriteSheet = assets.loadImage( data[ "image" ] )
+	local data           = require( spriteSheet )
+	self.spriteSheet     = assets.loadImage( data[ "image" ] )
+	self.spriteSheetName = spriteSheet
 
 	self.animator = spriteAnimator(self)
 	self.animator:setAnimations(data[ "animations" ] or {})
