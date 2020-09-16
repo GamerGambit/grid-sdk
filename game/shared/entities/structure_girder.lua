@@ -12,15 +12,16 @@ girder.state = {
 	reinforced = 2
 }
 
+local girderStateToAnim = {
+	[0] = "normal",
+	[1] = "displaced",
+	[2] = "reinforced",
+}
+
 function girder:structure_girder()
 	structure.structure(self)
 
-	if (_CLIENT) then
-		local sprite =sprite("images.entities.girder")
-		sprite:setFilter("nearest", "nearest")
-		self:setSprite(sprite)
-		self:setState(girder.state.normal)
-	end
+	self:setState(girder.state.normal)
 end
 
 function girder:setProperties(properties)
@@ -47,5 +48,5 @@ function girder:setState(state)
 		end
 	end
 
-	self:setAnimation(state)
+	self:setAnimation(string.format("girder_%s", girderStateToAnim[self.state]))
 end

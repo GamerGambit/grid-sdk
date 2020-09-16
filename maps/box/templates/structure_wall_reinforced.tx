@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <template>
  <tileset firstgid="1" source="../tilesets/turfs/walls/reinforced_wall.tsx"/>
- <object type="structure_reinforced_wall" gid="21" width="32" height="32"/>
+ <object type="structure_wall_reinforced" gid="21" width="32" height="32"/>
 </template>

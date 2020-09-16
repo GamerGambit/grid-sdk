@@ -9,9 +9,5 @@ local grill = structure_grill
 function grill:structure_grill()
 	structure.structure(self)
 
-	if (_CLIENT) then
-		local sprite = assets.loadImage("entities/grill.png")
-		sprite:setFilter("nearest", "nearest")
-		self:setSprite(sprite)
-	end
+	self:setAnimation("grill")
 end

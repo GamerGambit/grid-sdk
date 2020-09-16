@@ -4,6 +4,12 @@ class "structure" ("entity")
 
 function structure:structure()
 	entity.entity(self)
+
+	if (_CLIENT) then
+		local sprite = sprite("images.obj.structures")
+		sprite:setFilter("nearest", "nearest")
+		self:setSprite(sprite)
+	end
 end
 
 function structure:spawn()
