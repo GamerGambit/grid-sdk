@@ -1,5 +1,6 @@
 require( "engine.client.sprite" )
 require( "game.shared.access" )
+require( "game.shared.construction" )
 entities.require("machine")
 
 class "machine_airlock" ("machine")
@@ -44,22 +45,16 @@ function airlock:machine_airlock()
 	self.skin = nil
 	self.fillType = nil
 
+	self.maint_panel_open = false
+
 	self.required_access = {}     -- all access listed is required
 	self.required_one_access = {} -- a single access listed is required
 end
 
 function airlock:use(activator, value)
-	if (#self.required_access > 0 or #self.required_one_access  > 0) then
-		if (type(activator.getAccess) ~= "function") then return end -- Not entirely sure what entities would be trying to open doors that dont have an access function?
-		local a = activator:getAccess()
-		if (not a:canAccess(self.required_access, self.required_one_access)) then return end
-	end
+	if (machine.use(self, activator, value)) then return end
 
-	if (self.state == states.open) then
-		self:close()
-	elseif (self.state == states.closed) then
-		self:open()
-	end
+	self:tryOpen()
 end
 
 function airlock:onAnimationEnd( animation )
@@ -75,8 +70,10 @@ function airlock:onAnimationEnd( animation )
 end
 
 function airlock:startTouch( other, contact )
+	-- TODO this function obviously does not allow non-players to open doors.
+	-- valid door openers are the MULEbot, beepsky, and other AI.
 	if (not typeof(other, "player")) then return end
-	self:use(other)
+	self:tryOpen(other)
 end
 
 function airlock:think()
@@ -152,6 +149,20 @@ function airlock:update(dt)
 	end
 end
 
+function airlock:tryOpen(activator)
+	if (#self.required_access > 0 or #self.required_one_access  > 0) then
+		if (type(activator.getAccess) ~= "function") then return end -- Not entirely sure what entities would be trying to open doors that dont have an access function?
+		local a = activator:getAccess()
+		if (not a:canAccess(self.required_access, self.required_one_access)) then return end
+	end
+
+	if (self.state == states.open) then
+		self:close()
+	elseif (self.state == states.closed) then
+		self:open()
+	end
+end
+
 function airlock:open()
 	if (self.state ~= states.closed) then return end
 	setAnimation(self, "opening")
@@ -168,3 +179,22 @@ function airlock:close()
 	self.openTime = 0
 	self:emitSound("sounds/airlock_close")
 end
+
+construction.register("machine_airlock", {
+	-- TODO shielding
+	tool_screwdriver = {
+		onActivate = function(ent, act)
+			-- TODO check if the door has been detonated
+			ent.maint_panel_open = not ent.maint_panel_open
+			-- TODO [opt] send player a message telling them they opened/closed the maintenance maint_panel_open
+			-- TODO play tool sound
+			-- TODO update icon
+		end
+	}
+	-- TODO (wirecutters && note)
+	-- TODO (wirecutters or multitool)
+	-- TODO pAI cable
+	-- TODO airlock painter
+	-- TODO door charge
+	-- TODO (paper or photo)
+})

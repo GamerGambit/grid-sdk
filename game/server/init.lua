@@ -1,5 +1,8 @@
+require( "game.shared.construction" )
+
 local _G = _G
 local require = require
+local construction = construction
 
 module( "game.server" )
 
@@ -38,6 +41,7 @@ function tick( timestep )
 end
 
 function shutdown()
+	construction.clear()
 end
 
 function update( dt )

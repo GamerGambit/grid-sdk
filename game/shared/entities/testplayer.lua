@@ -28,6 +28,12 @@ function testplayer:spawn()
 	self:setCollisionBounds( min, max )
 end
 
+-- TODO remove this for prod
+TESTPLAYER_ACTIVEHAND_ITEMNAME = "tool_screwdriver"
+function testplayer:getActiveHand()
+	return { getItem = function() return setmetatable({}, { __type = TESTPLAYER_ACTIVEHAND_ITEMNAME }) end }
+end
+
 entities.linkToClassname(testplayer, "testplayer")
 
 local t = {}

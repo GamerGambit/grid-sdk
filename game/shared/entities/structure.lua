@@ -12,6 +12,11 @@ function structure:structure()
 	end
 end
 
+function structure:use(activator, value)
+	-- return true so derived classes can check if this handles the call
+	if (construction.check(self, activator)) then return true end
+end
+
 function structure:spawn()
 	entity.spawn( self )
 
