@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <template>
- <tileset firstgid="1" source="../../tilesets/obj/airlocks.tsx"/>
+ <tileset firstgid="1" source="../../../../tilesets/obj/airlocks.tsx"/>
  <object type="door_airlock" gid="9" width="32" height="32">
   <properties>
    <property name="fillType" value="command"/>

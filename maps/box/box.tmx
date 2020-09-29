@@ -1052,192 +1052,192 @@
   <object id="7329" template="templates/structure_table_reinforced.tx" x="4800" y="4000"/>
   <object id="7330" template="templates/structure_table_reinforced.tx" x="4832" y="4000"/>
   <object id="7331" template="templates/structure_table_reinforced.tx" x="4864" y="4000"/>
-  <object id="7099" template="templates/airlocks/external.tx" name="Escape Pod One" x="1088" y="3360"/>
-  <object id="7100" template="templates/airlocks/external.tx" name="Escape Pod One" x="1152" y="3360"/>
-  <object id="7101" template="templates/airlocks/external.tx" name="Port Docking Bay 1" x="1216" y="3392"/>
-  <object id="7102" template="templates/airlocks/external.tx" name="Port Docking Bay 1" x="1216" y="3456"/>
-  <object id="7103" template="templates/airlocks/external.tx" name="Port Docking Bay 1" x="1440" y="3392"/>
-  <object id="7104" template="templates/airlocks/external.tx" name="Port Docking Bay 1" x="1440" y="3456"/>
-  <object id="7043" template="templates/airlocks/engineering.tx" name="Auxillary Base Construction" x="1504" y="3296">
+  <object id="7099" template="templates/machinery/door/airlock/external.tx" name="Escape Pod One" x="1088" y="3360"/>
+  <object id="7100" template="templates/machinery/door/airlock/external.tx" name="Escape Pod One" x="1152" y="3360"/>
+  <object id="7101" template="templates/machinery/door/airlock/external.tx" name="Port Docking Bay 1" x="1216" y="3392"/>
+  <object id="7102" template="templates/machinery/door/airlock/external.tx" name="Port Docking Bay 1" x="1216" y="3456"/>
+  <object id="7103" template="templates/machinery/door/airlock/external.tx" name="Port Docking Bay 1" x="1440" y="3392"/>
+  <object id="7104" template="templates/machinery/door/airlock/external.tx" name="Port Docking Bay 1" x="1440" y="3456"/>
+  <object id="7043" template="templates/machinery/door/airlock/engineering.tx" name="Auxillary Base Construction" x="1504" y="3296">
    <properties>
     <property name="required_one_access" value="construction;research;mining"/>
    </properties>
   </object>
-  <object id="7094" template="templates/airlocks/external.tx" name="Construction Zone" x="1440" y="3136"/>
-  <object id="7184" template="templates/airlocks/maintenance.tx" x="1600" y="3296">
+  <object id="7094" template="templates/machinery/door/airlock/external.tx" name="Construction Zone" x="1440" y="3136"/>
+  <object id="7184" template="templates/machinery/door/airlock/maintenance.tx" x="1600" y="3296">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7095" template="templates/airlocks/external.tx" name="External Access" x="1664" y="3104">
+  <object id="7095" template="templates/machinery/door/airlock/external.tx" name="External Access" x="1664" y="3104">
    <properties>
     <property name="required_access" value="external_airlocks"/>
    </properties>
   </object>
-  <object id="7096" template="templates/airlocks/external.tx" name="External Access" x="1664" y="3168">
+  <object id="7096" template="templates/machinery/door/airlock/external.tx" name="External Access" x="1664" y="3168">
    <properties>
     <property name="required_access" value="external_airlocks"/>
    </properties>
   </object>
-  <object id="7173" template="templates/airlocks/maintenance.tx" x="1792" y="3168">
+  <object id="7173" template="templates/machinery/door/airlock/maintenance.tx" x="1792" y="3168">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7174" template="templates/airlocks/maintenance.tx" x="1888" y="3200">
+  <object id="7174" template="templates/machinery/door/airlock/maintenance.tx" x="1888" y="3200">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7042" template="templates/airlocks/engineering.tx" name="Port Bow Solar Access" x="2048" y="3008">
+  <object id="7042" template="templates/machinery/door/airlock/engineering.tx" name="Port Bow Solar Access" x="2048" y="3008">
    <properties>
     <property name="required_access" value="engine"/>
    </properties>
   </object>
-  <object id="7097" template="templates/airlocks/external.tx" name="Solar Maintenance" x="2048" y="2816">
+  <object id="7097" template="templates/machinery/door/airlock/external.tx" name="Solar Maintenance" x="2048" y="2816">
    <properties>
     <property name="required_access" value="engine;external_airlocks"/>
    </properties>
   </object>
-  <object id="7098" template="templates/airlocks/external.tx" name="Solar Maintenance" x="2048" y="2880">
+  <object id="7098" template="templates/machinery/door/airlock/external.tx" name="Solar Maintenance" x="2048" y="2880">
    <properties>
     <property name="required_access" value="engine;external_airlocks"/>
    </properties>
   </object>
-  <object id="7175" template="templates/airlocks/maintenance.tx" x="2208" y="2976">
+  <object id="7175" template="templates/machinery/door/airlock/maintenance.tx" x="2208" y="2976">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7176" template="templates/airlocks/maintenance.tx" x="2336" y="3008">
+  <object id="7176" template="templates/machinery/door/airlock/maintenance.tx" x="2336" y="3008">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7177" template="templates/airlocks/maintenance.tx" x="2624" y="3104">
+  <object id="7177" template="templates/machinery/door/airlock/maintenance.tx" x="2624" y="3104">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7178" template="templates/airlocks/maintenance.tx" name="Firefighting equipment" x="2272" y="3328">
+  <object id="7178" template="templates/machinery/door/airlock/maintenance.tx" name="Firefighting equipment" x="2272" y="3328">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7179" template="templates/airlocks/maintenance.tx" x="2432" y="3328">
+  <object id="7179" template="templates/machinery/door/airlock/maintenance.tx" x="2432" y="3328">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7183" template="templates/airlocks/maintenance.tx" name="Security Maintenance" x="1824" y="3456">
+  <object id="7183" template="templates/machinery/door/airlock/maintenance.tx" name="Security Maintenance" x="1824" y="3456">
    <properties>
     <property name="required_access" value="security"/>
    </properties>
   </object>
-  <object id="7181" template="templates/airlocks/maintenance.tx" name="Tool Storage Maintenance" x="2176" y="3456">
+  <object id="7181" template="templates/machinery/door/airlock/maintenance.tx" name="Tool Storage Maintenance" x="2176" y="3456">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7182" template="templates/airlocks/maintenance.tx" name="Garden Maintenance" x="1952" y="3392">
+  <object id="7182" template="templates/machinery/door/airlock/maintenance.tx" name="Garden Maintenance" x="1952" y="3392">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7345" template="templates/airlocks/public2.tx" name="Garden" x="2016" y="3648">
+  <object id="7345" template="templates/machinery/door/airlock/public2.tx" name="Garden" x="2016" y="3648">
    <properties>
     <property name="fillType" value="glass2"/>
    </properties>
   </object>
-  <object id="7349" template="templates/airlocks/public.tx" name="Garden" x="2112" y="3520"/>
-  <object id="7376" template="templates/airlocks/security.tx" name="Security Checkpoint" x="1696" y="3584">
+  <object id="7349" template="templates/machinery/door/airlock/public.tx" name="Garden" x="2112" y="3520"/>
+  <object id="7376" template="templates/machinery/door/airlock/security.tx" name="Security Checkpoint" x="1696" y="3584">
    <properties>
     <property name="required_access" value="security"/>
    </properties>
   </object>
-  <object id="7346" template="templates/airlocks/public2.tx" name="Primary Tool Storage" x="2176" y="3648">
+  <object id="7346" template="templates/machinery/door/airlock/public2.tx" name="Primary Tool Storage" x="2176" y="3648">
    <properties>
     <property name="fillType" value="glass2"/>
    </properties>
   </object>
-  <object id="7347" template="templates/airlocks/public2.tx" name="Primary Tool Storage" x="2400" y="3648">
+  <object id="7347" template="templates/machinery/door/airlock/public2.tx" name="Primary Tool Storage" x="2400" y="3648">
    <properties>
     <property name="fillType" value="glass2"/>
    </properties>
   </object>
-  <object id="7105" template="templates/airlocks/external.tx" name="Escape Pod One" x="1088" y="3808"/>
-  <object id="7106" template="templates/airlocks/external.tx" name="Escape Pod One" x="1152" y="3808"/>
-  <object id="7111" template="templates/airlocks/external.tx" name="Port Docking Bay 2" x="1472" y="3968"/>
-  <object id="7112" template="templates/airlocks/external.tx" name="Port Docking Bay 2" x="1536" y="3968"/>
-  <object id="7107" template="templates/airlocks/external.tx" name="Port Docking Bay 1" x="1216" y="3776"/>
-  <object id="7108" template="templates/airlocks/external.tx" name="Port Docking Bay 1" x="1216" y="3712"/>
-  <object id="7109" template="templates/airlocks/external.tx" name="Port Docking Bay 1" x="1440" y="3712"/>
-  <object id="7110" template="templates/airlocks/external.tx" name="Port Docking Bay 1" x="1440" y="3776"/>
-  <object id="7113" template="templates/airlocks/external.tx" name="Port Docking Bay 4" x="1216" y="4160"/>
-  <object id="7114" template="templates/airlocks/external.tx" name="Port Docking Bay 4" x="1216" y="4224"/>
-  <object id="7115" template="templates/airlocks/external.tx" name="Port Docking Bay 3" x="1440" y="4160"/>
-  <object id="7116" template="templates/airlocks/external.tx" name="Port Docking Bay 3" x="1440" y="4224"/>
-  <object id="7260" template="templates/airlocks/maintenance.tx" x="1632" y="4096">
+  <object id="7105" template="templates/machinery/door/airlock/external.tx" name="Escape Pod One" x="1088" y="3808"/>
+  <object id="7106" template="templates/machinery/door/airlock/external.tx" name="Escape Pod One" x="1152" y="3808"/>
+  <object id="7111" template="templates/machinery/door/airlock/external.tx" name="Port Docking Bay 2" x="1472" y="3968"/>
+  <object id="7112" template="templates/machinery/door/airlock/external.tx" name="Port Docking Bay 2" x="1536" y="3968"/>
+  <object id="7107" template="templates/machinery/door/airlock/external.tx" name="Port Docking Bay 1" x="1216" y="3776"/>
+  <object id="7108" template="templates/machinery/door/airlock/external.tx" name="Port Docking Bay 1" x="1216" y="3712"/>
+  <object id="7109" template="templates/machinery/door/airlock/external.tx" name="Port Docking Bay 1" x="1440" y="3712"/>
+  <object id="7110" template="templates/machinery/door/airlock/external.tx" name="Port Docking Bay 1" x="1440" y="3776"/>
+  <object id="7113" template="templates/machinery/door/airlock/external.tx" name="Port Docking Bay 4" x="1216" y="4160"/>
+  <object id="7114" template="templates/machinery/door/airlock/external.tx" name="Port Docking Bay 4" x="1216" y="4224"/>
+  <object id="7115" template="templates/machinery/door/airlock/external.tx" name="Port Docking Bay 3" x="1440" y="4160"/>
+  <object id="7116" template="templates/machinery/door/airlock/external.tx" name="Port Docking Bay 3" x="1440" y="4224"/>
+  <object id="7260" template="templates/machinery/door/airlock/maintenance.tx" x="1632" y="4096">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7261" template="templates/airlocks/maintenance.tx" x="2048" y="3776">
+  <object id="7261" template="templates/machinery/door/airlock/maintenance.tx" x="2048" y="3776">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7259" template="templates/airlocks/maintenance.tx" name="Disposals Access" x="1856" y="4256">
+  <object id="7259" template="templates/machinery/door/airlock/maintenance.tx" name="Disposals Access" x="1856" y="4256">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7258" template="templates/airlocks/maintenance.tx" name="Locker Room Maintenance" x="2464" y="4128">
+  <object id="7258" template="templates/machinery/door/airlock/maintenance.tx" name="Locker Room Maintenance" x="2464" y="4128">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7344" template="templates/airlocks/public2.tx" name="Art Storage" x="2560" y="3776">
+  <object id="7344" template="templates/machinery/door/airlock/public2.tx" name="Art Storage" x="2560" y="3776">
    <properties>
     <property name="fillType" value="glass2"/>
    </properties>
   </object>
-  <object id="7257" template="templates/airlocks/maintenance.tx" x="2656" y="3776">
+  <object id="7257" template="templates/machinery/door/airlock/maintenance.tx" x="2656" y="3776">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7437" template="templates/airlocks/maintenance.tx" name="Cargo Bay Warehouse Maintenance" x="2688" y="3968">
+  <object id="7437" template="templates/machinery/door/airlock/maintenance.tx" name="Cargo Bay Warehouse Maintenance" x="2688" y="3968">
    <properties>
     <property name="required_access" value="cargo"/>
    </properties>
   </object>
-  <object id="7171" template="templates/airlocks/external.tx" x="2784" y="3264">
+  <object id="7171" template="templates/machinery/door/airlock/external.tx" x="2784" y="3264">
    <properties>
     <property name="required_access" value="external_airlocks"/>
    </properties>
   </object>
-  <object id="7172" template="templates/airlocks/external.tx" x="2848" y="3264">
+  <object id="7172" template="templates/machinery/door/airlock/external.tx" x="2848" y="3264">
    <properties>
     <property name="required_access" value="external_airlocks"/>
    </properties>
   </object>
-  <object id="7072" template="templates/airlocks/command.tx" name="Gateway Access" x="2880" y="3648">
+  <object id="7072" template="templates/machinery/door/airlock/command.tx" name="Gateway Access" x="2880" y="3648">
    <properties>
     <property name="required_access" value="gateway"/>
    </properties>
   </object>
-  <object id="7185" template="templates/airlocks/maintenance.tx" x="2816" y="3648">
+  <object id="7185" template="templates/machinery/door/airlock/maintenance.tx" x="2816" y="3648">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7186" template="templates/airlocks/maintenance.tx" x="3104" y="3648">
+  <object id="7186" template="templates/machinery/door/airlock/maintenance.tx" x="3104" y="3648">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7187" template="templates/airlocks/maintenance.tx" name="Chemical Storage" x="3008" y="3264">
+  <object id="7187" template="templates/machinery/door/airlock/maintenance.tx" name="Chemical Storage" x="3008" y="3264">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
@@ -1248,1674 +1248,1674 @@
     <property name="skin" value="vault"/>
    </properties>
   </object>
-  <object id="7188" template="templates/airlocks/maintenance.tx" name="Security Maintenance" x="3104" y="3072">
+  <object id="7188" template="templates/machinery/door/airlock/maintenance.tx" name="Security Maintenance" x="3104" y="3072">
    <properties>
     <property name="required_access" value="brig"/>
    </properties>
   </object>
-  <object id="7169" template="templates/airlocks/external.tx" name="Labor Camp Shuttle Airlock" x="2912" y="3008"/>
-  <object id="7170" template="templates/airlocks/external.tx" name="Labor Camp Shuttle Airlock" x="2976" y="3008"/>
-  <object id="7167" template="templates/airlocks/external.tx" name="Labor Camp Shuttle Airlock" x="2912" y="2880">
+  <object id="7169" template="templates/machinery/door/airlock/external.tx" name="Labor Camp Shuttle Airlock" x="2912" y="3008"/>
+  <object id="7170" template="templates/machinery/door/airlock/external.tx" name="Labor Camp Shuttle Airlock" x="2976" y="3008"/>
+  <object id="7167" template="templates/machinery/door/airlock/external.tx" name="Labor Camp Shuttle Airlock" x="2912" y="2880">
    <properties>
     <property name="required_access" value="brig"/>
    </properties>
   </object>
-  <object id="7168" template="templates/airlocks/external.tx" name="Labor Camp Shuttle Airlock" x="2976" y="2880">
+  <object id="7168" template="templates/machinery/door/airlock/external.tx" name="Labor Camp Shuttle Airlock" x="2976" y="2880">
    <properties>
     <property name="required_access" value="brig"/>
    </properties>
   </object>
-  <object id="7189" template="templates/airlocks/maintenance.tx" name="Law Office Maintenance" x="3168" y="3200">
+  <object id="7189" template="templates/machinery/door/airlock/maintenance.tx" name="Law Office Maintenance" x="3168" y="3200">
    <properties>
     <property name="required_access" value="lawyer"/>
    </properties>
   </object>
-  <object id="7190" template="templates/airlocks/maintenance.tx" name="Detective Maintenance" x="3392" y="3232">
+  <object id="7190" template="templates/machinery/door/airlock/maintenance.tx" name="Detective Maintenance" x="3392" y="3232">
    <properties>
     <property name="required_access" value="forensics_lockers"/>
    </properties>
   </object>
-  <object id="7320" template="templates/airlocks/public.tx" name="Law Office" x="3200" y="3072">
+  <object id="7320" template="templates/machinery/door/airlock/public.tx" name="Law Office" x="3200" y="3072">
    <properties>
     <property name="required_access" value="lawyer"/>
    </properties>
   </object>
-  <object id="7377" template="templates/airlocks/security.tx" name="Detective's Office" x="3488" y="3072">
+  <object id="7377" template="templates/machinery/door/airlock/security.tx" name="Detective's Office" x="3488" y="3072">
    <properties>
     <property name="required_access" value="forensics_lockers"/>
    </properties>
   </object>
-  <object id="7073" template="templates/airlocks/command.tx" name="Command Tool Storage" x="3520" y="3584">
+  <object id="7073" template="templates/machinery/door/airlock/command.tx" name="Command Tool Storage" x="3520" y="3584">
    <properties>
     <property name="required_access" value="heads"/>
    </properties>
   </object>
-  <object id="7074" template="templates/airlocks/command.tx" name="Command Tool Storage" x="3520" y="3488">
+  <object id="7074" template="templates/machinery/door/airlock/command.tx" name="Command Tool Storage" x="3520" y="3488">
    <properties>
     <property name="required_access" value="heads"/>
    </properties>
   </object>
-  <object id="7075" template="templates/airlocks/command.tx" name="Command Tool Storage" x="3424" y="3488">
+  <object id="7075" template="templates/machinery/door/airlock/command.tx" name="Command Tool Storage" x="3424" y="3488">
    <properties>
     <property name="required_access" value="heads"/>
    </properties>
   </object>
-  <object id="7076" template="templates/airlocks/command.tx" name="EVA Storage" x="3264" y="3648">
+  <object id="7076" template="templates/machinery/door/airlock/command.tx" name="EVA Storage" x="3264" y="3648">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="eva"/>
    </properties>
   </object>
-  <object id="7077" template="templates/airlocks/command.tx" name="EVA Storage" x="3264" y="3520">
+  <object id="7077" template="templates/machinery/door/airlock/command.tx" name="EVA Storage" x="3264" y="3520">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="eva"/>
    </properties>
   </object>
-  <object id="7078" template="templates/airlocks/command.tx" name="EVA Storage" x="3392" y="3392">
+  <object id="7078" template="templates/machinery/door/airlock/command.tx" name="EVA Storage" x="3392" y="3392">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="eva"/>
    </properties>
   </object>
-  <object id="7191" template="templates/airlocks/maintenance.tx" name="EVA Maintenance" x="3136" y="3392">
+  <object id="7191" template="templates/machinery/door/airlock/maintenance.tx" name="EVA Maintenance" x="3136" y="3392">
    <properties>
     <property name="required_access" value="eva"/>
    </properties>
   </object>
-  <object id="7301" template="templates/airlocks/public.tx" name="Unisex Restrooms" x="2176" y="3968"/>
-  <object id="7302" template="templates/airlocks/public.tx" name="Unit 1" x="2112" y="4000"/>
-  <object id="7303" template="templates/airlocks/public.tx" name="Unit 2" x="2112" y="4064"/>
-  <object id="7304" template="templates/airlocks/public.tx" name="Unit 3" x="2112" y="4128"/>
-  <object id="7305" template="templates/airlocks/public.tx" name="Unit 4" x="2112" y="4192"/>
-  <object id="7343" template="templates/airlocks/public.tx" name="Port Emergency Storage" x="2752" y="3808"/>
-  <object id="7342" template="templates/airlocks/public2.tx" name="Auxiliary Tool Storage" x="2944" y="3808">
+  <object id="7301" template="templates/machinery/door/airlock/public.tx" name="Unisex Restrooms" x="2176" y="3968"/>
+  <object id="7302" template="templates/machinery/door/airlock/public.tx" name="Unit 1" x="2112" y="4000"/>
+  <object id="7303" template="templates/machinery/door/airlock/public.tx" name="Unit 2" x="2112" y="4064"/>
+  <object id="7304" template="templates/machinery/door/airlock/public.tx" name="Unit 3" x="2112" y="4128"/>
+  <object id="7305" template="templates/machinery/door/airlock/public.tx" name="Unit 4" x="2112" y="4192"/>
+  <object id="7343" template="templates/machinery/door/airlock/public.tx" name="Port Emergency Storage" x="2752" y="3808"/>
+  <object id="7342" template="templates/machinery/door/airlock/public2.tx" name="Auxiliary Tool Storage" x="2944" y="3808">
    <properties>
     <property name="fillType" value="glass2"/>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7256" template="templates/airlocks/maintenance.tx" name="Vacant Office B" x="2816" y="4064">
+  <object id="7256" template="templates/machinery/door/airlock/maintenance.tx" name="Vacant Office B" x="2816" y="4064">
    <properties>
     <property name="required_access" value="construction"/>
    </properties>
   </object>
-  <object id="7443" template="templates/airlocks/engineering.tx" name="Vacant Office A" x="1632" y="4000">
+  <object id="7443" template="templates/machinery/door/airlock/engineering.tx" name="Vacant Office A" x="1632" y="4000">
    <properties>
     <property name="required_access" value="construction"/>
    </properties>
   </object>
-  <object id="7339" template="templates/airlocks/public2.tx" name="Central Access" x="3040" y="3680">
+  <object id="7339" template="templates/machinery/door/airlock/public2.tx" name="Central Access" x="3040" y="3680">
    <properties>
     <property name="fillType" value="glass2"/>
    </properties>
   </object>
-  <object id="7340" template="templates/airlocks/public2.tx" name="Central Access" x="3040" y="3712">
+  <object id="7340" template="templates/machinery/door/airlock/public2.tx" name="Central Access" x="3040" y="3712">
    <properties>
     <property name="fillType" value="glass2"/>
    </properties>
   </object>
-  <object id="7341" template="templates/airlocks/public2.tx" name="Central Access" x="3040" y="3744">
+  <object id="7341" template="templates/machinery/door/airlock/public2.tx" name="Central Access" x="3040" y="3744">
    <properties>
     <property name="fillType" value="glass2"/>
    </properties>
   </object>
-  <object id="7378" template="templates/airlocks/security.tx" name="Labor Shuttle" x="3136" y="3008">
+  <object id="7378" template="templates/machinery/door/airlock/security.tx" name="Labor Shuttle" x="3136" y="3008">
    <properties>
     <property name="required_access" value="sec_doors"/>
    </properties>
   </object>
-  <object id="7379" template="templates/airlocks/security.tx" name="Prisoner Processing" x="3072" y="2944">
+  <object id="7379" template="templates/machinery/door/airlock/security.tx" name="Prisoner Processing" x="3072" y="2944">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="brig"/>
    </properties>
   </object>
-  <object id="7380" template="templates/airlocks/security.tx" name="Labor Shuttle" x="3136" y="2816">
+  <object id="7380" template="templates/machinery/door/airlock/security.tx" name="Labor Shuttle" x="3136" y="2816">
    <properties>
     <property name="required_access" value="brig"/>
    </properties>
   </object>
-  <object id="7381" template="templates/airlocks/security.tx" name="Evidence Storage" x="3200" y="2848">
+  <object id="7381" template="templates/machinery/door/airlock/security.tx" name="Evidence Storage" x="3200" y="2848">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="sec_doors"/>
    </properties>
   </object>
-  <object id="7395" template="templates/airlocks/security.tx" name="Interrogation" x="3168" y="2592">
+  <object id="7395" template="templates/machinery/door/airlock/security.tx" name="Interrogation" x="3168" y="2592">
    <properties>
     <property name="required_access" value="sec_doors"/>
    </properties>
   </object>
-  <object id="7396" template="templates/airlocks/security.tx" name="Interrogation" x="3264" y="2752">
+  <object id="7396" template="templates/machinery/door/airlock/security.tx" name="Interrogation" x="3264" y="2752">
    <properties>
     <property name="required_access" value="sec_doors"/>
    </properties>
   </object>
-  <object id="7315" template="templates/airlocks/public2.tx" name="Cell 3" x="3136" y="2368">
+  <object id="7315" template="templates/machinery/door/airlock/public2.tx" name="Cell 3" x="3136" y="2368">
    <properties>
     <property name="fillType" value="glass2"/>
    </properties>
   </object>
-  <object id="7316" template="templates/airlocks/public2.tx" name="Cell 2" x="3264" y="2368">
+  <object id="7316" template="templates/machinery/door/airlock/public2.tx" name="Cell 2" x="3264" y="2368">
    <properties>
     <property name="fillType" value="glass2"/>
    </properties>
   </object>
-  <object id="7317" template="templates/airlocks/public2.tx" name="Cell 1" x="3392" y="2368">
+  <object id="7317" template="templates/machinery/door/airlock/public2.tx" name="Cell 1" x="3392" y="2368">
    <properties>
     <property name="fillType" value="glass2"/>
    </properties>
   </object>
-  <object id="7399" template="templates/airlocks/security.tx" name="Prison Transfer Centre" x="3072" y="2528">
+  <object id="7399" template="templates/machinery/door/airlock/security.tx" name="Prison Transfer Centre" x="3072" y="2528">
    <properties>
     <property name="required_access" value="brig"/>
    </properties>
   </object>
-  <object id="7400" template="templates/airlocks/security.tx" name="Long Term Cell 3" x="3136" y="2464">
-   <properties>
-    <property name="fillType" value="glass"/>
-    <property name="required_access" value="brig"/>
-   </properties>
-  </object>
-  <object id="7401" template="templates/airlocks/security.tx" name="Long Term Cell 2" x="3264" y="2464">
+  <object id="7400" template="templates/machinery/door/airlock/security.tx" name="Long Term Cell 3" x="3136" y="2464">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="brig"/>
    </properties>
   </object>
-  <object id="7402" template="templates/airlocks/security.tx" name="Long Term Cell 1" x="3392" y="2464">
+  <object id="7401" template="templates/machinery/door/airlock/security.tx" name="Long Term Cell 2" x="3264" y="2464">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="brig"/>
    </properties>
   </object>
-  <object id="7319" template="templates/airlocks/public.tx" name="Unisex Restroom" x="3488" y="2368"/>
-  <object id="7397" template="templates/airlocks/security.tx" name="Prison Wing" x="3456" y="2560">
+  <object id="7402" template="templates/machinery/door/airlock/security.tx" name="Long Term Cell 1" x="3392" y="2464">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="brig"/>
    </properties>
   </object>
-  <object id="7398" template="templates/airlocks/security.tx" name="Prison Wing" x="3488" y="2560">
+  <object id="7319" template="templates/machinery/door/airlock/public.tx" name="Unisex Restroom" x="3488" y="2368"/>
+  <object id="7397" template="templates/machinery/door/airlock/security.tx" name="Prison Wing" x="3456" y="2560">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="brig"/>
    </properties>
   </object>
-  <object id="7394" template="templates/airlocks/security.tx" name="Equipment Room" x="3904" y="2560">
+  <object id="7398" template="templates/machinery/door/airlock/security.tx" name="Prison Wing" x="3488" y="2560">
+   <properties>
+    <property name="fillType" value="glass"/>
+    <property name="required_access" value="brig"/>
+   </properties>
+  </object>
+  <object id="7394" template="templates/machinery/door/airlock/security.tx" name="Equipment Room" x="3904" y="2560">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="security"/>
    </properties>
   </object>
-  <object id="7071" template="templates/airlocks/command.tx" name="Head of Security" x="4096" y="2496">
+  <object id="7071" template="templates/machinery/door/airlock/command.tx" name="Head of Security" x="4096" y="2496">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="hos"/>
    </properties>
   </object>
-  <object id="7163" template="templates/airlocks/external.tx" name="Escape Pod Three" x="4288" y="2528"/>
-  <object id="7164" template="templates/airlocks/external.tx" name="Escape Pod Three" x="4352" y="2528"/>
-  <object id="7165" template="templates/airlocks/external.tx" name="Security External Airlock" x="4320" y="2400">
+  <object id="7163" template="templates/machinery/door/airlock/external.tx" name="Escape Pod Three" x="4288" y="2528"/>
+  <object id="7164" template="templates/machinery/door/airlock/external.tx" name="Escape Pod Three" x="4352" y="2528"/>
+  <object id="7165" template="templates/machinery/door/airlock/external.tx" name="Security External Airlock" x="4320" y="2400">
    <properties>
     <property name="required_access" value="sec_doors"/>
    </properties>
   </object>
-  <object id="7166" template="templates/airlocks/external.tx" name="Security External Airlock" x="4320" y="2464">
+  <object id="7166" template="templates/machinery/door/airlock/external.tx" name="Security External Airlock" x="4320" y="2464">
    <properties>
     <property name="required_access" value="sec_doors"/>
    </properties>
   </object>
-  <object id="7192" template="templates/airlocks/maintenance.tx" name="Security Maintenance" x="4256" y="2688">
+  <object id="7192" template="templates/machinery/door/airlock/maintenance.tx" name="Security Maintenance" x="4256" y="2688">
    <properties>
     <property name="required_access" value="security"/>
    </properties>
   </object>
-  <object id="7393" template="templates/airlocks/security.tx" name="Brig Control" x="3712" y="2720">
+  <object id="7393" template="templates/machinery/door/airlock/security.tx" name="Brig Control" x="3712" y="2720">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="armory"/>
    </properties>
   </object>
-  <object id="7392" template="templates/airlocks/security.tx" name="Security Office" x="3872" y="2720">
+  <object id="7392" template="templates/machinery/door/airlock/security.tx" name="Security Office" x="3872" y="2720">
    <properties>
     <property name="required_access" value="security"/>
    </properties>
   </object>
-  <object id="7382" template="templates/airlocks/security.tx" name="Brig Desk" x="3680" y="2848">
+  <object id="7382" template="templates/machinery/door/airlock/security.tx" name="Brig Desk" x="3680" y="2848">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="security"/>
    </properties>
   </object>
-  <object id="7387" template="templates/airlocks/security.tx" name="Brig" x="3776" y="2944">
+  <object id="7387" template="templates/machinery/door/airlock/security.tx" name="Brig" x="3776" y="2944">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="brig"/>
    </properties>
   </object>
-  <object id="7388" template="templates/airlocks/security.tx" name="Brig" x="3808" y="2944">
+  <object id="7388" template="templates/machinery/door/airlock/security.tx" name="Brig" x="3808" y="2944">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="brig"/>
    </properties>
   </object>
-  <object id="7389" template="templates/airlocks/security.tx" name="Brig" x="3776" y="2848">
+  <object id="7389" template="templates/machinery/door/airlock/security.tx" name="Brig" x="3776" y="2848">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="brig"/>
    </properties>
   </object>
-  <object id="7390" template="templates/airlocks/security.tx" name="Brig" x="3808" y="2848">
+  <object id="7390" template="templates/machinery/door/airlock/security.tx" name="Brig" x="3808" y="2848">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="brig"/>
    </properties>
   </object>
-  <object id="7391" template="templates/airlocks/security.tx" name="Brig" x="3968" y="2784">
+  <object id="7391" template="templates/machinery/door/airlock/security.tx" name="Brig" x="3968" y="2784">
    <properties>
     <property name="required_access" value="sec_doors;court"/>
    </properties>
   </object>
-  <object id="7314" template="templates/airlocks/public2.tx" name="Courtroom" x="4096" y="2912">
+  <object id="7314" template="templates/machinery/door/airlock/public2.tx" name="Courtroom" x="4096" y="2912">
    <properties>
     <property name="fillType" value="glass2"/>
     <property name="required_access" value="court"/>
    </properties>
   </object>
-  <object id="7313" template="templates/airlocks/public2.tx" name="Courtroom" x="3968" y="3008">
+  <object id="7313" template="templates/machinery/door/airlock/public2.tx" name="Courtroom" x="3968" y="3008">
    <properties>
     <property name="fillType" value="glass2"/>
    </properties>
   </object>
-  <object id="7193" template="templates/airlocks/maintenance.tx" x="4256" y="3008">
+  <object id="7193" template="templates/machinery/door/airlock/maintenance.tx" x="4256" y="3008">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7160" template="templates/airlocks/external.tx" x="4384" y="2976">
+  <object id="7160" template="templates/machinery/door/airlock/external.tx" x="4384" y="2976">
    <properties>
     <property name="required_access" value="external_airlocks"/>
    </properties>
   </object>
-  <object id="7161" template="templates/airlocks/external.tx" x="4448" y="2976">
+  <object id="7161" template="templates/machinery/door/airlock/external.tx" x="4448" y="2976">
    <properties>
     <property name="required_access" value="external_airlocks"/>
    </properties>
   </object>
-  <object id="7162" template="templates/airlocks/atmos.tx" name="Atmospherics Maintenance" x="4352" y="3072">
+  <object id="7162" template="templates/machinery/door/airlock/atmos.tx" name="Atmospherics Maintenance" x="4352" y="3072">
    <properties>
     <property name="required_access" value="maint_tunnels;atmospherics"/>
    </properties>
   </object>
-  <object id="7194" template="templates/airlocks/maintenance.tx" name="Fitness Maintenance" x="4256" y="3136">
+  <object id="7194" template="templates/machinery/door/airlock/maintenance.tx" name="Fitness Maintenance" x="4256" y="3136">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7195" template="templates/airlocks/maintenance.tx" name="Dormitories Maintenance" x="3904" y="3136">
+  <object id="7195" template="templates/machinery/door/airlock/maintenance.tx" name="Dormitories Maintenance" x="3904" y="3136">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7284" template="templates/airlocks/public.tx" name="Unisex Restrooms" x="3968" y="3520"/>
-  <object id="7285" template="templates/airlocks/public.tx" name="Unisex Showers" x="4192" y="3392"/>
-  <object id="7286" template="templates/airlocks/public.tx" name="Unit 1" x="4096" y="3584"/>
-  <object id="7287" template="templates/airlocks/public.tx" name="Unit 2" x="4160" y="3584"/>
-  <object id="7288" template="templates/airlocks/public.tx" name="Unit 3" x="4224" y="3584"/>
-  <object id="7289" template="templates/airlocks/public.tx" name="Dorm 1" x="3872" y="3488"/>
-  <object id="7290" template="templates/airlocks/public.tx" name="Dorm 2" x="3872" y="3392"/>
-  <object id="7291" template="templates/airlocks/public.tx" name="Dorm 3" x="3872" y="3296"/>
-  <object id="7292" template="templates/airlocks/public.tx" name="Dorm 4" x="3872" y="3200"/>
-  <object id="7293" template="templates/airlocks/public.tx" name="Cabin 1" x="4032" y="3232"/>
-  <object id="7294" template="templates/airlocks/public.tx" name="Cabin 2" x="4160" y="3232"/>
-  <object id="7295" template="templates/airlocks/public.tx" name="Unisex Showers" x="4128" y="3488"/>
-  <object id="7296" template="templates/airlocks/public.tx" name="Theatre Backstage" x="4320" y="3616">
+  <object id="7284" template="templates/machinery/door/airlock/public.tx" name="Unisex Restrooms" x="3968" y="3520"/>
+  <object id="7285" template="templates/machinery/door/airlock/public.tx" name="Unisex Showers" x="4192" y="3392"/>
+  <object id="7286" template="templates/machinery/door/airlock/public.tx" name="Unit 1" x="4096" y="3584"/>
+  <object id="7287" template="templates/machinery/door/airlock/public.tx" name="Unit 2" x="4160" y="3584"/>
+  <object id="7288" template="templates/machinery/door/airlock/public.tx" name="Unit 3" x="4224" y="3584"/>
+  <object id="7289" template="templates/machinery/door/airlock/public.tx" name="Dorm 1" x="3872" y="3488"/>
+  <object id="7290" template="templates/machinery/door/airlock/public.tx" name="Dorm 2" x="3872" y="3392"/>
+  <object id="7291" template="templates/machinery/door/airlock/public.tx" name="Dorm 3" x="3872" y="3296"/>
+  <object id="7292" template="templates/machinery/door/airlock/public.tx" name="Dorm 4" x="3872" y="3200"/>
+  <object id="7293" template="templates/machinery/door/airlock/public.tx" name="Cabin 1" x="4032" y="3232"/>
+  <object id="7294" template="templates/machinery/door/airlock/public.tx" name="Cabin 2" x="4160" y="3232"/>
+  <object id="7295" template="templates/machinery/door/airlock/public.tx" name="Unisex Showers" x="4128" y="3488"/>
+  <object id="7296" template="templates/machinery/door/airlock/public.tx" name="Theatre Backstage" x="4320" y="3616">
    <properties>
     <property name="required_access" value="theatre"/>
    </properties>
   </object>
-  <object id="7311" template="templates/airlocks/public2.tx" name="Fitness" x="4224" y="3296">
+  <object id="7311" template="templates/machinery/door/airlock/public2.tx" name="Fitness" x="4224" y="3296">
    <properties>
     <property name="fillType" value="glass2"/>
    </properties>
   </object>
-  <object id="7312" template="templates/airlocks/public2.tx" name="Fitness" x="4224" y="3328">
+  <object id="7312" template="templates/machinery/door/airlock/public2.tx" name="Fitness" x="4224" y="3328">
    <properties>
     <property name="fillType" value="glass2"/>
    </properties>
   </object>
-  <object id="7307" template="templates/airlocks/public2.tx" name="Holodeck Door" x="4704" y="3232">
+  <object id="7307" template="templates/machinery/door/airlock/public2.tx" name="Holodeck Door" x="4704" y="3232">
    <properties>
     <property name="fillType" value="glass2"/>
    </properties>
   </object>
-  <object id="7308" template="templates/airlocks/public2.tx" name="Holodeck Door" x="4704" y="3328">
+  <object id="7308" template="templates/machinery/door/airlock/public2.tx" name="Holodeck Door" x="4704" y="3328">
    <properties>
     <property name="fillType" value="glass2"/>
    </properties>
   </object>
-  <object id="7309" template="templates/airlocks/public2.tx" name="Holodeck Door" x="4512" y="3232">
+  <object id="7309" template="templates/machinery/door/airlock/public2.tx" name="Holodeck Door" x="4512" y="3232">
    <properties>
     <property name="fillType" value="glass2"/>
    </properties>
   </object>
-  <object id="7310" template="templates/airlocks/public2.tx" name="Holodeck Door" x="4512" y="3328">
+  <object id="7310" template="templates/machinery/door/airlock/public2.tx" name="Holodeck Door" x="4512" y="3328">
    <properties>
     <property name="fillType" value="glass2"/>
    </properties>
   </object>
-  <object id="7197" template="templates/airlocks/maintenance.tx" x="3680" y="3296">
+  <object id="7197" template="templates/machinery/door/airlock/maintenance.tx" x="3680" y="3296">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7198" template="templates/airlocks/maintenance.tx" x="3712" y="3584">
+  <object id="7198" template="templates/machinery/door/airlock/maintenance.tx" x="3712" y="3584">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7199" template="templates/airlocks/maintenance.tx" x="3872" y="3552">
+  <object id="7199" template="templates/machinery/door/airlock/maintenance.tx" x="3872" y="3552">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7196" template="templates/airlocks/maintenance.tx" x="3552" y="3296">
+  <object id="7196" template="templates/machinery/door/airlock/maintenance.tx" x="3552" y="3296">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7200" template="templates/airlocks/maintenance.tx" x="4416" y="3424">
+  <object id="7200" template="templates/machinery/door/airlock/maintenance.tx" x="4416" y="3424">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7201" template="templates/airlocks/maintenance.tx" name="Theatre Maintenance" x="4384" y="3488">
+  <object id="7201" template="templates/machinery/door/airlock/maintenance.tx" name="Theatre Maintenance" x="4384" y="3488">
    <properties>
     <property name="required_access" value="theatre"/>
    </properties>
   </object>
-  <object id="7306" template="templates/airlocks/public.tx" name="Service Maintenance" x="4992" y="3520">
+  <object id="7306" template="templates/machinery/door/airlock/public.tx" name="Service Maintenance" x="4992" y="3520">
    <properties>
     <property name="required_one_access" value="bar;janitor;kitchen;hydroponics"/>
    </properties>
   </object>
-  <object id="7202" template="templates/airlocks/maintenance.tx" name="Bar Maintenance" x="4480" y="3616">
+  <object id="7202" template="templates/machinery/door/airlock/maintenance.tx" name="Bar Maintenance" x="4480" y="3616">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7203" template="templates/airlocks/maintenance.tx" name="Bar Storage Maintenance" x="4608" y="3584">
+  <object id="7203" template="templates/machinery/door/airlock/maintenance.tx" name="Bar Storage Maintenance" x="4608" y="3584">
    <properties>
     <property name="required_access" value="bar"/>
    </properties>
   </object>
-  <object id="7297" template="templates/airlocks/public.tx" name="Bar Storage" x="4608" y="3744">
+  <object id="7297" template="templates/machinery/door/airlock/public.tx" name="Bar Storage" x="4608" y="3744">
    <properties>
     <property name="required_access" value="bar"/>
    </properties>
   </object>
-  <object id="7204" template="templates/airlocks/maintenance.tx" name="Kitchen Maintenance" x="4800" y="3616">
+  <object id="7204" template="templates/machinery/door/airlock/maintenance.tx" name="Kitchen Maintenance" x="4800" y="3616">
    <properties>
     <property name="required_access" value="kitchen"/>
    </properties>
   </object>
-  <object id="7299" template="templates/airlocks/public.tx" name="Kitchen Cold Room" x="4800" y="3776">
+  <object id="7299" template="templates/machinery/door/airlock/public.tx" name="Kitchen Cold Room" x="4800" y="3776">
    <properties>
     <property name="required_access" value="kitchen"/>
    </properties>
   </object>
-  <object id="7298" template="templates/airlocks/public.tx" name="Kitchen" x="4672" y="3968">
+  <object id="7298" template="templates/machinery/door/airlock/public.tx" name="Kitchen" x="4672" y="3968">
    <properties>
     <property name="required_access" value="kitchen"/>
    </properties>
   </object>
-  <object id="7205" template="templates/airlocks/maintenance.tx" name="Hydroponics Maintenance" x="5024" y="3616">
+  <object id="7205" template="templates/machinery/door/airlock/maintenance.tx" name="Hydroponics Maintenance" x="5024" y="3616">
    <properties>
     <property name="required_access" value="hydroponics"/>
    </properties>
   </object>
-  <object id="7444" template="templates/airlocks/public2.tx" name="Kitchen" x="4672" y="3840">
+  <object id="7444" template="templates/machinery/door/airlock/public2.tx" name="Kitchen" x="4672" y="3840">
    <properties>
     <property name="required_access" value="kitchen"/>
    </properties>
   </object>
-  <object id="7324" template="templates/airlocks/public2.tx" name="Diner" x="4352" y="4032">
+  <object id="7324" template="templates/machinery/door/airlock/public2.tx" name="Diner" x="4352" y="4032">
    <properties>
     <property name="fillType" value="glass2"/>
    </properties>
   </object>
-  <object id="7325" template="templates/airlocks/public2.tx" name="Diner" x="4416" y="4032">
+  <object id="7325" template="templates/machinery/door/airlock/public2.tx" name="Diner" x="4416" y="4032">
    <properties>
     <property name="fillType" value="glass2"/>
    </properties>
   </object>
-  <object id="7321" template="templates/airlocks/public2.tx" name="Central Access" x="4192" y="4064">
+  <object id="7321" template="templates/machinery/door/airlock/public2.tx" name="Central Access" x="4192" y="4064">
    <properties>
     <property name="fillType" value="glass2"/>
    </properties>
   </object>
-  <object id="7322" template="templates/airlocks/public2.tx" name="Central Access" x="4192" y="4096">
+  <object id="7322" template="templates/machinery/door/airlock/public2.tx" name="Central Access" x="4192" y="4096">
    <properties>
     <property name="fillType" value="glass2"/>
    </properties>
   </object>
-  <object id="7323" template="templates/airlocks/public2.tx" name="Central Access" x="4192" y="4128">
+  <object id="7323" template="templates/machinery/door/airlock/public2.tx" name="Central Access" x="4192" y="4128">
    <properties>
     <property name="fillType" value="glass2"/>
    </properties>
   </object>
-  <object id="7158" template="templates/airlocks/external.tx" name="External Access" x="4960" y="3168">
+  <object id="7158" template="templates/machinery/door/airlock/external.tx" name="External Access" x="4960" y="3168">
    <properties>
     <property name="required_access" value="external_airlocks"/>
    </properties>
   </object>
-  <object id="7159" template="templates/airlocks/external.tx" name="External Access" x="4960" y="3104">
+  <object id="7159" template="templates/machinery/door/airlock/external.tx" name="External Access" x="4960" y="3104">
    <properties>
     <property name="required_access" value="external_airlocks"/>
    </properties>
   </object>
-  <object id="7156" template="templates/airlocks/external.tx" name="Solar Maintenance" x="5152" y="2976">
+  <object id="7156" template="templates/machinery/door/airlock/external.tx" name="Solar Maintenance" x="5152" y="2976">
    <properties>
     <property name="required_access" value="engine;external_airlocks"/>
    </properties>
   </object>
-  <object id="7157" template="templates/airlocks/external.tx" name="Solar Maintenance" x="5152" y="2912">
+  <object id="7157" template="templates/machinery/door/airlock/external.tx" name="Solar Maintenance" x="5152" y="2912">
    <properties>
     <property name="required_access" value="engine;external_airlocks"/>
    </properties>
   </object>
-  <object id="7041" template="templates/airlocks/engineering.tx" name="Port Bow Solar Access" x="5152" y="3104">
+  <object id="7041" template="templates/machinery/door/airlock/engineering.tx" name="Port Bow Solar Access" x="5152" y="3104">
    <properties>
     <property name="required_access" value="engine"/>
    </properties>
   </object>
-  <object id="7214" template="templates/airlocks/maintenance.tx" x="5312" y="3232">
+  <object id="7214" template="templates/machinery/door/airlock/maintenance.tx" x="5312" y="3232">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7213" template="templates/airlocks/maintenance.tx" name="Firefighting Equipment" x="5440" y="3168">
+  <object id="7213" template="templates/machinery/door/airlock/maintenance.tx" name="Firefighting Equipment" x="5440" y="3168">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7209" template="templates/airlocks/maintenance.tx" x="5536" y="3328">
+  <object id="7209" template="templates/machinery/door/airlock/maintenance.tx" x="5536" y="3328">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7212" template="templates/airlocks/maintenance.tx" x="5664" y="3200">
+  <object id="7212" template="templates/machinery/door/airlock/maintenance.tx" x="5664" y="3200">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7040" template="templates/airlocks/engineering.tx" name="Electrical Maintenance" x="5760" y="3296">
+  <object id="7040" template="templates/machinery/door/airlock/engineering.tx" name="Electrical Maintenance" x="5760" y="3296">
    <properties>
     <property name="required_access" value="engine_equip"/>
    </properties>
   </object>
-  <object id="7211" template="templates/airlocks/maintenance.tx" name="Chapel Maintenance" x="5824" y="3488">
+  <object id="7211" template="templates/machinery/door/airlock/maintenance.tx" name="Chapel Maintenance" x="5824" y="3488">
    <properties>
     <property name="required_maintenance" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7207" template="templates/airlocks/maintenance.tx" name="Crematorium Maintenance" x="5600" y="3552">
+  <object id="7207" template="templates/machinery/door/airlock/maintenance.tx" name="Crematorium Maintenance" x="5600" y="3552">
    <properties>
     <property name="required_maintenance" value="crematorium"/>
    </properties>
   </object>
-  <object id="7300" template="templates/airlocks/public.tx" name="Crematorium" x="5632" y="3648">
+  <object id="7300" template="templates/machinery/door/airlock/public.tx" name="Crematorium" x="5632" y="3648">
    <properties>
     <property name="required_access" value="crematorium"/>
    </properties>
   </object>
-  <object id="7338" template="templates/airlocks/public2.tx" name="Chapel Office" x="5760" y="3712">
+  <object id="7338" template="templates/machinery/door/airlock/public2.tx" name="Chapel Office" x="5760" y="3712">
    <properties>
     <property name="fillType" value="glass2"/>
     <property name="required_access" value="chapel_office"/>
    </properties>
   </object>
-  <object id="7206" template="templates/airlocks/maintenance.tx" name="Library Maintenance" x="5376" y="3552">
+  <object id="7206" template="templates/machinery/door/airlock/maintenance.tx" name="Library Maintenance" x="5376" y="3552">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7332" template="templates/airlocks/public2.tx" name="Library" x="5376" y="3936">
+  <object id="7332" template="templates/machinery/door/airlock/public2.tx" name="Library" x="5376" y="3936">
    <properties>
     <property name="fillType" value="glass2"/>
    </properties>
   </object>
-  <object id="7333" template="templates/airlocks/public2.tx" name="Library" x="5376" y="3968">
+  <object id="7333" template="templates/machinery/door/airlock/public2.tx" name="Library" x="5376" y="3968">
    <properties>
     <property name="fillType" value="glass2"/>
    </properties>
   </object>
-  <object id="7334" template="templates/airlocks/public2.tx" name="Chapel" x="5696" y="3936">
+  <object id="7334" template="templates/machinery/door/airlock/public2.tx" name="Chapel" x="5696" y="3936">
    <properties>
     <property name="fillType" value="glass2"/>
    </properties>
   </object>
-  <object id="7335" template="templates/airlocks/public2.tx" name="Chapel" x="5696" y="3968">
+  <object id="7335" template="templates/machinery/door/airlock/public2.tx" name="Chapel" x="5696" y="3968">
    <properties>
     <property name="fillType" value="glass2"/>
    </properties>
   </object>
-  <object id="7336" template="templates/airlocks/public2.tx" name="Chapel" x="5984" y="3936">
+  <object id="7336" template="templates/machinery/door/airlock/public2.tx" name="Chapel" x="5984" y="3936">
    <properties>
     <property name="fillType" value="glass2"/>
    </properties>
   </object>
-  <object id="7337" template="templates/airlocks/public2.tx" name="Chapel" x="5984" y="3968">
+  <object id="7337" template="templates/machinery/door/airlock/public2.tx" name="Chapel" x="5984" y="3968">
    <properties>
     <property name="fillType" value="glass2"/>
    </properties>
   </object>
-  <object id="7210" template="templates/airlocks/maintenance.tx" x="5280" y="3904">
+  <object id="7210" template="templates/machinery/door/airlock/maintenance.tx" x="5280" y="3904">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7326" template="templates/airlocks/public2.tx" name="Hydroponics" x="5024" y="4032">
+  <object id="7326" template="templates/machinery/door/airlock/public2.tx" name="Hydroponics" x="5024" y="4032">
    <properties>
     <property name="fillType" value="glass2"/>
     <property name="required_access" value="hydroponics"/>
    </properties>
   </object>
-  <object id="7327" template="templates/airlocks/public2.tx" name="Hydroponics" x="5056" y="4032">
+  <object id="7327" template="templates/machinery/door/airlock/public2.tx" name="Hydroponics" x="5056" y="4032">
    <properties>
     <property name="fillType" value="glass2"/>
     <property name="required_access" value="hydroponics"/>
    </properties>
   </object>
-  <object id="7436" template="templates/airlocks/maintenance.tx" x="3168" y="4288">
+  <object id="7436" template="templates/machinery/door/airlock/maintenance.tx" x="3168" y="4288">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7080" template="templates/airlocks/command.tx" name="Bridge" x="3968" y="3936">
+  <object id="7080" template="templates/machinery/door/airlock/command.tx" name="Bridge" x="3968" y="3936">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="heads"/>
    </properties>
   </object>
-  <object id="7081" template="templates/airlocks/command.tx" name="Bridge" x="3904" y="3936">
+  <object id="7081" template="templates/machinery/door/airlock/command.tx" name="Bridge" x="3904" y="3936">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="heads"/>
    </properties>
   </object>
-  <object id="7082" template="templates/airlocks/command.tx" name="Bridge" x="3328" y="3936">
+  <object id="7082" template="templates/machinery/door/airlock/command.tx" name="Bridge" x="3328" y="3936">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="heads"/>
    </properties>
   </object>
-  <object id="7083" template="templates/airlocks/command.tx" name="Bridge" x="3264" y="3936">
+  <object id="7083" template="templates/machinery/door/airlock/command.tx" name="Bridge" x="3264" y="3936">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="heads"/>
    </properties>
   </object>
-  <object id="7088" template="templates/airlocks/command.tx" name="Captain's Quarters" x="3872" y="4288">
+  <object id="7088" template="templates/machinery/door/airlock/command.tx" name="Captain's Quarters" x="3872" y="4288">
    <properties>
     <property name="required_access" value="captain"/>
    </properties>
   </object>
-  <object id="7089" template="templates/airlocks/command.tx" name="Captain's Office" x="3840" y="4000">
+  <object id="7089" template="templates/machinery/door/airlock/command.tx" name="Captain's Office" x="3840" y="4000">
    <properties>
     <property name="required_access" value="captain"/>
    </properties>
   </object>
-  <object id="7445" template="templates/airlocks/public.tx" name="Private Restroom" x="3936" y="4320"/>
-  <object id="7446" template="templates/airlocks/maintenance.tx" name="Captain's Office Maintenance" x="4032" y="4288">
+  <object id="7445" template="templates/machinery/door/airlock/public.tx" name="Private Restroom" x="3936" y="4320"/>
+  <object id="7446" template="templates/machinery/door/airlock/maintenance.tx" name="Captain's Office Maintenance" x="4032" y="4288">
    <properties>
     <property name="required_access" value="captain"/>
    </properties>
   </object>
-  <object id="7447" template="templates/airlocks/maintenance.tx" name="Teleporter Maintenance" x="4032" y="4416">
+  <object id="7447" template="templates/machinery/door/airlock/maintenance.tx" name="Teleporter Maintenance" x="4032" y="4416">
    <properties>
     <property name="required_access" value="teleporter"/>
    </properties>
   </object>
-  <object id="7087" template="templates/airlocks/command.tx" name="Teleporter Access" x="4064" y="4480">
+  <object id="7087" template="templates/machinery/door/airlock/command.tx" name="Teleporter Access" x="4064" y="4480">
    <properties>
     <property name="required_access" value="teleporter"/>
    </properties>
   </object>
-  <object id="7090" template="templates/airlocks/engineering.tx" name="Gravity Generator" x="3616" y="4576">
+  <object id="7090" template="templates/machinery/door/airlock/engineering.tx" name="Gravity Generator" x="3616" y="4576">
    <properties>
     <property name="required_access" value="engine_equip"/>
    </properties>
   </object>
-  <object id="7092" template="templates/airlocks/engineering.tx" name="Gravity Generator" x="3616" y="4480">
+  <object id="7092" template="templates/machinery/door/airlock/engineering.tx" name="Gravity Generator" x="3616" y="4480">
    <properties>
     <property name="required_access" value="engine_equip"/>
    </properties>
   </object>
-  <object id="7093" template="templates/airlocks/engineering.tx" name="Gravity Generator" x="3616" y="4352">
+  <object id="7093" template="templates/machinery/door/airlock/engineering.tx" name="Gravity Generator" x="3616" y="4352">
    <properties>
     <property name="required_access" value="engine_equip"/>
    </properties>
   </object>
-  <object id="7085" template="templates/airlocks/command.tx" name="Head of Personnel's Office" x="3392" y="4320">
+  <object id="7085" template="templates/machinery/door/airlock/command.tx" name="Head of Personnel's Office" x="3392" y="4320">
    <properties>
     <property name="required_access" value="hop"/>
    </properties>
   </object>
-  <object id="7086" template="templates/airlocks/command.tx" name="Head of Personnel's Office" x="3392" y="4576">
+  <object id="7086" template="templates/machinery/door/airlock/command.tx" name="Head of Personnel's Office" x="3392" y="4576">
    <properties>
     <property name="required_access" value="hop"/>
    </properties>
   </object>
-  <object id="7084" template="templates/airlocks/command.tx" name="Conference Room" x="3392" y="4000">
+  <object id="7084" template="templates/machinery/door/airlock/command.tx" name="Conference Room" x="3392" y="4000">
    <properties>
     <property name="required_access" value="heads"/>
    </properties>
   </object>
-  <object id="7448" template="templates/airlocks/security.tx" name="Holding Area" x="6112" y="3808">
+  <object id="7448" template="templates/machinery/door/airlock/security.tx" name="Holding Area" x="6112" y="3808">
    <properties>
     <property name="required_access" value="brig"/>
    </properties>
   </object>
-  <object id="7153" template="templates/airlocks/external.tx" name="Security Escape Airlock" x="6208" y="3776">
+  <object id="7153" template="templates/machinery/door/airlock/external.tx" name="Security Escape Airlock" x="6208" y="3776">
    <properties>
     <property name="required_access" value="brig"/>
    </properties>
   </object>
-  <object id="7154" template="templates/airlocks/external.tx" name="Security Escape Airlock" x="6368" y="3776">
+  <object id="7154" template="templates/machinery/door/airlock/external.tx" name="Security Escape Airlock" x="6368" y="3776">
    <properties>
     <property name="required_access" value="brig"/>
    </properties>
   </object>
-  <object id="7150" template="templates/airlocks/external.tx" name="Escape Airlock" x="6368" y="4032"/>
-  <object id="7151" template="templates/airlocks/external.tx" name="Escape Airlock" x="6208" y="4032"/>
-  <object id="7152" template="templates/airlocks/external.tx" name="Escape Airlock" x="6208" y="3840"/>
-  <object id="7155" template="templates/airlocks/external.tx" name="Escape Airlock" x="6368" y="3840"/>
-  <object id="7148" template="templates/airlocks/external.tx" name="Cargo Escape Airlock" x="6208" y="4096"/>
-  <object id="7149" template="templates/airlocks/external.tx" name="Cargo Escape Airlock" x="6368" y="4096"/>
-  <object id="7215" template="templates/airlocks/maintenance.tx" x="6080" y="4192">
+  <object id="7150" template="templates/machinery/door/airlock/external.tx" name="Escape Airlock" x="6368" y="4032"/>
+  <object id="7151" template="templates/machinery/door/airlock/external.tx" name="Escape Airlock" x="6208" y="4032"/>
+  <object id="7152" template="templates/machinery/door/airlock/external.tx" name="Escape Airlock" x="6208" y="3840"/>
+  <object id="7155" template="templates/machinery/door/airlock/external.tx" name="Escape Airlock" x="6368" y="3840"/>
+  <object id="7148" template="templates/machinery/door/airlock/external.tx" name="Cargo Escape Airlock" x="6208" y="4096"/>
+  <object id="7149" template="templates/machinery/door/airlock/external.tx" name="Cargo Escape Airlock" x="6368" y="4096"/>
+  <object id="7215" template="templates/machinery/door/airlock/maintenance.tx" x="6080" y="4192">
    <properties>
     <property name="required_maintenance" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7146" template="templates/airlocks/external.tx" x="6208" y="4288">
+  <object id="7146" template="templates/machinery/door/airlock/external.tx" x="6208" y="4288">
    <properties>
     <property name="required_access" value="external_airlocks"/>
    </properties>
   </object>
-  <object id="7147" template="templates/airlocks/external.tx" x="6272" y="4288">
+  <object id="7147" template="templates/machinery/door/airlock/external.tx" x="6272" y="4288">
    <properties>
     <property name="required_access" value="external_airlocks"/>
    </properties>
   </object>
-  <object id="7216" template="templates/airlocks/maintenance.tx" name="Experimental Lab Maintenance" x="6304" y="4416">
+  <object id="7216" template="templates/machinery/door/airlock/maintenance.tx" name="Experimental Lab Maintenance" x="6304" y="4416">
    <properties>
     <property name="required_access" value="research"/>
    </properties>
   </object>
-  <object id="7217" template="templates/airlocks/maintenance.tx" x="6368" y="4512">
+  <object id="7217" template="templates/machinery/door/airlock/maintenance.tx" x="6368" y="4512">
    <properties>
     <property name="require_one_access" value="maint_tunnels;tox_storage"/>
    </properties>
   </object>
-  <object id="7218" template="templates/airlocks/maintenance.tx" x="6368" y="4672">
+  <object id="7218" template="templates/machinery/door/airlock/maintenance.tx" x="6368" y="4672">
    <properties>
     <property name="require_one_access" value="maint_tunnels;tox_storage"/>
    </properties>
   </object>
-  <object id="7219" template="templates/airlocks/maintenance.tx" x="6240" y="4768">
+  <object id="7219" template="templates/machinery/door/airlock/maintenance.tx" x="6240" y="4768">
    <properties>
     <property name="require_one_access" value="maint_tunnels;tox_storage"/>
    </properties>
   </object>
-  <object id="7366" template="templates/airlocks/research.tx" name="Toxins Launch Room Access" x="6176" y="4832">
+  <object id="7366" template="templates/machinery/door/airlock/research.tx" name="Toxins Launch Room Access" x="6176" y="4832">
    <properties>
     <property name="required_access" value="tox"/>
    </properties>
   </object>
-  <object id="7367" template="templates/airlocks/research.tx" name="Toxins Launch Room" x="6304" y="4832">
+  <object id="7367" template="templates/machinery/door/airlock/research.tx" name="Toxins Launch Room" x="6304" y="4832">
    <properties>
     <property name="required_access" value="tox"/>
    </properties>
   </object>
-  <object id="7449" template="templates/airlocks/research.tx" x="5984" y="4960">
+  <object id="7449" template="templates/machinery/door/airlock/research.tx" x="5984" y="4960">
    <properties>
     <property name="fillType" value="glass"/>
    </properties>
   </object>
-  <object id="7450" template="templates/airlocks/research.tx" x="6048" y="4960">
+  <object id="7450" template="templates/machinery/door/airlock/research.tx" x="6048" y="4960">
    <properties>
     <property name="fillType" value="glass"/>
    </properties>
   </object>
-  <object id="7220" template="templates/airlocks/maintenance.tx" x="6240" y="4896">
+  <object id="7220" template="templates/machinery/door/airlock/maintenance.tx" x="6240" y="4896">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7221" template="templates/airlocks/maintenance.tx" x="6304" y="4992">
+  <object id="7221" template="templates/machinery/door/airlock/maintenance.tx" x="6304" y="4992">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7222" template="templates/airlocks/maintenance.tx" x="6336" y="5280">
+  <object id="7222" template="templates/machinery/door/airlock/maintenance.tx" x="6336" y="5280">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7452" template="templates/airlocks/research.tx" name="Test Chamber" x="6080" y="5248">
+  <object id="7452" template="templates/machinery/door/airlock/research.tx" name="Test Chamber" x="6080" y="5248">
    <properties>
     <property name="required_access" value="research"/>
    </properties>
   </object>
-  <object id="7453" template="templates/airlocks/research.tx" name="Test Chamber" x="6144" y="5248">
+  <object id="7453" template="templates/machinery/door/airlock/research.tx" name="Test Chamber" x="6144" y="5248">
    <properties>
     <property name="required_access" value="research"/>
    </properties>
   </object>
-  <object id="7454" template="templates/airlocks/maintenance.tx" name="Air Supply Maintenance" x="5792" y="5504">
+  <object id="7454" template="templates/machinery/door/airlock/maintenance.tx" name="Air Supply Maintenance" x="5792" y="5504">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7144" template="templates/airlocks/external.tx" x="6432" y="5504">
+  <object id="7144" template="templates/machinery/door/airlock/external.tx" x="6432" y="5504">
    <properties>
     <property name="required_access" value="external_airlocks"/>
    </properties>
   </object>
-  <object id="7145" template="templates/airlocks/external.tx" x="6496" y="5504">
+  <object id="7145" template="templates/machinery/door/airlock/external.tx" x="6496" y="5504">
    <properties>
     <property name="required_access" value="external_airlocks"/>
    </properties>
   </object>
-  <object id="7223" template="templates/airlocks/maintenance.tx" name="Firefighting Equipment" x="6368" y="5536"/>
-  <object id="7224" template="templates/airlocks/maintenance.tx" name="Research Delivery Access" x="6176" y="5568">
+  <object id="7223" template="templates/machinery/door/airlock/maintenance.tx" name="Firefighting Equipment" x="6368" y="5536"/>
+  <object id="7224" template="templates/machinery/door/airlock/maintenance.tx" name="Research Delivery Access" x="6176" y="5568">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7455" template="templates/airlocks/engineering.tx" name="Starboard Quarter Solar Access" x="6240" y="5664">
+  <object id="7455" template="templates/machinery/door/airlock/engineering.tx" name="Starboard Quarter Solar Access" x="6240" y="5664">
    <properties>
     <property name="required_access" value="engine"/>
    </properties>
   </object>
-  <object id="7142" template="templates/airlocks/external.tx" name="Solar Maintenance" x="6240" y="5792">
+  <object id="7142" template="templates/machinery/door/airlock/external.tx" name="Solar Maintenance" x="6240" y="5792">
    <properties>
     <property name="required_access" value="engine;external_airlocks"/>
    </properties>
   </object>
-  <object id="7143" template="templates/airlocks/external.tx" name="Solar Maintenance" x="6240" y="5856">
+  <object id="7143" template="templates/machinery/door/airlock/external.tx" name="Solar Maintenance" x="6240" y="5856">
    <properties>
     <property name="required_access" value="engine;external_airlocks"/>
    </properties>
   </object>
-  <object id="7140" template="templates/airlocks/external.tx" name="External Access" x="5600" y="6016">
+  <object id="7140" template="templates/machinery/door/airlock/external.tx" name="External Access" x="5600" y="6016">
    <properties>
     <property name="required_access" value="external_airlocks"/>
    </properties>
   </object>
-  <object id="7141" template="templates/airlocks/external.tx" name="External Access" x="5632" y="5984">
+  <object id="7141" template="templates/machinery/door/airlock/external.tx" name="External Access" x="5632" y="5984">
    <properties>
     <property name="required_access" value="external_airlocks"/>
    </properties>
   </object>
-  <object id="7225" template="templates/airlocks/maintenance.tx" x="5920" y="5760">
+  <object id="7225" template="templates/machinery/door/airlock/maintenance.tx" x="5920" y="5760">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7226" template="templates/airlocks/maintenance.tx" x="5728" y="5888">
+  <object id="7226" template="templates/machinery/door/airlock/maintenance.tx" x="5728" y="5888">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7227" template="templates/airlocks/maintenance.tx" x="5696" y="5632">
+  <object id="7227" template="templates/machinery/door/airlock/maintenance.tx" x="5696" y="5632">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7228" template="templates/airlocks/maintenance.tx" name="Testing Lab Maintenance" x="5760" y="5408">
+  <object id="7228" template="templates/machinery/door/airlock/maintenance.tx" name="Testing Lab Maintenance" x="5760" y="5408">
    <properties>
     <property name="required_access" value="research"/>
    </properties>
   </object>
-  <object id="7403" template="templates/airlocks/research.tx" name="Testing Lab" x="5760" y="5248">
+  <object id="7403" template="templates/machinery/door/airlock/research.tx" name="Testing Lab" x="5760" y="5248">
    <properties>
     <property name="required_access" value="research"/>
    </properties>
   </object>
-  <object id="7404" template="templates/airlocks/research.tx" name="Toxins Lab" x="5856" y="5120">
+  <object id="7404" template="templates/machinery/door/airlock/research.tx" name="Toxins Lab" x="5856" y="5120">
    <properties>
     <property name="required_access" value="tox"/>
    </properties>
   </object>
-  <object id="7364" template="templates/airlocks/research.tx" name="Xenobiology Lab" x="5696" y="4960">
+  <object id="7364" template="templates/machinery/door/airlock/research.tx" name="Xenobiology Lab" x="5696" y="4960">
    <properties>
     <property name="required_access" value="xenobiology"/>
    </properties>
   </object>
-  <object id="7070" template="templates/airlocks/command.tx" name="Research Director's Office" x="5824" y="4832">
+  <object id="7070" template="templates/machinery/door/airlock/command.tx" name="Research Director's Office" x="5824" y="4832">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="rd"/>
    </properties>
   </object>
-  <object id="7363" template="templates/airlocks/research.tx" name="Toxins Storage" x="5696" y="4800">
+  <object id="7363" template="templates/machinery/door/airlock/research.tx" name="Toxins Storage" x="5696" y="4800">
    <properties>
     <property name="required_access" value="tox_storage"/>
    </properties>
   </object>
-  <object id="7371" template="templates/airlocks/security.tx" name="Security Office" x="5600" y="4576">
+  <object id="7371" template="templates/machinery/door/airlock/security.tx" name="Security Office" x="5600" y="4576">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="sec_doors"/>
    </properties>
   </object>
-  <object id="7368" template="templates/airlocks/command.tx" name="Server Room" x="5408" y="4576">
+  <object id="7368" template="templates/machinery/door/airlock/command.tx" name="Server Room" x="5408" y="4576">
    <properties>
     <property name="required_access" value="rd"/>
    </properties>
   </object>
-  <object id="7369" template="templates/airlocks/command.tx" name="Server Room" x="5376" y="4640">
+  <object id="7369" template="templates/machinery/door/airlock/command.tx" name="Server Room" x="5376" y="4640">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="rd"/>
    </properties>
   </object>
-  <object id="7362" template="templates/airlocks/research.tx" name="Experimentation Lab" x="6048" y="4416">
+  <object id="7362" template="templates/machinery/door/airlock/research.tx" name="Experimentation Lab" x="6048" y="4416">
    <properties>
     <property name="required_access" value="research"/>
    </properties>
   </object>
-  <object id="7355" template="templates/airlocks/research.tx" name="Research Division Access" x="5760" y="4192">
+  <object id="7355" template="templates/machinery/door/airlock/research.tx" name="Research Division Access" x="5760" y="4192">
    <properties>
     <property name="required_access" value="research"/>
    </properties>
   </object>
-  <object id="7356" template="templates/airlocks/research.tx" name="Research Division Access" x="5760" y="4320">
+  <object id="7356" template="templates/machinery/door/airlock/research.tx" name="Research Division Access" x="5760" y="4320">
    <properties>
     <property name="required_access" value="research"/>
    </properties>
   </object>
-  <object id="7370" template="templates/airlocks/research.tx" name="Robotics Lab" x="5632" y="4480">
+  <object id="7370" template="templates/machinery/door/airlock/research.tx" name="Robotics Lab" x="5632" y="4480">
    <properties>
     <property name="required_access" value="robotics"/>
    </properties>
   </object>
-  <object id="7357" template="templates/airlocks/research.tx" name="Mech Bay" x="5408" y="4160">
+  <object id="7357" template="templates/machinery/door/airlock/research.tx" name="Mech Bay" x="5408" y="4160">
    <properties>
     <property name="required_access" value="robotics"/>
    </properties>
   </object>
-  <object id="7358" template="templates/airlocks/research.tx" name="Robotics Lab" x="5440" y="4192">
+  <object id="7358" template="templates/machinery/door/airlock/research.tx" name="Robotics Lab" x="5440" y="4192">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="robotics"/>
    </properties>
   </object>
-  <object id="7418" template="templates/airlocks/public.tx" name="Starboard Emergency Storage" x="5088" y="4192"/>
-  <object id="7412" template="templates/airlocks/maintenance.tx" name="Mech Bay Maintenance" x="5248" y="4192">
+  <object id="7418" template="templates/machinery/door/airlock/public.tx" name="Starboard Emergency Storage" x="5088" y="4192"/>
+  <object id="7412" template="templates/machinery/door/airlock/maintenance.tx" name="Mech Bay Maintenance" x="5248" y="4192">
    <properties>
     <property name="required_access" value="robotics"/>
    </properties>
   </object>
-  <object id="7411" template="templates/airlocks/maintenance.tx" x="5216" y="4160">
+  <object id="7411" template="templates/machinery/door/airlock/maintenance.tx" x="5216" y="4160">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7413" template="templates/airlocks/maintenance.tx" name="Morgue Maintenance" x="5024" y="4320">
+  <object id="7413" template="templates/machinery/door/airlock/maintenance.tx" name="Morgue Maintenance" x="5024" y="4320">
    <properties>
     <property name="required_access" value="morgue"/>
    </properties>
   </object>
-  <object id="7267" template="templates/airlocks/medical.tx" name="Morgue" x="4896" y="4160">
+  <object id="7267" template="templates/machinery/door/airlock/medical.tx" name="Morgue" x="4896" y="4160">
    <properties>
     <property name="required_access" value="morgue"/>
    </properties>
   </object>
-  <object id="7266" template="templates/airlocks/medical.tx" name="Morgue" x="4832" y="4352">
+  <object id="7266" template="templates/machinery/door/airlock/medical.tx" name="Morgue" x="4832" y="4352">
    <properties>
     <property name="required_access" value="morgue;medical"/>
    </properties>
   </object>
-  <object id="7414" template="templates/airlocks/maintenance.tx" x="5216" y="4480">
+  <object id="7414" template="templates/machinery/door/airlock/maintenance.tx" x="5216" y="4480">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7415" template="templates/airlocks/maintenance.tx" x="5216" y="4608">
+  <object id="7415" template="templates/machinery/door/airlock/maintenance.tx" x="5216" y="4608">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7365" template="templates/airlocks/research.tx" name="Kill Chamber" x="5408" y="5504">
+  <object id="7365" template="templates/machinery/door/airlock/research.tx" name="Kill Chamber" x="5408" y="5504">
    <properties>
     <property name="required_access" value="xenobiology"/>
    </properties>
   </object>
-  <object id="7360" template="templates/airlocks/research.tx" name="Genetics Research Access" x="5280" y="4544">
+  <object id="7360" template="templates/machinery/door/airlock/research.tx" name="Genetics Research Access" x="5280" y="4544">
    <properties>
     <property name="required_access" value="research"/>
    </properties>
   </object>
-  <object id="7359" template="templates/airlocks/research.tx" name="Genetics Research Access" x="5184" y="4544">
+  <object id="7359" template="templates/machinery/door/airlock/research.tx" name="Genetics Research Access" x="5184" y="4544">
    <properties>
     <property name="required_access" value="genetics"/>
    </properties>
   </object>
-  <object id="7361" template="templates/airlocks/research.tx" name="Genetics Research" x="4992" y="4576">
+  <object id="7361" template="templates/machinery/door/airlock/research.tx" name="Genetics Research" x="4992" y="4576">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="medical;genetics;cloning"/>
    </properties>
   </object>
-  <object id="7268" template="templates/airlocks/medical.tx" name="Genetics" x="4896" y="4480">
+  <object id="7268" template="templates/machinery/door/airlock/medical.tx" name="Genetics" x="4896" y="4480">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="medical;cloning"/>
    </properties>
   </object>
-  <object id="7069" template="templates/airlocks/command.tx" name="Chief Medical Officer's Office" x="4992" y="4800">
+  <object id="7069" template="templates/machinery/door/airlock/command.tx" name="Chief Medical Officer's Office" x="4992" y="4800">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="cmo"/>
    </properties>
   </object>
-  <object id="7273" template="templates/airlocks/medical.tx" name="Patient Room 1" x="4864" y="4832">
+  <object id="7273" template="templates/machinery/door/airlock/medical.tx" name="Patient Room 1" x="4864" y="4832">
    <properties>
     <property name="required_access" value="medical"/>
    </properties>
   </object>
-  <object id="7274" template="templates/airlocks/medical.tx" name="Patient Room 2" x="4864" y="4896">
+  <object id="7274" template="templates/machinery/door/airlock/medical.tx" name="Patient Room 2" x="4864" y="4896">
    <properties>
     <property name="required_access" value="medical"/>
    </properties>
   </object>
-  <object id="7271" template="templates/airlocks/medical.tx" name="Medbay Storage" x="4512" y="4736">
+  <object id="7271" template="templates/machinery/door/airlock/medical.tx" name="Medbay Storage" x="4512" y="4736">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="medical"/>
    </properties>
   </object>
-  <object id="7272" template="templates/airlocks/medical.tx" name="Medbay Storage" x="4736" y="4736">
+  <object id="7272" template="templates/machinery/door/airlock/medical.tx" name="Medbay Storage" x="4736" y="4736">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="medical"/>
    </properties>
   </object>
-  <object id="7270" template="templates/airlocks/medical.tx" name="Recovery Room" x="4448" y="4672">
+  <object id="7270" template="templates/machinery/door/airlock/medical.tx" name="Recovery Room" x="4448" y="4672">
    <properties>
     <property name="fillType" value="glass"/>
    </properties>
   </object>
-  <object id="7269" template="templates/airlocks/medical.tx" name="Operating Theatre" x="4384" y="4768">
+  <object id="7269" template="templates/machinery/door/airlock/medical.tx" name="Operating Theatre" x="4384" y="4768">
    <properties>
     <property name="required_access" value="surgery"/>
    </properties>
   </object>
-  <object id="7459" template="templates/airlocks/medical.tx" name="Surgery Observation" x="4288" y="4576">
+  <object id="7459" template="templates/machinery/door/airlock/medical.tx" name="Surgery Observation" x="4288" y="4576">
    <properties>
     <property name="fillType" value="glass"/>
    </properties>
   </object>
-  <object id="7372" template="templates/airlocks/security.tx" name="Security Office" x="4704" y="4352">
+  <object id="7372" template="templates/machinery/door/airlock/security.tx" name="Security Office" x="4704" y="4352">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="sec_doors"/>
    </properties>
   </object>
-  <object id="7262" template="templates/airlocks/medical.tx" name="Medbay" x="4448" y="4352">
+  <object id="7262" template="templates/machinery/door/airlock/medical.tx" name="Medbay" x="4448" y="4352">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="medical"/>
    </properties>
   </object>
-  <object id="7263" template="templates/airlocks/medical.tx" name="Medbay" x="4480" y="4352">
+  <object id="7263" template="templates/machinery/door/airlock/medical.tx" name="Medbay" x="4480" y="4352">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="medical"/>
    </properties>
   </object>
-  <object id="7264" template="templates/airlocks/medical.tx" name="Medbay Reception" x="4576" y="4384">
+  <object id="7264" template="templates/machinery/door/airlock/medical.tx" name="Medbay Reception" x="4576" y="4384">
    <properties>
     <property name="required_access" value="medical"/>
    </properties>
   </object>
-  <object id="7265" template="templates/airlocks/medical.tx" name="Chemistry Lab" x="4256" y="4416">
+  <object id="7265" template="templates/machinery/door/airlock/medical.tx" name="Chemistry Lab" x="4256" y="4416">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="medical;chemistry"/>
    </properties>
   </object>
-  <object id="7405" template="templates/airlocks/virology.tx" name="Virology Exterior Airlock" x="4928" y="4960">
+  <object id="7405" template="templates/machinery/door/airlock/virology.tx" name="Virology Exterior Airlock" x="4928" y="4960">
    <properties>
     <property name="required_access" value="virology"/>
    </properties>
   </object>
-  <object id="7406" template="templates/airlocks/virology.tx" name="Virology Interior Airlock" x="4928" y="5088">
+  <object id="7406" template="templates/machinery/door/airlock/virology.tx" name="Virology Interior Airlock" x="4928" y="5088">
    <properties>
     <property name="required_access" value="virology"/>
    </properties>
   </object>
-  <object id="7407" template="templates/airlocks/virology.tx" name="Break Room" x="4832" y="5120">
+  <object id="7407" template="templates/machinery/door/airlock/virology.tx" name="Break Room" x="4832" y="5120">
    <properties>
     <property name="required_access" value="virology"/>
    </properties>
   </object>
-  <object id="7408" template="templates/airlocks/virology.tx" name="Isolation Room A" x="5024" y="5184">
-   <properties>
-    <property name="fillType" value="glass"/>
-    <property name="required_access" value="virology"/>
-   </properties>
-  </object>
-  <object id="7409" template="templates/airlocks/virology.tx" name="Isolation Room B" x="5152" y="5184">
+  <object id="7408" template="templates/machinery/door/airlock/virology.tx" name="Isolation Room A" x="5024" y="5184">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="virology"/>
    </properties>
   </object>
-  <object id="7410" template="templates/airlocks/virology.tx" name="Monkey Pen" x="5088" y="5088">
+  <object id="7409" template="templates/machinery/door/airlock/virology.tx" name="Isolation Room B" x="5152" y="5184">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="virology"/>
    </properties>
   </object>
-  <object id="7416" template="templates/airlocks/maintenance.tx" name="Medbay Maintenance" x="4992" y="4928">
+  <object id="7410" template="templates/machinery/door/airlock/virology.tx" name="Monkey Pen" x="5088" y="5088">
+   <properties>
+    <property name="fillType" value="glass"/>
+    <property name="required_access" value="virology"/>
+   </properties>
+  </object>
+  <object id="7416" template="templates/machinery/door/airlock/maintenance.tx" name="Medbay Maintenance" x="4992" y="4928">
    <properties>
     <property name="required_access" value="medical"/>
    </properties>
   </object>
-  <object id="7417" template="templates/airlocks/maintenance.tx" name="Xenobiology Maintenance" x="5248" y="4960">
+  <object id="7417" template="templates/machinery/door/airlock/maintenance.tx" name="Xenobiology Maintenance" x="5248" y="4960">
    <properties>
     <property name="required_access" value="xenobiology"/>
    </properties>
   </object>
-  <object id="7231" template="templates/airlocks/atmos.tx" name="Atmospherics Maintenance" x="5024" y="5408">
+  <object id="7231" template="templates/machinery/door/airlock/atmos.tx" name="Atmospherics Maintenance" x="5024" y="5408">
    <properties>
     <property name="required_access" value="maint_tunnels;atmospherics"/>
    </properties>
   </object>
-  <object id="7229" template="templates/airlocks/maintenance.tx" x="5216" y="5440">
+  <object id="7229" template="templates/machinery/door/airlock/maintenance.tx" x="5216" y="5440">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7230" template="templates/airlocks/maintenance.tx" name="Biohazard Disposals" x="5024" y="5696">
+  <object id="7230" template="templates/machinery/door/airlock/maintenance.tx" name="Biohazard Disposals" x="5024" y="5696">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7136" template="templates/airlocks/external.tx" name="External Access" x="5184" y="5728">
+  <object id="7136" template="templates/machinery/door/airlock/external.tx" name="External Access" x="5184" y="5728">
    <properties>
     <property name="required_access" value="external_airlocks"/>
    </properties>
   </object>
-  <object id="7137" template="templates/airlocks/external.tx" name="External Access" x="5216" y="5792">
+  <object id="7137" template="templates/machinery/door/airlock/external.tx" name="External Access" x="5216" y="5792">
    <properties>
     <property name="required_access" value="external_airlocks"/>
    </properties>
   </object>
-  <object id="7046" template="templates/airlocks/atmos.tx" name="Turbine Access" x="4768" y="5536">
+  <object id="7046" template="templates/machinery/door/airlock/atmos.tx" name="Turbine Access" x="4768" y="5536">
    <properties>
     <property name="required_access" value="construction"/>
    </properties>
   </object>
-  <object id="7353" template="templates/airlocks/public2.tx" x="4800" y="5760">
+  <object id="7353" template="templates/machinery/door/airlock/public2.tx" x="4800" y="5760">
    <properties>
     <property name="fillType" value="glass2"/>
    </properties>
   </object>
-  <object id="7354" template="templates/airlocks/public2.tx" x="4800" y="5824">
+  <object id="7354" template="templates/machinery/door/airlock/public2.tx" x="4800" y="5824">
    <properties>
     <property name="fillType" value="glass2"/>
    </properties>
   </object>
-  <object id="7460" template="templates/airlocks/maintenance.tx" name="Atmospherics Maintenance" x="4064" y="4928">
+  <object id="7460" template="templates/machinery/door/airlock/maintenance.tx" name="Atmospherics Maintenance" x="4064" y="4928">
    <properties>
     <property name="required_access" value="atmospherics"/>
    </properties>
   </object>
-  <object id="7419" template="templates/airlocks/public.tx" name="Custodial Closet" x="3840" y="4704">
+  <object id="7419" template="templates/machinery/door/airlock/public.tx" name="Custodial Closet" x="3840" y="4704">
    <properties>
     <property name="required_access" value="janitor"/>
    </properties>
   </object>
-  <object id="7233" template="templates/airlocks/maintenance.tx" name="Surgery Maintenance" x="4192" y="4768">
+  <object id="7233" template="templates/machinery/door/airlock/maintenance.tx" name="Surgery Maintenance" x="4192" y="4768">
    <properties>
     <property name="required_access" value="surgery"/>
    </properties>
   </object>
-  <object id="7232" template="templates/airlocks/maintenance.tx" x="4032" y="4704">
+  <object id="7232" template="templates/machinery/door/airlock/maintenance.tx" x="4032" y="4704">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7235" template="templates/airlocks/maintenance.tx" x="3680" y="4864">
+  <object id="7235" template="templates/machinery/door/airlock/maintenance.tx" x="3680" y="4864">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7234" template="templates/airlocks/maintenance.tx" name="Custodial Maintenance" x="3872" y="4832">
+  <object id="7234" template="templates/machinery/door/airlock/maintenance.tx" name="Custodial Maintenance" x="3872" y="4832">
    <properties>
     <property name="required_access" value="janitor"/>
    </properties>
   </object>
-  <object id="7236" template="templates/airlocks/engineering.tx" name="Tech Storage" x="3552" y="4832">
+  <object id="7236" template="templates/machinery/door/airlock/engineering.tx" name="Tech Storage" x="3552" y="4832">
    <properties>
     <property name="required_access" value="tech_storage"/>
    </properties>
   </object>
-  <object id="7422" template="templates/airlocks/highsecurity.tx" name="AI Upload Access" x="3616" y="3968">
+  <object id="7422" template="templates/machinery/door/airlock/highsecurity.tx" name="AI Upload Access" x="3616" y="3968">
    <properties>
     <property name="required_access" value="ai_upload"/>
    </properties>
   </object>
-  <object id="7461" template="templates/airlocks/highsecurity.tx" name="Secure Tech Storage" x="3264" y="4832">
+  <object id="7461" template="templates/machinery/door/airlock/highsecurity.tx" name="Secure Tech Storage" x="3264" y="4832">
    <properties>
     <property name="required_access" value="heads;tech_storage"/>
    </properties>
   </object>
-  <object id="7350" template="templates/airlocks/public2.tx" name="Central Access" x="3584" y="4704">
+  <object id="7350" template="templates/machinery/door/airlock/public2.tx" name="Central Access" x="3584" y="4704">
    <properties>
     <property name="fillType" value="glass2"/>
    </properties>
   </object>
-  <object id="7351" template="templates/airlocks/public2.tx" name="Central Access" x="3616" y="4704">
+  <object id="7351" template="templates/machinery/door/airlock/public2.tx" name="Central Access" x="3616" y="4704">
    <properties>
     <property name="fillType" value="glass2"/>
    </properties>
   </object>
-  <object id="7352" template="templates/airlocks/public2.tx" name="Central Access" x="3648" y="4704">
+  <object id="7352" template="templates/machinery/door/airlock/public2.tx" name="Central Access" x="3648" y="4704">
    <properties>
     <property name="fillType" value="glass2"/>
    </properties>
   </object>
-  <object id="7237" template="templates/airlocks/engineering.tx" name="Contruction Area" x="3552" y="5056">
+  <object id="7237" template="templates/machinery/door/airlock/engineering.tx" name="Contruction Area" x="3552" y="5056">
    <properties>
     <property name="required_access" value="construction"/>
    </properties>
   </object>
-  <object id="7420" template="templates/airlocks/maintenance.tx" name="Construction Area Maintenance" x="3264" y="5088">
+  <object id="7420" template="templates/machinery/door/airlock/maintenance.tx" name="Construction Area Maintenance" x="3264" y="5088">
    <properties>
     <property name="required_access" value="construction"/>
    </properties>
   </object>
-  <object id="7462" template="templates/airlocks/maintenance.tx" x="3552" y="5376">
+  <object id="7462" template="templates/machinery/door/airlock/maintenance.tx" x="3552" y="5376">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7253" template="templates/airlocks/maintenance.tx" x="3552" y="5536">
+  <object id="7253" template="templates/machinery/door/airlock/maintenance.tx" x="3552" y="5536">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7064" template="templates/airlocks/engineering.tx" name="Telecommunications" x="3488" y="5472">
+  <object id="7064" template="templates/machinery/door/airlock/engineering.tx" name="Telecommunications" x="3488" y="5472">
    <properties>
     <property name="required_access" value="tcomsat"/>
    </properties>
   </object>
-  <object id="7065" template="templates/airlocks/engineering.tx" name="Server Room" x="3360" y="5376">
+  <object id="7065" template="templates/machinery/door/airlock/engineering.tx" name="Server Room" x="3360" y="5376">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="tcomsat"/>
    </properties>
   </object>
-  <object id="7066" template="templates/airlocks/engineering.tx" name="Server Room" x="3296" y="5376">
+  <object id="7066" template="templates/machinery/door/airlock/engineering.tx" name="Server Room" x="3296" y="5376">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="tcomsat"/>
    </properties>
   </object>
-  <object id="7068" template="templates/airlocks/command.tx" name="Control Room" x="3424" y="5344">
+  <object id="7068" template="templates/machinery/door/airlock/command.tx" name="Control Room" x="3424" y="5344">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="heads;tcomsat"/>
    </properties>
   </object>
-  <object id="7047" template="templates/airlocks/atmos.tx" name="Distribution Loop" x="4128" y="5088">
+  <object id="7047" template="templates/machinery/door/airlock/atmos.tx" name="Distribution Loop" x="4128" y="5088">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="atmospherics"/>
    </properties>
   </object>
-  <object id="7044" template="templates/airlocks/atmos.tx" name="Atmospherics" x="3904" y="5184">
+  <object id="7044" template="templates/machinery/door/airlock/atmos.tx" name="Atmospherics" x="3904" y="5184">
    <properties>
     <property name="required_access" value="atmospherics"/>
    </properties>
   </object>
-  <object id="7045" template="templates/airlocks/atmos.tx" name="Atmospherics" x="3776" y="5280">
+  <object id="7045" template="templates/machinery/door/airlock/atmos.tx" name="Atmospherics" x="3776" y="5280">
    <properties>
     <property name="required_access" value="atmospherics"/>
    </properties>
   </object>
-  <object id="7048" template="templates/airlocks/atmos.tx" name="Atmospherics Monitoring" x="3840" y="5152">
+  <object id="7048" template="templates/machinery/door/airlock/atmos.tx" name="Atmospherics Monitoring" x="3840" y="5152">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="atmospherics"/>
    </properties>
   </object>
-  <object id="7049" template="templates/airlocks/engineering.tx" name="Engineering" x="3712" y="5472">
+  <object id="7049" template="templates/machinery/door/airlock/engineering.tx" name="Engineering" x="3712" y="5472">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="construction"/>
    </properties>
   </object>
-  <object id="7373" template="templates/airlocks/security.tx" name="Security Office" x="3840" y="5344">
+  <object id="7373" template="templates/machinery/door/airlock/security.tx" name="Security Office" x="3840" y="5344">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="sec_doors"/>
    </properties>
   </object>
-  <object id="7050" template="templates/airlocks/engineering.tx" name="Engine Room" x="3904" y="5568">
+  <object id="7050" template="templates/machinery/door/airlock/engineering.tx" name="Engine Room" x="3904" y="5568">
    <properties>
     <property name="required_access" value="engine"/>
    </properties>
   </object>
-  <object id="7051" template="templates/airlocks/engineering.tx" name="Engine Room" x="3904" y="5696">
+  <object id="7051" template="templates/machinery/door/airlock/engineering.tx" name="Engine Room" x="3904" y="5696">
    <properties>
     <property name="required_access" value="engine"/>
    </properties>
   </object>
-  <object id="7067" template="templates/airlocks/command.tx" name="Chief Engineer's Office" x="3808" y="5728">
+  <object id="7067" template="templates/machinery/door/airlock/command.tx" name="Chief Engineer's Office" x="3808" y="5728">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="ce"/>
    </properties>
   </object>
-  <object id="7134" template="templates/airlocks/external.tx" name="Atmospherics External Airlock" x="4384" y="5600">
+  <object id="7134" template="templates/machinery/door/airlock/external.tx" name="Atmospherics External Airlock" x="4384" y="5600">
    <properties>
     <property name="required_access" value="atmospherics"/>
    </properties>
   </object>
-  <object id="7135" template="templates/airlocks/external.tx" name="Atmospherics External Airlock" x="4448" y="5600">
+  <object id="7135" template="templates/machinery/door/airlock/external.tx" name="Atmospherics External Airlock" x="4448" y="5600">
    <properties>
     <property name="required_access" value="atmospherics"/>
    </properties>
   </object>
-  <object id="7132" template="templates/airlocks/external.tx" name="Escape Pod Four" x="4096" y="5920"/>
-  <object id="7133" template="templates/airlocks/external.tx" name="Escape Pod Four" x="4160" y="5920"/>
-  <object id="7421" template="templates/airlocks/command.tx" name="MiniSat Access" x="4064" y="6048">
+  <object id="7132" template="templates/machinery/door/airlock/external.tx" name="Escape Pod Four" x="4096" y="5920"/>
+  <object id="7133" template="templates/machinery/door/airlock/external.tx" name="Escape Pod Four" x="4160" y="5920"/>
+  <object id="7421" template="templates/machinery/door/airlock/command.tx" name="MiniSat Access" x="4064" y="6048">
    <properties>
     <property name="required_access" value="minisat"/>
    </properties>
   </object>
-  <object id="7130" template="templates/airlocks/external.tx" name="Engineering External Access" x="4000" y="6080">
+  <object id="7130" template="templates/machinery/door/airlock/external.tx" name="Engineering External Access" x="4000" y="6080">
    <properties>
     <property name="required_access" value="engine;external_airlocks"/>
    </properties>
   </object>
-  <object id="7131" template="templates/airlocks/external.tx" name="Engineering External Access" x="4000" y="6144">
+  <object id="7131" template="templates/machinery/door/airlock/external.tx" name="Engineering External Access" x="4000" y="6144">
    <properties>
     <property name="required_access" value="engine;external_airlocks"/>
    </properties>
   </object>
-  <object id="7054" template="templates/airlocks/engineering.tx" name="Supermatter Engine Room" x="3360" y="5920">
+  <object id="7054" template="templates/machinery/door/airlock/engineering.tx" name="Supermatter Engine Room" x="3360" y="5920">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="engine"/>
    </properties>
   </object>
-  <object id="7056" template="templates/airlocks/engineering.tx" name="Supermatter Engine Room" x="3584" y="5856">
+  <object id="7056" template="templates/machinery/door/airlock/engineering.tx" name="Supermatter Engine Room" x="3584" y="5856">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="engine"/>
    </properties>
   </object>
-  <object id="7057" template="templates/airlocks/engineering.tx" name="Supermatter Engine Room" x="3648" y="5856">
+  <object id="7057" template="templates/machinery/door/airlock/engineering.tx" name="Supermatter Engine Room" x="3648" y="5856">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="engine"/>
    </properties>
   </object>
-  <object id="7058" template="templates/airlocks/engineering.tx" name="Supermatter Engine Room" x="3872" y="5920">
+  <object id="7058" template="templates/machinery/door/airlock/engineering.tx" name="Supermatter Engine Room" x="3872" y="5920">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="engine"/>
    </properties>
   </object>
-  <object id="7059" template="templates/airlocks/engineering.tx" name="Supermatter Engine Room" x="3936" y="6016">
+  <object id="7059" template="templates/machinery/door/airlock/engineering.tx" name="Supermatter Engine Room" x="3936" y="6016">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="engine"/>
    </properties>
   </object>
-  <object id="7062" template="templates/airlocks/engineering.tx" name="Laser Room" x="3488" y="6304">
+  <object id="7062" template="templates/machinery/door/airlock/engineering.tx" name="Laser Room" x="3488" y="6304">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="engine"/>
    </properties>
   </object>
-  <object id="7063" template="templates/airlocks/engineering.tx" name="Laser Room" x="3744" y="6304">
+  <object id="7063" template="templates/machinery/door/airlock/engineering.tx" name="Laser Room" x="3744" y="6304">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="engine"/>
    </properties>
   </object>
-  <object id="7060" template="templates/airlocks/engineering.tx" name="Supermatter Chamber" x="3616" y="5984">
+  <object id="7060" template="templates/machinery/door/airlock/engineering.tx" name="Supermatter Chamber" x="3616" y="5984">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="engine"/>
    </properties>
   </object>
-  <object id="7061" template="templates/airlocks/engineering.tx" name="Supermatter Chamber" x="3616" y="6048">
+  <object id="7061" template="templates/machinery/door/airlock/engineering.tx" name="Supermatter Chamber" x="3616" y="6048">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="engine"/>
    </properties>
   </object>
-  <object id="7128" template="templates/airlocks/external.tx" name="Engineering External Access" x="3328" y="5984">
+  <object id="7128" template="templates/machinery/door/airlock/external.tx" name="Engineering External Access" x="3328" y="5984">
    <properties>
     <property name="required_access" value="engine;external_airlocks"/>
    </properties>
   </object>
-  <object id="7129" template="templates/airlocks/external.tx" name="Engineering External Access" x="3328" y="6048">
+  <object id="7129" template="templates/machinery/door/airlock/external.tx" name="Engineering External Access" x="3328" y="6048">
    <properties>
     <property name="required_access" value="engine;external_airlocks"/>
    </properties>
   </object>
-  <object id="7055" template="templates/airlocks/engineering.tx" name="Power Storage" x="3424" y="5760">
+  <object id="7055" template="templates/machinery/door/airlock/engineering.tx" name="Power Storage" x="3424" y="5760">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="engine_equip"/>
    </properties>
   </object>
-  <object id="7252" template="templates/airlocks/maintenance.tx" name="Engineering Maintenance" x="3136" y="5824">
+  <object id="7252" template="templates/machinery/door/airlock/maintenance.tx" name="Engineering Maintenance" x="3136" y="5824">
    <properties>
     <property name="required_access" value="engine"/>
    </properties>
   </object>
-  <object id="7052" template="templates/airlocks/engineering.tx" name="SMES Room" x="2944" y="5888">
+  <object id="7052" template="templates/machinery/door/airlock/engineering.tx" name="SMES Room" x="2944" y="5888">
    <properties>
     <property name="required_access" value="construction"/>
    </properties>
   </object>
-  <object id="7053" template="templates/airlocks/engineering.tx" name="SMES Room" x="3040" y="5888">
+  <object id="7053" template="templates/machinery/door/airlock/engineering.tx" name="SMES Room" x="3040" y="5888">
    <properties>
     <property name="required_access" value="construction"/>
    </properties>
   </object>
-  <object id="7464" template="templates/airlocks/public.tx" name="Observatory Access" x="2624" y="5952"/>
-  <object id="7251" template="templates/airlocks/maintenance.tx" x="2656" y="5760">
+  <object id="7464" template="templates/machinery/door/airlock/public.tx" name="Observatory Access" x="2624" y="5952"/>
+  <object id="7251" template="templates/machinery/door/airlock/maintenance.tx" x="2656" y="5760">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7126" template="templates/airlocks/external.tx" name="External Access" x="2496" y="5760">
+  <object id="7126" template="templates/machinery/door/airlock/external.tx" name="External Access" x="2496" y="5760">
    <properties>
     <property name="required_access" value="external_airlocks"/>
    </properties>
   </object>
-  <object id="7127" template="templates/airlocks/external.tx" name="External Access" x="2560" y="5760">
+  <object id="7127" template="templates/machinery/door/airlock/external.tx" name="External Access" x="2560" y="5760">
    <properties>
     <property name="required_access" value="external_airlocks"/>
    </properties>
   </object>
-  <object id="7246" template="templates/airlocks/maintenance.tx" x="2496" y="5408">
+  <object id="7246" template="templates/machinery/door/airlock/maintenance.tx" x="2496" y="5408">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7247" template="templates/airlocks/maintenance.tx" x="2560" y="5440">
+  <object id="7247" template="templates/machinery/door/airlock/maintenance.tx" x="2560" y="5440">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7248" template="templates/airlocks/maintenance.tx" x="2624" y="5536">
+  <object id="7248" template="templates/machinery/door/airlock/maintenance.tx" x="2624" y="5536">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7249" template="templates/airlocks/maintenance.tx" x="2656" y="5600">
+  <object id="7249" template="templates/machinery/door/airlock/maintenance.tx" x="2656" y="5600">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7124" template="templates/airlocks/external.tx" name="Solar Maintenance" x="2304" y="5632">
+  <object id="7124" template="templates/machinery/door/airlock/external.tx" name="Solar Maintenance" x="2304" y="5632">
    <properties>
     <property name="required_access" value="engine;external_airlocks"/>
    </properties>
   </object>
-  <object id="7125" template="templates/airlocks/external.tx" name="Solar Maintenance" x="2368" y="5632">
+  <object id="7125" template="templates/machinery/door/airlock/external.tx" name="Solar Maintenance" x="2368" y="5632">
    <properties>
     <property name="required_access" value="engine;external_airlocks"/>
    </properties>
   </object>
-  <object id="7250" template="templates/airlocks/engineering.tx" name="Port Quarter Solar Access" x="2496" y="5632">
+  <object id="7250" template="templates/machinery/door/airlock/engineering.tx" name="Port Quarter Solar Access" x="2496" y="5632">
    <properties>
     <property name="required_access" value="engine"/>
    </properties>
   </object>
-  <object id="7242" template="templates/airlocks/maintenance.tx" name="Incinerator Access" x="2688" y="5312">
+  <object id="7242" template="templates/machinery/door/airlock/maintenance.tx" name="Incinerator Access" x="2688" y="5312">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7245" template="templates/airlocks/maintenance.tx" name="Incinerator Access" x="2560" y="5376">
+  <object id="7245" template="templates/machinery/door/airlock/maintenance.tx" name="Incinerator Access" x="2560" y="5376">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7122" template="templates/airlocks/external.tx" name="External Access" x="2400" y="5280">
+  <object id="7122" template="templates/machinery/door/airlock/external.tx" name="External Access" x="2400" y="5280">
    <properties>
     <property name="required_access" value="external_airlocks"/>
    </properties>
   </object>
-  <object id="7123" template="templates/airlocks/external.tx" name="External Access" x="2464" y="5280">
+  <object id="7123" template="templates/machinery/door/airlock/external.tx" name="External Access" x="2464" y="5280">
    <properties>
     <property name="required_access" value="external_airlocks"/>
    </properties>
   </object>
-  <object id="7241" template="templates/airlocks/maintenance.tx" x="2784" y="5152">
+  <object id="7241" template="templates/machinery/door/airlock/maintenance.tx" x="2784" y="5152">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7243" template="templates/airlocks/maintenance.tx" x="2560" y="5152">
+  <object id="7243" template="templates/machinery/door/airlock/maintenance.tx" x="2560" y="5152">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7244" template="templates/airlocks/maintenance.tx" name="Maint Bar Access" x="2560" y="5056">
+  <object id="7244" template="templates/machinery/door/airlock/maintenance.tx" name="Maint Bar Access" x="2560" y="5056">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7238" template="templates/airlocks/maintenance.tx" x="3072" y="4704">
+  <object id="7238" template="templates/machinery/door/airlock/maintenance.tx" x="3072" y="4704">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7240" template="templates/airlocks/maintenance.tx" name="Firefighting Equipment" x="2976" y="4800">
+  <object id="7240" template="templates/machinery/door/airlock/maintenance.tx" name="Firefighting Equipment" x="2976" y="4800">
    <properties>
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7239" template="templates/airlocks/maintenance.tx" name="Mining Maintenance" x="2912" y="4736">
+  <object id="7239" template="templates/machinery/door/airlock/maintenance.tx" name="Mining Maintenance" x="2912" y="4736">
    <properties>
     <property name="required_access" value="mining"/>
    </properties>
   </object>
-  <object id="7121" template="templates/airlocks/external.tx" name="Mining Dock Airlock" x="2592" y="4864">
+  <object id="7121" template="templates/machinery/door/airlock/external.tx" name="Mining Dock Airlock" x="2592" y="4864">
    <properties>
     <property name="required_access" value="mining"/>
    </properties>
   </object>
-  <object id="7281" template="templates/airlocks/mining.tx" name="Mining Dock" x="2688" y="4864">
+  <object id="7281" template="templates/machinery/door/airlock/mining.tx" name="Mining Dock" x="2688" y="4864">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="mining"/>
    </properties>
   </object>
-  <object id="7375" template="templates/airlocks/security.tx" name="Security Office" x="2880" y="4640">
+  <object id="7375" template="templates/machinery/door/airlock/security.tx" name="Security Office" x="2880" y="4640">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="sec_doors"/>
    </properties>
   </object>
-  <object id="7280" template="templates/airlocks/mining.tx" x="2816" y="4576">
+  <object id="7280" template="templates/machinery/door/airlock/mining.tx" x="2816" y="4576">
    <properties>
     <property name="required_access" value="mining"/>
    </properties>
   </object>
-  <object id="7282" template="templates/airlocks/mining.tx" name="Quartermaster" x="2720" y="4640">
+  <object id="7282" template="templates/machinery/door/airlock/mining.tx" name="Quartermaster" x="2720" y="4640">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="qm"/>
    </properties>
   </object>
-  <object id="7283" template="templates/airlocks/mining.tx" name="Quartermaster" x="2592" y="4576">
+  <object id="7283" template="templates/machinery/door/airlock/mining.tx" name="Quartermaster" x="2592" y="4576">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="qm"/>
    </properties>
   </object>
-  <object id="7275" template="templates/airlocks/mining.tx" name="Delivery Office" x="2944" y="4320">
+  <object id="7275" template="templates/machinery/door/airlock/mining.tx" name="Delivery Office" x="2944" y="4320">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="mailsorting"/>
    </properties>
   </object>
-  <object id="7277" template="templates/airlocks/mining.tx" name="Cargo Office" x="2816" y="4288">
+  <object id="7277" template="templates/machinery/door/airlock/mining.tx" name="Cargo Office" x="2816" y="4288">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="mailsorting"/>
    </properties>
   </object>
-  <object id="7276" template="templates/airlocks/mining.tx" name="Cargo Office" x="2880" y="4448">
+  <object id="7276" template="templates/machinery/door/airlock/mining.tx" name="Cargo Office" x="2880" y="4448">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="mailsorting"/>
    </properties>
   </object>
-  <object id="7278" template="templates/airlocks/mining.tx" name="Cargo Bay" x="2688" y="4320">
+  <object id="7278" template="templates/machinery/door/airlock/mining.tx" name="Cargo Bay" x="2688" y="4320">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="cargo"/>
    </properties>
   </object>
-  <object id="7279" template="templates/airlocks/mining.tx" name="Cargo Bay" x="2688" y="4352">
+  <object id="7279" template="templates/machinery/door/airlock/mining.tx" name="Cargo Bay" x="2688" y="4352">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="cargo"/>
    </properties>
   </object>
-  <object id="7255" template="templates/airlocks/maintenance.tx" name="Cargo Bay Maintenance" x="2368" y="4288">
+  <object id="7255" template="templates/machinery/door/airlock/maintenance.tx" name="Cargo Bay Maintenance" x="2368" y="4288">
    <properties>
     <property name="required_access" value="cargo"/>
    </properties>
   </object>
-  <object id="7117" template="templates/airlocks/external.tx" name="Supply Shuttle Airlock" x="2208" y="4448">
+  <object id="7117" template="templates/machinery/door/airlock/external.tx" name="Supply Shuttle Airlock" x="2208" y="4448">
    <properties>
     <property name="required_access" value="cargo"/>
    </properties>
   </object>
-  <object id="7118" template="templates/airlocks/external.tx" name="Supply Shuttle Airlock" x="2272" y="4448">
+  <object id="7118" template="templates/machinery/door/airlock/external.tx" name="Supply Shuttle Airlock" x="2272" y="4448">
    <properties>
     <property name="required_access" value="cargo"/>
    </properties>
   </object>
-  <object id="7119" template="templates/airlocks/external.tx" name="Supply Shuttle Airlock" x="2208" y="4512">
+  <object id="7119" template="templates/machinery/door/airlock/external.tx" name="Supply Shuttle Airlock" x="2208" y="4512">
    <properties>
     <property name="required_access" value="cargo"/>
    </properties>
   </object>
-  <object id="7120" template="templates/airlocks/external.tx" name="Supply Shuttle Airlock" x="2272" y="4512">
+  <object id="7120" template="templates/machinery/door/airlock/external.tx" name="Supply Shuttle Airlock" x="2272" y="4512">
    <properties>
     <property name="required_access" value="cargo"/>
    </properties>
   </object>
-  <object id="7138" template="templates/airlocks/external.tx" name="MiniSat External Access" x="4672" y="6240">
+  <object id="7138" template="templates/machinery/door/airlock/external.tx" name="MiniSat External Access" x="4672" y="6240">
    <properties>
     <property name="required_access" value="external_airlocks;minisat"/>
    </properties>
   </object>
-  <object id="7139" template="templates/airlocks/external.tx" name="MiniSat External Access" x="4736" y="6240">
+  <object id="7139" template="templates/machinery/door/airlock/external.tx" name="MiniSat External Access" x="4736" y="6240">
    <properties>
     <property name="required_access" value="external_airlocks;minisat"/>
    </properties>
   </object>
-  <object id="7423" template="templates/airlocks/hatch.tx" name="MiniSat Foyer" x="4800" y="6304">
+  <object id="7423" template="templates/machinery/door/airlock/hatch.tx" name="MiniSat Foyer" x="4800" y="6304">
    <properties>
     <property name="required_access" value="minisat"/>
    </properties>
   </object>
-  <object id="7425" template="templates/airlocks/hatch.tx" name="MiniSat Teleporter" x="4896" y="6400">
+  <object id="7425" template="templates/machinery/door/airlock/hatch.tx" name="MiniSat Teleporter" x="4896" y="6400">
    <properties>
     <property name="required_access" value="teleporter;minisat"/>
    </properties>
   </object>
-  <object id="7424" template="templates/airlocks/hatch.tx" name="MiniSat Antechamber" x="4800" y="6496">
+  <object id="7424" template="templates/machinery/door/airlock/hatch.tx" name="MiniSat Antechamber" x="4800" y="6496">
    <properties>
     <property name="required_access" value="minisat"/>
    </properties>
   </object>
-  <object id="7426" template="templates/airlocks/hatch.tx" name="MiniSat Atmospherics" x="4736" y="6592">
+  <object id="7426" template="templates/machinery/door/airlock/hatch.tx" name="MiniSat Atmospherics" x="4736" y="6592">
    <properties>
     <property name="required_access" value="minisat"/>
    </properties>
   </object>
-  <object id="7427" template="templates/airlocks/hatch.tx" name="MiniSat Service Bay" x="4864" y="6592">
+  <object id="7427" template="templates/machinery/door/airlock/hatch.tx" name="MiniSat Service Bay" x="4864" y="6592">
    <properties>
     <property name="required_access" value="minisat"/>
    </properties>
   </object>
-  <object id="7431" template="templates/airlocks/hatch_maintenance.tx" name="MiniSat Maintenance" x="4672" y="6656">
+  <object id="7431" template="templates/machinery/door/airlock/hatch_maintenance.tx" name="MiniSat Maintenance" x="4672" y="6656">
    <properties>
     <property name="required_access" value="minisat"/>
    </properties>
   </object>
-  <object id="7432" template="templates/airlocks/hatch_maintenance.tx" name="MiniSat Maintenance" x="4928" y="6656">
+  <object id="7432" template="templates/machinery/door/airlock/hatch_maintenance.tx" name="MiniSat Maintenance" x="4928" y="6656">
    <properties>
     <property name="required_access" value="minisat"/>
    </properties>
   </object>
-  <object id="7433" template="templates/airlocks/hatch_maintenance.tx" name="MiniSat Maintenance" x="4704" y="6816">
+  <object id="7433" template="templates/machinery/door/airlock/hatch_maintenance.tx" name="MiniSat Maintenance" x="4704" y="6816">
    <properties>
     <property name="required_access" value="minisat"/>
    </properties>
   </object>
-  <object id="7434" template="templates/airlocks/hatch_maintenance.tx" name="MiniSat Maintenance" x="4896" y="6816">
+  <object id="7434" template="templates/machinery/door/airlock/hatch_maintenance.tx" name="MiniSat Maintenance" x="4896" y="6816">
    <properties>
     <property name="required_access" value="minisat"/>
    </properties>
   </object>
-  <object id="7428" template="templates/airlocks/hatch.tx" name="MiniSat Antechamber Hallway" x="4800" y="6656">
+  <object id="7428" template="templates/machinery/door/airlock/hatch.tx" name="MiniSat Antechamber Hallway" x="4800" y="6656">
    <properties>
     <property name="required_access" value="minisat"/>
    </properties>
   </object>
-  <object id="7429" template="templates/airlocks/hatch.tx" name="MiniSat Chamber Observation" x="4800" y="6976">
+  <object id="7429" template="templates/machinery/door/airlock/hatch.tx" name="MiniSat Chamber Observation" x="4800" y="6976">
    <properties>
     <property name="required_access" value="minisat"/>
    </properties>
   </object>
-  <object id="7430" template="templates/airlocks/command.tx" name="AI Core" x="4800" y="7072">
+  <object id="7430" template="templates/machinery/door/airlock/command.tx" name="AI Core" x="4800" y="7072">
    <properties>
     <property name="fillType" value="glass"/>
     <property name="required_access" value="minisat"/>
    </properties>
   </object>
-  <object id="7473" template="templates/airlocks/public2.tx" name="Dormitory" x="3904" y="3584"/>
-  <object id="7474" template="templates/airlocks/public2.tx" name="Dormitory" x="3936" y="3584"/>
-  <object id="7476" template="templates/doors/shutter.tx" name="Gateway Access Shutters" x="2944" y="3648"/>
-  <object id="7477" template="templates/doors/shutter.tx" name="Gateway Access Shutters" x="2976" y="3648"/>
-  <object id="7478" template="templates/doors/shutter.tx" name="Mech Bay" x="5312" y="4160"/>
-  <object id="7479" template="templates/doors/shutter.tx" name="Mech Bay" x="5344" y="4160"/>
-  <object id="7480" template="templates/doors/shutter.tx" name="Mech Bay" x="5376" y="4160"/>
-  <object id="7481" template="templates/doors/shutter.tx" name="Auxillary Base Shutters" x="1472" y="3296"/>
-  <object id="7483" template="templates/doors/shutter.tx" name="Kitchen Shutters" x="4768" y="4000"/>
-  <object id="7484" template="templates/doors/shutter.tx" name="Kitchen Shutters" x="4800" y="4000"/>
-  <object id="7485" template="templates/doors/shutter.tx" name="Kitchen Shutters" x="4832" y="4000"/>
-  <object id="7487" template="templates/doors/shutter.tx" name="Kitchen Shutters" x="4864" y="4000"/>
-  <object id="7488" template="templates/doors/shutter.tx" name="Warehouse Shutters" x="2624" y="4224"/>
-  <object id="7489" template="templates/doors/shutter.tx" name="Armory Shutters" x="3808" y="2496"/>
-  <object id="7490" template="templates/doors/shutter.tx" name="MiniSat Teleport Access" x="4896" y="6368"/>
-  <object id="7491" template="templates/doors/shutter.tx" x="3008" y="4064"/>
-  <object id="7492" template="templates/doors/shutter.tx" x="3008" y="4032"/>
+  <object id="7473" template="templates/machinery/door/airlock/public2.tx" name="Dormitory" x="3904" y="3584"/>
+  <object id="7474" template="templates/machinery/door/airlock/public2.tx" name="Dormitory" x="3936" y="3584"/>
+  <object id="7476" template="templates/machinery/door/shutter.tx" name="Gateway Access Shutters" x="2944" y="3648"/>
+  <object id="7477" template="templates/machinery/door/shutter.tx" name="Gateway Access Shutters" x="2976" y="3648"/>
+  <object id="7478" template="templates/machinery/door/shutter.tx" name="Mech Bay" x="5312" y="4160"/>
+  <object id="7479" template="templates/machinery/door/shutter.tx" name="Mech Bay" x="5344" y="4160"/>
+  <object id="7480" template="templates/machinery/door/shutter.tx" name="Mech Bay" x="5376" y="4160"/>
+  <object id="7481" template="templates/machinery/door/shutter.tx" name="Auxillary Base Shutters" x="1472" y="3296"/>
+  <object id="7483" template="templates/machinery/door/shutter.tx" name="Kitchen Shutters" x="4768" y="4000"/>
+  <object id="7484" template="templates/machinery/door/shutter.tx" name="Kitchen Shutters" x="4800" y="4000"/>
+  <object id="7485" template="templates/machinery/door/shutter.tx" name="Kitchen Shutters" x="4832" y="4000"/>
+  <object id="7487" template="templates/machinery/door/shutter.tx" name="Kitchen Shutters" x="4864" y="4000"/>
+  <object id="7488" template="templates/machinery/door/shutter.tx" name="Warehouse Shutters" x="2624" y="4224"/>
+  <object id="7489" template="templates/machinery/door/shutter.tx" name="Armory Shutters" x="3808" y="2496"/>
+  <object id="7490" template="templates/machinery/door/shutter.tx" name="MiniSat Teleport Access" x="4896" y="6368"/>
+  <object id="7491" template="templates/machinery/door/shutter.tx" x="3008" y="4064"/>
+  <object id="7492" template="templates/machinery/door/shutter.tx" x="3008" y="4032"/>
  </objectgroup>
  <objectgroup id="3" name="walls-windows" locked="1">
   <object id="2" template="templates/structure_wall_reinforced.tx" x="3424" y="3808"/>
