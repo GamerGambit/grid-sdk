@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.2" orientation="orthogonal" renderorder="right-down" width="255" height="255" tilewidth="32" tileheight="32" infinite="0" nextlayerid="9" nextobjectid="7476">
+<map version="1.4" tiledversion="1.4.2" orientation="orthogonal" renderorder="right-down" width="255" height="255" tilewidth="32" tileheight="32" infinite="0" nextlayerid="9" nextobjectid="7493">
  <editorsettings>
   <export target="../box.lua" format="lua"/>
  </editorsettings>
@@ -10,6 +10,7 @@
  <tileset firstgid="1585" source="tilesets/turfs/walls/wall.tsx"/>
  <tileset firstgid="1621" source="tilesets/obj/structures.tsx"/>
  <tileset firstgid="2041" source="tilesets/obj/airlocks.tsx"/>
+ <tileset firstgid="2177" source="tilesets/obj/shutter.tsx"/>
  <layer id="1" name="space" width="255" height="255" locked="1">
   <data encoding="csv">
 65,34,3,43,73,25,11,62,27,21,74,57,60,49,39,50,40,5,54,24,15,34,28,50,55,28,8,61,29,39,28,4,60,69,47,12,14,46,45,10,10,64,18,24,2,10,5,47,67,57,9,77,50,53,36,67,18,53,42,57,15,42,16,62,1,13,33,5,35,28,9,8,57,63,1,27,75,50,5,77,60,34,36,44,64,69,59,41,1,8,3,71,35,1,49,31,24,5,34,49,55,10,69,24,32,12,50,65,64,16,19,10,3,18,52,10,35,37,31,9,26,40,33,41,56,42,77,53,9,47,77,30,42,61,46,6,70,45,49,11,59,67,61,42,73,5,28,7,6,63,36,7,73,73,6,8,58,62,43,67,43,11,29,34,16,39,11,57,34,55,73,28,1,47,23,6,10,9,12,25,62,64,27,27,14,3,55,9,21,46,55,67,37,34,13,14,27,43,53,7,2,8,36,24,60,38,63,24,61,10,60,69,70,62,49,43,58,13,60,43,44,29,20,9,74,19,14,54,36,41,38,59,28,23,2,55,9,24,37,36,15,15,52,23,18,73,40,3,73,30,49,17,42,4,4,
@@ -2900,7 +2901,21 @@
   </object>
   <object id="7473" template="templates/airlocks/public2.tx" name="Dormitory" x="3904" y="3584"/>
   <object id="7474" template="templates/airlocks/public2.tx" name="Dormitory" x="3936" y="3584"/>
-  <object id="7475" template="templates/structure_girder.tx" x="4128" y="4192"/>
+  <object id="7476" template="templates/doors/shutter.tx" name="Gateway Access Shutters" x="2944" y="3648"/>
+  <object id="7477" template="templates/doors/shutter.tx" name="Gateway Access Shutters" x="2976" y="3648"/>
+  <object id="7478" template="templates/doors/shutter.tx" name="Mech Bay" x="5312" y="4160"/>
+  <object id="7479" template="templates/doors/shutter.tx" name="Mech Bay" x="5344" y="4160"/>
+  <object id="7480" template="templates/doors/shutter.tx" name="Mech Bay" x="5376" y="4160"/>
+  <object id="7481" template="templates/doors/shutter.tx" name="Auxillary Base Shutters" x="1472" y="3296"/>
+  <object id="7483" template="templates/doors/shutter.tx" name="Kitchen Shutters" x="4768" y="4000"/>
+  <object id="7484" template="templates/doors/shutter.tx" name="Kitchen Shutters" x="4800" y="4000"/>
+  <object id="7485" template="templates/doors/shutter.tx" name="Kitchen Shutters" x="4832" y="4000"/>
+  <object id="7487" template="templates/doors/shutter.tx" name="Kitchen Shutters" x="4864" y="4000"/>
+  <object id="7488" template="templates/doors/shutter.tx" name="Warehouse Shutters" x="2624" y="4224"/>
+  <object id="7489" template="templates/doors/shutter.tx" name="Armory Shutters" x="3808" y="2496"/>
+  <object id="7490" template="templates/doors/shutter.tx" name="MiniSat Teleport Access" x="4896" y="6368"/>
+  <object id="7491" template="templates/doors/shutter.tx" x="3008" y="4064"/>
+  <object id="7492" template="templates/doors/shutter.tx" x="3008" y="4032"/>
  </objectgroup>
  <objectgroup id="3" name="walls-windows" locked="1">
   <object id="2" template="templates/structure_wall_reinforced.tx" x="3424" y="3808"/>
