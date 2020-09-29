@@ -1241,7 +1241,7 @@
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7435" type="machine_airlock" gid="2169" x="2624" y="3584" width="32" height="32">
+  <object id="7435" type="door_airlock" gid="2169" x="2624" y="3584" width="32" height="32">
    <properties>
     <property name="required_access" value="vault"/>
     <property name="skin" value="vault"/>
