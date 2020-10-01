@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.2" orientation="orthogonal" renderorder="right-down" width="255" height="255" tilewidth="32" tileheight="32" infinite="0" nextlayerid="9" nextobjectid="7493">
+<map version="1.4" tiledversion="1.4.2" orientation="orthogonal" renderorder="right-down" width="255" height="255" tilewidth="32" tileheight="32" infinite="0" nextlayerid="9" nextobjectid="7610">
  <editorsettings>
   <export target="../box.lua" format="lua"/>
  </editorsettings>
@@ -11,6 +11,7 @@
  <tileset firstgid="1621" source="tilesets/obj/structures.tsx"/>
  <tileset firstgid="2041" source="tilesets/obj/airlocks.tsx"/>
  <tileset firstgid="2177" source="tilesets/obj/shutter.tsx"/>
+ <tileset firstgid="2185" source="tilesets/obj/door_blast.tsx"/>
  <layer id="1" name="space" width="255" height="255" locked="1">
   <data encoding="csv">
 65,34,3,43,73,25,11,62,27,21,74,57,60,49,39,50,40,5,54,24,15,34,28,50,55,28,8,61,29,39,28,4,60,69,47,12,14,46,45,10,10,64,18,24,2,10,5,47,67,57,9,77,50,53,36,67,18,53,42,57,15,42,16,62,1,13,33,5,35,28,9,8,57,63,1,27,75,50,5,77,60,34,36,44,64,69,59,41,1,8,3,71,35,1,49,31,24,5,34,49,55,10,69,24,32,12,50,65,64,16,19,10,3,18,52,10,35,37,31,9,26,40,33,41,56,42,77,53,9,47,77,30,42,61,46,6,70,45,49,11,59,67,61,42,73,5,28,7,6,63,36,7,73,73,6,8,58,62,43,67,43,11,29,34,16,39,11,57,34,55,73,28,1,47,23,6,10,9,12,25,62,64,27,27,14,3,55,9,21,46,55,67,37,34,13,14,27,43,53,7,2,8,36,24,60,38,63,24,61,10,60,69,70,62,49,43,58,13,60,43,44,29,20,9,74,19,14,54,36,41,38,59,28,23,2,55,9,24,37,36,15,15,52,23,18,73,40,3,73,30,49,17,42,4,4,
@@ -2005,12 +2006,12 @@
     <property name="required_access" value="maint_tunnels"/>
    </properties>
   </object>
-  <object id="7452" template="templates/machinery/door/airlock/research.tx" name="Test Chamber" x="6080" y="5248">
+  <object id="7452" template="templates/machinery/door/airlock/research.tx" name="Test Chamber" x="6048" y="5248">
    <properties>
     <property name="required_access" value="research"/>
    </properties>
   </object>
-  <object id="7453" template="templates/machinery/door/airlock/research.tx" name="Test Chamber" x="6144" y="5248">
+  <object id="7453" template="templates/machinery/door/airlock/research.tx" name="Test Chamber" x="6112" y="5248">
    <properties>
     <property name="required_access" value="research"/>
    </properties>
@@ -2916,6 +2917,543 @@
   <object id="7490" template="templates/machinery/door/shutter.tx" name="MiniSat Teleport Access" x="4896" y="6368"/>
   <object id="7491" template="templates/machinery/door/shutter.tx" x="3008" y="4064"/>
   <object id="7492" template="templates/machinery/door/shutter.tx" x="3008" y="4032"/>
+  <object id="7493" template="templates/machinery/door/blast.tx" name="Disposal Bay Door" x="1664" y="4352"/>
+  <object id="7495" template="templates/machinery/door/blast.tx" name="Disposal Exit Vent" x="1664" y="4288">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7496" template="templates/machinery/door/blast.tx" x="2976" y="2432">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7497" template="templates/machinery/door/blast.tx" x="3040" y="2432">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7498" template="templates/machinery/door/blast.tx" x="3008" y="2432">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7499" template="templates/machinery/door/blast.tx" name="Cell Blast Door" x="3136" y="2368">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7501" template="templates/machinery/door/blast.tx" name="Cell Blast Door" x="3264" y="2368">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7502" template="templates/machinery/door/blast.tx" name="Cell Blast Door" x="3392" y="2368">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7503" template="templates/machinery/door/blast.tx" name="Privacy Shutters" x="3168" y="4064">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7504" template="templates/machinery/door/blast.tx" name="Privacy Shutters" x="3168" y="4096">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7505" template="templates/machinery/door/blast.tx" name="Privacy Shutters" x="3168" y="4128">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7506" template="templates/machinery/door/blast.tx" name="Bridge Blast Door" x="3296" y="3904">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7507" template="templates/machinery/door/blast.tx" name="Bridge Blast Door" x="3296" y="3936">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7508" template="templates/machinery/door/blast.tx" name="Bridge Blast Door" x="3296" y="3968">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7509" template="templates/machinery/door/blast.tx" name="Bridge Blast Door" x="3936" y="3904">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7510" template="templates/machinery/door/blast.tx" name="Bridge Blast Door" x="3936" y="3936">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7511" template="templates/machinery/door/blast.tx" name="Bridge Blast Door" x="3936" y="3968">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7512" template="templates/machinery/door/blast.tx" name="Bridge Blast Door" x="3456" y="3776">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7513" template="templates/machinery/door/blast.tx" name="Bridge Blast Door" x="3488" y="3776">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7514" template="templates/machinery/door/blast.tx" name="Bridge Blast Door" x="3520" y="3776">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7515" template="templates/machinery/door/blast.tx" name="Bridge Blast Door" x="3552" y="3776">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7516" template="templates/machinery/door/blast.tx" name="Bridge Blast Door" x="3584" y="3776">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7517" template="templates/machinery/door/blast.tx" name="Bridge Blast Door" x="3616" y="3776">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7518" template="templates/machinery/door/blast.tx" name="Bridge Blast Door" x="3648" y="3776">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7519" template="templates/machinery/door/blast.tx" name="Bridge Blast Door" x="3680" y="3776">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7520" template="templates/machinery/door/blast.tx" name="Bridge Blast Door" x="3712" y="3776">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7521" template="templates/machinery/door/blast.tx" name="Bridge Blast Door" x="3744" y="3776">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7522" template="templates/machinery/door/blast.tx" name="Bridge Blast Door" x="3776" y="3776">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7523" template="templates/machinery/door/blast.tx" name="Brig Shutters" x="3296" y="2944">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7524" template="templates/machinery/door/blast.tx" name="Brig Shutters" x="3328" y="2944">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7525" template="templates/machinery/door/blast.tx" name="Brig Shutters" x="3360" y="2944">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7526" template="templates/machinery/door/blast.tx" name="Brig Shutters" x="3424" y="2944">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7527" template="templates/machinery/door/blast.tx" name="Brig Shutters" x="3456" y="2944">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7528" template="templates/machinery/door/blast.tx" name="Brig Shutters" x="3488" y="2944">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7529" template="templates/machinery/door/blast.tx" name="Brig Shutters" x="3552" y="2944">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7530" template="templates/machinery/door/blast.tx" name="Brig Shutters" x="3584" y="2944">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7531" template="templates/machinery/door/blast.tx" name="Brig Shutters" x="3616" y="2944">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7532" template="templates/machinery/door/blast.tx" name="Security Blast Door" x="3744" y="2944">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7533" template="templates/machinery/door/blast.tx" name="Prison Blast Door" x="3488" y="2592">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7534" template="templates/machinery/door/blast.tx" name="Prison Blast Door" x="3456" y="2592">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7535" template="templates/machinery/door/blast.tx" name="Privacy Door" x="3552" y="3136">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7536" template="templates/machinery/door/blast.tx" name="Privacy Door" x="3552" y="3168">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7537" template="templates/machinery/door/blast.tx" name="Privacy Door" x="3552" y="3200">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7538" template="templates/machinery/door/blast.tx" name="Atmospherics Blast Door" x="3712" y="5056">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7539" template="templates/machinery/door/blast.tx" name="Atmospherics Blast Door" x="3712" y="5120">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7540" template="templates/machinery/door/blast.tx" name="Atmospherics Blast Door" x="3712" y="5088">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7541" template="templates/machinery/door/blast.tx" name="Privacy Door" x="3744" y="5536">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7542" template="templates/machinery/door/blast.tx" name="Privacy Door" x="3776" y="5536">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7543" template="templates/machinery/door/blast.tx" name="Privacy Door" x="3808" y="5536">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7544" template="templates/machinery/door/blast.tx" name="Privacy Door" x="3840" y="5600">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7545" template="templates/machinery/door/blast.tx" name="Privacy Door" x="3840" y="5632">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7546" template="templates/machinery/door/blast.tx" name="Atmospherics Blast Door" x="3743.67" y="5248">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7547" template="templates/machinery/door/blast.tx" name="Atmospherics Blast Door" x="3776" y="5248">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7548" template="templates/machinery/door/blast.tx" name="Atmospherics Blast Door" x="3808" y="5248">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7549" template="templates/machinery/door/blast.tx" name="Engineering Security Door" x="3872" y="5664">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7550" template="templates/machinery/door/blast.tx" name="Engineering Security Door" x="3904" y="5664">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7551" template="templates/machinery/door/blast.tx" name="Engineering Security Door" x="3936" y="5664">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7552" template="templates/machinery/door/blast.tx" name="Privacy Shutters" x="4192" y="3840">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7553" template="templates/machinery/door/blast.tx" name="Privacy Shutters" x="4192" y="3904">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7554" template="templates/machinery/door/blast.tx" name="Privacy Shutters" x="4192" y="3968">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7555" template="templates/machinery/door/blast.tx" name="Privacy Shutters" x="4384" y="4032">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7556" template="templates/machinery/door/blast.tx" name="Chemistry Shutters" x="4384" y="4224">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7557" template="templates/machinery/door/blast.tx" name="Chemistry Shutters" x="4384" y="4288">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7558" template="templates/machinery/door/blast.tx" name="Privacy Door" x="4864" y="4928">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7559" template="templates/machinery/door/blast.tx" name="Privacy Door" x="4864" y="4800">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7564" template="templates/machinery/door/blast.tx" name="Test Chamber Blast Door" x="5312" y="4864">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7565" template="templates/machinery/door/blast.tx" name="Test Chamber Blast Door" x="5344" y="4864">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7566" template="templates/machinery/door/blast.tx" name="Test Chamber Blast Door" x="5408" y="4864">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7567" template="templates/machinery/door/blast.tx" name="Test Chamber Blast Door" x="5440" y="4864">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7568" template="templates/machinery/door/blast.tx" name="Test Chamber Blast Door" x="5376" y="4864"/>
+  <object id="7569" template="templates/machinery/door/blast.tx" name="Biohazard Containment Door" x="5312" y="4544">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7571" template="templates/machinery/door/blast.tx" name="Biohazard Containment Door" x="5312" y="4512">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7572" template="templates/machinery/door/blast.tx" name="Containment Blast Door" x="5376" y="5408">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7573" template="templates/machinery/door/blast.tx" name="Containment Blast Door" x="5376" y="5376">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7574" template="templates/machinery/door/blast.tx" name="Containment Blast Door" x="5376" y="5344">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7575" template="templates/machinery/door/blast.tx" name="Containment Blast Door" x="5568" y="5408">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7576" template="templates/machinery/door/blast.tx" name="Containment Blast Door" x="5568" y="5376">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7577" template="templates/machinery/door/blast.tx" name="Containment Blast Door" x="5568" y="5344">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7578" template="templates/machinery/door/blast.tx" name="Containment Blast Door" x="5568" y="5280">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7579" template="templates/machinery/door/blast.tx" name="Containment Blast Door" x="5568" y="5248">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7580" template="templates/machinery/door/blast.tx" name="Containment Blast Door" x="5568" y="5216">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7581" template="templates/machinery/door/blast.tx" name="Containment Blast Door" x="5376" y="5280">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7582" template="templates/machinery/door/blast.tx" name="Containment Blast Door" x="5376" y="5248">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7583" template="templates/machinery/door/blast.tx" name="Containment Blast Door" x="5376" y="5216">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7584" template="templates/machinery/door/blast.tx" name="Containment Blast Door" x="5376" y="5152">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7585" template="templates/machinery/door/blast.tx" name="Containment Blast Door" x="5376" y="5120">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7586" template="templates/machinery/door/blast.tx" name="Containment Blast Door" x="5376" y="5088">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7587" template="templates/machinery/door/blast.tx" name="Containment Blast Door" x="5568" y="5088">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7588" template="templates/machinery/door/blast.tx" name="Containment Blast Door" x="5568" y="5120">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7589" template="templates/machinery/door/blast.tx" name="Containment Blast Door" x="5568" y="5152">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7590" template="templates/machinery/door/blast.tx" x="5376" y="3456">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7591" template="templates/machinery/door/blast.tx" x="5408" y="3456">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7592" template="templates/machinery/door/blast.tx" x="5376" y="3392">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7593" template="templates/machinery/door/blast.tx" x="5408" y="3392">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7594" template="templates/machinery/door/blast.tx" x="5376" y="3264">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7595" template="templates/machinery/door/blast.tx" x="5408" y="3264">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7597" template="templates/machinery/door/blast.tx" name="Biohazard Containment Door" x="5728" y="4352">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7598" template="templates/machinery/door/blast.tx" name="Biohazard Containment Door" x="5760" y="4352">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7599" template="templates/machinery/door/blast.tx" name="Biohazard Containment Door" x="5792" y="4352">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7600" template="templates/machinery/door/blast.tx" name="Test Chamber Blast Door" x="6048" y="5312">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7601" template="templates/machinery/door/blast.tx" name="Test Chamber Blast Door" x="6048" y="5344">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7602" template="templates/machinery/door/blast.tx" name="Test Chamber Blast Door" x="6048" y="5376">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7603" template="templates/machinery/door/blast.tx" name="Test Chamber Blast Door" x="6048" y="5408">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7604" template="templates/machinery/door/blast.tx" name="Test Chamber Blast Door" x="6080" y="4544">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7605" template="templates/machinery/door/blast.tx" name="Test Chamber Blast Door" x="6112" y="4544">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7606" template="templates/machinery/door/blast.tx" name="Test Chamber Blast Door" x="6176" y="4544">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7607" template="templates/machinery/door/blast.tx" name="Test Chamber Blast Door" x="6208" y="4544">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7608" template="templates/machinery/door/blast.tx" name="Test Chamber Blast Door" x="6112" y="5248">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7609" template="templates/machinery/door/blast.tx" name="Test Chamber Blast Door" x="6272" y="4544">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup id="3" name="walls-windows" locked="1">
   <object id="2" template="templates/structure_wall_reinforced.tx" x="3424" y="3808"/>
@@ -8672,5 +9210,9 @@
   <object id="7470" template="templates/structure_window_reinforced.tx" x="3008" y="5408"/>
   <object id="7471" template="templates/structure_window_reinforced.tx" x="3008" y="5376"/>
   <object id="7472" template="templates/structure_window_reinforced.tx" x="3008" y="5344"/>
+  <object id="7560" template="templates/structure_window_reinforced.tx" x="5312" y="4864"/>
+  <object id="7561" template="templates/structure_window_reinforced.tx" x="5344" y="4864"/>
+  <object id="7562" template="templates/structure_window_reinforced.tx" x="5408" y="4864"/>
+  <object id="7563" template="templates/structure_window_reinforced.tx" x="5440" y="4864"/>
  </objectgroup>
 </map>
