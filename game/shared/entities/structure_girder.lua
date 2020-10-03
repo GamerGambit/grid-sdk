@@ -55,7 +55,7 @@ function girder:setState(state)
 end
 
 construction.register("structure_girder", {
-	tool_screwdriver = {
+	item_screwdriver = {
 		predicate = function(ent, act) return ent.state == girder.state.displaced or ent.state == girder.state.reinforced or ent.state == girder.state.reinforced_struts end,
 		onActivate = function(ent, act)
 			if (ent.state == girder.state.displaced) then
@@ -85,7 +85,7 @@ construction.register("structure_girder", {
 		end
 	},
 
-	tool_wirecutter = {
+	item_wirecutter = {
 		predicate = function(ent, act) return ent.state == girder.state.reinforced_struts end,
 		onActivate = function(ent, act)
 			-- TODO [opt] send player a message telling them they are removing the inner grille
@@ -98,7 +98,7 @@ construction.register("structure_girder", {
 		end
 	},
 
-	tool_wrench = {
+	item_wrench = {
 		predicate = function(ent, act) return ent.state == girder.state.normal or ent.state == girder.state.reinforced end,
 		onActivate = function(ent, act)
 			if (ent.state == girder.state.normal) then

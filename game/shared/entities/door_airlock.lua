@@ -74,7 +74,7 @@ end
 
 construction.register("door_airlock", {
 	-- TODO shielding
-	tool_screwdriver = {
+	item_screwdriver = {
 		onActivate = function(ent, act)
 			-- TODO check if the door has been detonated
 			ent.maint_panel_open = not ent.maint_panel_open
