@@ -2908,10 +2908,26 @@
   <object id="7479" template="templates/machinery/door/shutter.tx" name="Mech Bay" x="5344" y="4160"/>
   <object id="7480" template="templates/machinery/door/shutter.tx" name="Mech Bay" x="5376" y="4160"/>
   <object id="7481" template="templates/machinery/door/shutter.tx" name="Auxillary Base Shutters" x="1472" y="3296"/>
-  <object id="7483" template="templates/machinery/door/shutter.tx" name="Kitchen Shutters" x="4768" y="4000"/>
-  <object id="7484" template="templates/machinery/door/shutter.tx" name="Kitchen Shutters" x="4800" y="4000"/>
-  <object id="7485" template="templates/machinery/door/shutter.tx" name="Kitchen Shutters" x="4832" y="4000"/>
-  <object id="7487" template="templates/machinery/door/shutter.tx" name="Kitchen Shutters" x="4864" y="4000"/>
+  <object id="7483" template="templates/machinery/door/shutter.tx" name="Kitchen Shutters" x="4768" y="4000">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7484" template="templates/machinery/door/shutter.tx" name="Kitchen Shutters" x="4800" y="4000">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7485" template="templates/machinery/door/shutter.tx" name="Kitchen Shutters" x="4832" y="4000">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="7487" template="templates/machinery/door/shutter.tx" name="Kitchen Shutters" x="4864" y="4000">
+   <properties>
+    <property name="startOpen" type="bool" value="true"/>
+   </properties>
+  </object>
   <object id="7488" template="templates/machinery/door/shutter.tx" name="Warehouse Shutters" x="2624" y="4224"/>
   <object id="7489" template="templates/machinery/door/shutter.tx" name="Armory Shutters" x="3808" y="2496"/>
   <object id="7490" template="templates/machinery/door/shutter.tx" name="MiniSat Teleport Access" x="4896" y="6368"/>
