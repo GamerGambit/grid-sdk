@@ -29,6 +29,6 @@ function door_blast:spawn()
 	door.spawn(self)
 
 	if (self.startOpen) then
-		self:setAnimation("idleopen")
+		self:open()
 	end
 end
