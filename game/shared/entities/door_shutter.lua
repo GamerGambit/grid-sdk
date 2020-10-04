@@ -7,6 +7,7 @@ function door_shutter:door_shutter()
 	door.door(self)
 
 	self.startOpen = false
+	self.autoCloseTime = 0
 
 	if (_CLIENT) then
 		local spr = sprite("images.entities.door_shutter")

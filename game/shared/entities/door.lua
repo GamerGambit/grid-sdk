@@ -124,7 +124,7 @@ function door:use(activator, value)
 end
 
 function door:think()
-	if (self.openTime > 0 and game.curtime() >= self.openTime + self.autoCloseTime) then
+	if (self.autoCloseTime and self.autoCloseTime > 0 and self.openTime > 0 and game.curtime() >= self.openTime + self.autoCloseTime) then
 		table.print(self:getBody():getContacts())
 		self:close()
 		self.nextThink = nil
