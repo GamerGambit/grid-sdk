@@ -35,7 +35,7 @@ function airlock:setProperties(properties)
 	end
 
 	assert(skin, "Airlocks must have a skin")
-	self.skin = skin
+	self.animPrefix = skin .. '.'
 
 	fillType = (fillType == skin and skin) or ((fillType == "glass" or fillType == "glass2") and fillType) or nil
 	local spr = sprite("images.entities.airlocks")

@@ -14,9 +14,8 @@ local setPhysics = function(airlock, bool)
 end
 
 local setAnimation = function(airlock, animName)
-	if (not airlock.skin) then return end
-
-	airlock:setAnimation(airlock.skin .. '.' .. animName)
+	local prefix = airlock.animPrefix or ""
+	airlock:setAnimation(prefix .. animName)
 
 	if (_CLIENT and airlock.fillType) then
 		airlock.fillSprite:setAnimation(airlock.fillType .. '.' .. animName)
@@ -36,6 +35,7 @@ function door:door()
 	self.state = states.closed
 	self.openTime = 0
 	self.autoCloseTime = 3
+	self.animPrefix = ""
 
 	self.required_access = {}     -- all access listed is required
 	self.required_one_access = {} -- a single access listed is required
