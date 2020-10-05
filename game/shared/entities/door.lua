@@ -142,14 +142,17 @@ function door:spawn()
 end
 
 function door:setProperties(properties)
-	for k,v in pairs(properties) do
-		if (key == "required_access" or key == "required_one_access") then
-			local split = string.split(value, ';')
-
-			for i, accessPath in ipairs(split) do
+	local function processAccess(keyName)
+		local acc = properties[keyName]
+		if (type(acc) == "string") then
+			local split = string.split(acc, ';')
+			for k, accessPath in ipairs(split) do
 				assert(access.exists(accessPath), string.format("Access type \"%s\" does not exist for entity at %s", accessPath, self:getPosition()))
-				table.insert(self[key], accessPath)
+				table.insert(self[keyName], accessPath)
 			end
 		end
 	end
+
+	processAccess("required_access")
+	processAccess("required_one_access")
 end

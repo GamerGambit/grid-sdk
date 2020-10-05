@@ -19,11 +19,7 @@ end
 function door_blast:setProperties(properties)
 	door.setProperties(self, properties)
 
-	for k,v in pairs(properties) do
-		if (k == "startOpen") then
-			self.startOpen = toboolean(v)
-		end
-	end
+	self.startOpen = toboolean(properties["startOpen"])
 end
 
 function door_blast:spawn()

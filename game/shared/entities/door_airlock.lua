@@ -23,16 +23,8 @@ end
 function airlock:setProperties(properties)
 	door.setProperties(self, properties)
 
-	local skin, fillType
-	for key, value in pairs(properties) do
-		if (_CLIENT) then
-			if (key == "skin") then
-				skin = value
-			elseif (key == "fillType") then
-				fillType = value
-			end
-		end
-	end
+	local skin = properties["skin"]
+	local fillType = properties["fillType"]
 
 	assert(skin, "Airlocks must have a skin")
 	self.animPrefix = skin .. '.'
