@@ -114,7 +114,7 @@ function door:onAnimationEnd( animation )
 end
 
 function door:use(activator, value)
-	if (door.use(self, activator, value)) then return end
+	if (machine.use(self, activator, value)) then return end
 
 	if (self.state == states.open) then
 		self:tryClose()
