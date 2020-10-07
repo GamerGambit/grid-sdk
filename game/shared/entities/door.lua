@@ -110,9 +110,9 @@ function door:use(activator, value)
 	if (machine.use(self, activator, value)) then return end
 
 	if (self.state == states.open) then
-		self:tryClose()
+		self:tryClose(activator)
 	elseif (self.state == states.closed) then
-		self:tryOpen()
+		self:tryOpen(activator)
 	end
 end
 
