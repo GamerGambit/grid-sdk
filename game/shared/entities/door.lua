@@ -94,13 +94,6 @@ function door:canAccess(activator)
 	return true
 end
 
-function door:startTouch(other, contact)
-	-- TODO this function obviously does not allow non-players to open doors.
-	-- valid door openers are the MULEbot, beepsky, and other AI.
-	if (not typeof(other, "player")) then return end
-	self:tryOpen(other)
-end
-
 function door:onAnimationEnd( animation )
 	if (string.find(animation, "closing")) then
 		setAnimation(self, "idleclosed")
