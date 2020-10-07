@@ -16,6 +16,7 @@ function spriteAnimator:spriteAnimator(sprite)
 	self.frameIndex    = 1
 	self.animation     = nil
 	self.animationName = ""
+	self.singleFrameFinished = false
 end
 
 --[[
@@ -56,9 +57,10 @@ function spriteAnimator:setAnimation( name )
 	assert(animation, string.format("Sprite Sheet %q does not contain animation %q", self.sprite:getSpriteSheetName(), name))
 	if ( animation == self:getAnimation() ) then return end
 
-	self.animation     = animation
-	self.animationName = name
-	self.frameIndex    = 1
+	self.animation           = animation
+	self.animationName       = name
+	self.frameIndex          = 1
+	self.singleFrameFinished = false
 
 	self.sprite:updateQuad()
 end
@@ -67,6 +69,7 @@ function spriteAnimator:update( dt )
 	local animation = self:getAnimation()
 
 	if ( animation == nil ) then return end
+	if ( self.singleFrameFinished and #animation == 1 ) then return end
 
 	self.curtime = self.curtime + dt
 
@@ -74,6 +77,7 @@ function spriteAnimator:update( dt )
 		self.curtime = 0
 		self.frameIndex = self.frameIndex + 1
 
+		-- This should always pass when the animation is a single frame
 		if ( self.frameIndex > #self.animation ) then
 			self.frameIndex = 1
 			local name = self:getAnimationName()
@@ -82,6 +86,7 @@ function spriteAnimator:update( dt )
 		end
 
 		self.sprite:updateQuad()
+		self.singleFrameFinished = true
 	end
 end
 
