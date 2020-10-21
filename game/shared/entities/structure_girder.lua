@@ -85,7 +85,7 @@ construction.register("structure_girder", {
 		end
 	},
 
-	item_wirecutter = {
+	item_wirecutters = {
 		predicate = function(ent, act) return ent.state == girder.state.reinforced_struts end,
 		onActivate = function(ent, act)
 			-- TODO [opt] send player a message telling them they are removing the inner grille

@@ -197,6 +197,10 @@ function table.irandom( t )
 	return t[ math.random( #t ) ]
 end
 
+function table.randomKey( t )
+	return table.irandom(table.keys(t))
+end
+
 function table.tostring( t )
 	for i, v in ipairs( t ) do
 		t[ i ] = tostring( v )
