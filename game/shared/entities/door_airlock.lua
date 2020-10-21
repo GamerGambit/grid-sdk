@@ -48,7 +48,7 @@ function airlock:setProperties(properties)
 	end
 end
 
-function airlock:touch(other, contact)
+function airlock:startTouch(other, contact)
 	-- TODO this function obviously does not allow non-players to open doors.
 	-- valid door openers are the MULEbot, beepsky, and other AI.
 	if (not typeof(other, "player")) then return end
