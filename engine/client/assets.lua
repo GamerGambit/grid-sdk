@@ -3,6 +3,9 @@ local error  = error
 local love   = love
 local print  = print
 local string = string
+local tostring = tostring
+local pcall = pcall
+local require = require
 
 local function prepName(name)
 	return string.gsub(string.fixslashes(string.stripextension(name)), '/', '.')
@@ -13,6 +16,7 @@ module("assets")
 _fonts = {}
 _images = {}
 _sounds = {}
+_animations = {}
 
 function loadFont(relativeFontPath, fontSize, hinting, name)
 	hinting = hinting or "normal"
@@ -31,7 +35,8 @@ function getFont(name)
 	local font = _fonts[name]
 
 	if (_DEBUG and not font) then
-		print(string.format("No font with the name \"%s\" exists", name))
+		print(string.format("No font with the name %q exists", tostring(name)))
+		return
 	end
 
 	return font
@@ -53,7 +58,8 @@ function getImage(name)
 	local image = _images[name]
 
 	if (_DEBUG and not image) then
-		print(string.format("No image with the name \"%s\" exists", name))
+		print(string.format("No image with the name %q exists", tostring(name)))
+		return
 	end
 
 	return image
@@ -76,8 +82,34 @@ function getSound(name)
 	local source = _sounds[name]
 
 	if (_DEBUG and not source) then
-		print(string.format("No sound with the name \"%s\" exists", name))
+		print(string.format("No sound with the name %q exists", tostring(name)))
+		return
 	end
 
 	return source
+end
+
+function loadAnimation(animRequirePath, name)
+	name = name or animRequirePath
+
+	if (_animations[name]) then
+		return _animations[name]
+	end
+
+	local status, ret = pcall(require, animRequirePath)
+	if (not status) then error(ret) end
+
+	_animations[name] = ret
+	return ret
+end
+
+function getAnimation(name)
+	local anim = _animations[name]
+
+	if (_DEBUG and not anim) then
+		print(string.format("No animations with the name %q exist", tostring(name)))
+		return
+	end
+
+	return anim
 end

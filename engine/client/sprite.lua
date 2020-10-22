@@ -104,7 +104,7 @@ function sprite:__tostring()
 end
 
 function sprite:setSpriteSheet(spriteSheet)
-	local data           = require( spriteSheet )
+	local data           = assets.loadAnimation( spriteSheet )
 	self.spriteSheet     = assets.loadImage( data[ "image" ] )
 	self.spriteSheetName = spriteSheet
 
