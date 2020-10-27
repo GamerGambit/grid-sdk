@@ -44,13 +44,14 @@ function spriteanim:update(dt)
 
 	if ( self.curTime >= spr:getFrameTime() ) then
 		self.curTime = 0
-		local old = self.frameIndex
-		self.frameIndex = math.min(#frames, self.frameIndex + 1)
+		self.frameIndex = self.frameIndex + 1
 
 		-- This should always pass when the animation is a single frame
-		if ( self.frameIndex == #frames ) then
+		if ( self.frameIndex > #frames ) then
 			if (self.loop) then
 				self.frameIndex = 1
+			else
+				self.frameIndex = #frames
 			end
 
 			local name = self:getAnimationName()
