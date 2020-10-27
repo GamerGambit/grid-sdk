@@ -170,7 +170,8 @@ if ( _CLIENT ) then
 			local x, y = renderable:getDrawPosition()
 			love.graphics.translate( x, y )
 			love.graphics.setColor( color.white )
-			renderable:draw()
+			local status, ret = pcall(renderable.draw, renderable)
+			if (not status) then print(ret) end
 		love.graphics.pop()
 	end
 
