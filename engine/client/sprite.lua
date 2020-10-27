@@ -75,8 +75,12 @@ function sprite:setAnimation( animation )
 		self.curAnim = animation
 	elseif (type(animation) == "string") then
 		if (not self.curAnim or (self.curAnim and self.curAnim:getAnimationName() ~= animation)) then
-			self.animInstances = {}
-			self.curAnim = self:createAnimInstance(animation)
+			local instance = self:createAnimInstance(animation);
+			instance:remove()
+			instance:setSprite(self)
+			instance.sprIndex = 0
+			self.animInstances[0] = instance
+			self.curAnim = instance
 		end
 	elseif (not animation) then
 		self.curAnim = nil
@@ -92,8 +96,9 @@ function sprite:getAnimation()
 end
 
 function sprite:update( dt )
-	for index, instance in ipairs(self.animInstances) do
-		if (not instance.paused) then
+	for index = 0, table.getn(self.animInstances) do
+		local instance = self.animInstances[index]
+		if (instance and not instance.paused) then
 			instance:update(dt)
 
 			local event = self.events[instance.frameIndex]
@@ -155,8 +160,8 @@ function sprite:createAnimInstance(animName)
 	instance:setAnimationName(animName)
 	instance:setFrames(frames)
 
-	local index = table.insert(self.animInstances, instance)
-	instance.sprIndex = index
+	table.insert(self.animInstances, instance)
+	instance.sprIndex = table.getn(self.animInstances)
 
 	return instance
 end
