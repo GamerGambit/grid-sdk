@@ -4,24 +4,44 @@
 --
 --==========================================================================--
 
-require("engine.client.spriteAnimator")
+require( "engine.client.spriteanim" )
 
 class( "sprite" )
 
+accessor( sprite, "spriteSheet" )
+accessor( sprite, "spriteSheetName" )
+accessor( sprite, "width" )
+accessor( sprite, "height" )
+accessor( sprite, "frameTime" )
+accessor( sprite, "animations" )
+accessor( sprite, "events" )
+
+local mt = {
+	__mode = 'v'
+}
+sprite.__INSTANCES = {}
+sprite.__SPRITES = {}
+setmetatable(sprite.__INSTANCES, mt)
+setmetatable(sprite.__SPRITES, mt)
+
 function sprite:sprite( spriteSheet )
+	-- Make sure this exists before loading a sprite sheet
+	self.animations      = {}
+
 	if (spriteSheet) then
 		self:setSpriteSheet(spriteSheet)
 	else
 		self.spriteSheetName = ""
 		self.width           = 0
 		self.height          = 0
-		self.frametime       = 0
-		self.animations      = {}
+		self.frameTime       = 0
 		self.events          = {}
 	end
 
-	self.curtime     = 0
-	self.frame       = 1
+	self.animInstances = {}
+	self.curAnim       = nil
+
+	table.insert(sprite.__SPRITES, self)
 end
 
 function sprite:draw()
@@ -30,8 +50,6 @@ function sprite:draw()
 
 	love.graphics.draw( image, self:getQuad() )
 end
-
-accessor( sprite, "animator" )
 
 function sprite:setFilter( ... )
 	local image = self:getSpriteSheet()
@@ -56,11 +74,6 @@ function sprite:getQuad()
 	return self.quad
 end
 
-accessor( sprite, "spriteSheet" )
-accessor( sprite, "spriteSheetName" )
-accessor( sprite, "width" )
-accessor( sprite, "height" )
-
 function sprite:onAnimationEnd( animation )
 end
 
@@ -68,24 +81,45 @@ function sprite:onAnimationEvent( event )
 end
 
 function sprite:setAnimation( animation )
-	if (not self.animator) then return end
-	self.animator:setAnimation(animation)
+	if (typeof(animation, "spriteanim")) then
+		self.curAnim = animation
+	elseif (type(animation) == "string") then
+		if (not self.curAnim or (self.curAnim and self.curAnim:getAnimationName() ~= animation)) then
+			self.animInstances = {}
+			self.curAnim = self:createAnimInstance(animation)
+		end
+	elseif (not animation) then
+		self.curAnim = nil
+	else
+		error(string.format("Invalid animation type %q", type(animation)))
+	end
+
+	self:updateQuad()
+end
+
+function sprite:getAnimation()
+	return self.curAnim
 end
 
 function sprite:update( dt )
-	if (self.animator) then
-		self.animator:update(dt)
+	for index, instance in ipairs(self.animInstances) do
+		if (not instance.paused) then
+			instance:update(dt)
+
+			local event = self.events[instance.frameIndex]
+			if (event) then
+				local status, ret = pcall(self.onAnimationEnd, self, event)
+				if (not status) then print(ret) end
+			end
+		end
 	end
 end
 
 function sprite:updateQuad()
-	if (not self.animator) then return end
-
-	local animation = self.animator:getAnimation()
-	if (#animation == 0) then return end
+	if (not self.curAnim) then return end
 
 	local quad       = self:getQuad()
-	local frame      = animation[self.animator.frameIndex] - 1
+	local frame      = self.animations[self.curAnim:getAnimationName()][self.curAnim.frameIndex] - 1
 	local width      = self:getWidth()
 	local height     = self:getHeight()
 	local image      = self:getSpriteSheet()
@@ -93,6 +127,50 @@ function sprite:updateQuad()
 	local x          =             frame * width % imageWidth
 	local y          = math.floor( frame * width / imageWidth ) * height
 	quad:setViewport( x, y, width, height )
+end
+
+function sprite:loadAnimations(animations)
+	assert(type(animations) == "table", "animTbl must be a table")
+
+	for animName, frameTbl in pairs(animations) do
+		local expanded = {}
+
+		for index, frame in ipairs(frameTbl) do
+			if (type(frame) == "number") then
+				table.insert(expanded, frame)
+			elseif (type(frame) == "table") then
+				assert(type(frame["from"]) == "number", "frameTbl range table \"from\" must be a frame index")
+				assert(type(frame["to"]) == "number", "frameTbl range table \"to\" must be a frame index")
+				for frameIndex = frame.from, frame.to, (frame.to < frame.from and -1 or 1) do
+					table.insert(expanded, frameIndex)
+				end
+			else
+				assert(false, "frameTbl must contain frame indices, or a range table")
+			end
+		end
+
+		self.animations[animName] = expanded
+	end
+end
+
+function sprite:createAnimInstance(animName)
+	local animations = self:getAnimations()
+	local frames  = animations[ animName ]
+
+	assert(frames, string.format("Sprite Sheet %q does not contain animation %q", self:getSpriteSheetName(), animName))
+
+	local instance = spriteanim()
+	instance:setSprite(self)
+	instance:setFrameTime(self:getFrameTime())
+	instance:setAnimationName(animName)
+	instance:setFrames(frames)
+
+	local index = table.insert(self.animInstances, instance)
+	instance.sprIndex = index
+
+	table.insert(sprite.__INSTANCES, instance)
+
+	return instance
 end
 
 function sprite:__tostring()
@@ -108,10 +186,9 @@ function sprite:setSpriteSheet(spriteSheet)
 	self.spriteSheet     = assets.loadImage( data[ "image" ] )
 	self.spriteSheetName = spriteSheet
 
-	self.animator = spriteAnimator(self)
-	self.animator:setAnimations(data[ "animations" ] or {})
-	self.animator:setEvents(data[ "events" ] or {})
-	self.animator:setFrametime(data[ "frametime" ])
+	self:loadAnimations(data[ "animations" ] or {})
+	self:setEvents(data[ "events" ] or {})
+	self:setFrameTime(data[ "frametime" ])
 
 	self.width       = data[ "width" ]
 	self.height      = data[ "height" ]
