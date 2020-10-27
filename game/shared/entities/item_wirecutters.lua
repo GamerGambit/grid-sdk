@@ -12,12 +12,8 @@ item_wirecutters.handleColors = {
 		yellow = color(213, 140, 24, 255)
 }
 
-item_wirecutters.handleSprite = sprite("images.entities.wirecutters")
-item_wirecutters.handleSprite:setFilter("nearest", "nearest")
-item_wirecutters.handleSprite:setAnimation("handle")
-item_wirecutters.bitsSprite = sprite("images.entities.wirecutters")
-item_wirecutters.bitsSprite:setFilter("nearest", "nearest")
-item_wirecutters.bitsSprite:setAnimation("bits")
+item_wirecutters._sprite = sprite("images.entities.wirecutters")
+item_wirecutters._sprite:setFilter("nearest", "nearest")
 -- TODO add brass
 
 function item_wirecutters:item_wirecutters()
@@ -30,12 +26,14 @@ end
 function item_wirecutters:draw()
 	entity.draw(self)
 
-	item_wirecutters.bitsSprite:draw()
+	item_wirecutters._sprite:setAnimation("bits")
+	item_wirecutters._sprite:draw()
 
 	local col = item_wirecutters.handleColors[self.colorKey]
 	love.graphics.setColor(col)
 
-	item_wirecutters.handleSprite:draw()
+	item_wirecutters._sprite:setAnimation("handle")
+	item_wirecutters._sprite:draw()
 end
 
 entities.linkToClassname( item_wirecutters, "item_wirecutters" )

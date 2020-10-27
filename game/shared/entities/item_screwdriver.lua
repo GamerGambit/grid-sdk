@@ -12,12 +12,10 @@ item_screwdriver.handleColors = {
 		yellow = color(255, 165, 0, 255)
 }
 
-item_screwdriver.handleSprite = sprite("images.entities.screwdriver")
-item_screwdriver.handleSprite:setFilter("nearest", "nearest")
-item_screwdriver.handleSprite:setAnimation("handle")
-item_screwdriver.bitsSprite = sprite("images.entities.screwdriver")
-item_screwdriver.bitsSprite:setFilter("nearest", "nearest")
-item_screwdriver.bitsSprite:setAnimation("bits")
+item_screwdriver._sprite = sprite("images.entities.screwdriver")
+item_screwdriver._sprite:setFilter("nearest", "nearest")
+item_screwdriver.bitsAnim = item_screwdriver._sprite:createAnimInstance("bits")
+item_screwdriver.handleAnim = item_screwdriver._sprite:createAnimInstance("handle")
 -- TODO add brass
 
 function item_screwdriver:item_screwdriver()
@@ -30,12 +28,14 @@ end
 function item_screwdriver:draw()
 	entity.draw(self)
 
-	item_screwdriver.bitsSprite:draw()
+	item_screwdriver._sprite:setAnimation(item_screwdriver.bitsAnim)
+	item_screwdriver._sprite:draw()
 
 	local col = item_screwdriver.handleColors[self.colorKey]
 	love.graphics.setColor(col)
 
-	item_screwdriver.handleSprite:draw()
+	item_screwdriver._sprite:setAnimation(item_screwdriver.handleAnim)
+	item_screwdriver._sprite:draw()
 end
 
 
