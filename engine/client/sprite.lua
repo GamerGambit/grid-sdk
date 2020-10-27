@@ -16,14 +16,6 @@ accessor( sprite, "frameTime" )
 accessor( sprite, "animations" )
 accessor( sprite, "events" )
 
-local mt = {
-	__mode = 'v'
-}
-sprite.__INSTANCES = {}
-sprite.__SPRITES = {}
-setmetatable(sprite.__INSTANCES, mt)
-setmetatable(sprite.__SPRITES, mt)
-
 function sprite:sprite( spriteSheet )
 	-- Make sure this exists before loading a sprite sheet
 	self.animations      = {}
@@ -40,8 +32,6 @@ function sprite:sprite( spriteSheet )
 
 	self.animInstances = {}
 	self.curAnim       = nil
-
-	table.insert(sprite.__SPRITES, self)
 end
 
 function sprite:draw()
@@ -167,8 +157,6 @@ function sprite:createAnimInstance(animName)
 
 	local index = table.insert(self.animInstances, instance)
 	instance.sprIndex = index
-
-	table.insert(sprite.__INSTANCES, instance)
 
 	return instance
 end
