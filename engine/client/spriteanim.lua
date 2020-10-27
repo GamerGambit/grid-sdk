@@ -26,7 +26,12 @@ end
 
 function spriteanim:loop(bShouldLoop)
 	self.loop = toboolean(bShouldLoop)
+	self:play()
+end
+
+function spriteanim:play()
 	self.frameIndex = 1
+	self.curTime = 0
 end
 
 function spriteanim:update(dt)
