@@ -84,9 +84,6 @@ function canvas:remove()
 			table.remove( canvas._canvases, i )
 		end
 	end
-
-	collectgarbage()
-	collectgarbage()
 end
 
 function canvas:renderTo( func )
