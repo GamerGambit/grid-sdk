@@ -14,7 +14,6 @@ item_wirecutters.handleColors = {
 
 item_wirecutters._sprite = sprite("images.entities.wirecutters")
 item_wirecutters._sprite:setFilter("nearest", "nearest")
--- TODO add brass
 
 function item_wirecutters:item_wirecutters()
 	item.item(self)
