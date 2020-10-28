@@ -1,4 +1,4 @@
-entities.require("item")
+entities.require("item_welder_experimental")
 
 class "item_welder_experimental_brass" ("item_welder_experimental")
 
