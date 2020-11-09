@@ -4,8 +4,8 @@ return {
 	height = 32,
 	frametime = 0,
 	animations = {
-		handle = { 1 },
-		bits = { 2 },
-		brass = { 3 }
+		handle = 1,
+		bits = 2,
+		brass = 3
 	}
 }

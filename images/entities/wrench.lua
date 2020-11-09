@@ -4,8 +4,8 @@ return {
 	height = 32,
 	frametime = 0,
 	animations = {
-		wrench = { 1 },
-		medical = { 2 },
-		brass = { 3 }
+		wrench = 1,
+		medical = 2,
+		brass = 3
 	}
 }
