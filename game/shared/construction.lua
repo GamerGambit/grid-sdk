@@ -48,6 +48,7 @@ local pairs         = pairs
 local strFormat     = string.format
 local tblShallowCopy = table.shallowcopy
 local tblMerge      = table.merge
+local tblInsert     = table.insert
 local tostring      = tostring
 local type          = type
 local typeof        = typeof
@@ -140,7 +141,7 @@ local function registerItem(entType, itemType, recipeTbl)
 	tblMerge(newRecipe, recipeTbl)
 
 	_lookup[entType][itemType] = _lookup[entType][itemType] or {}
-	table.insert(_lookup[entType][itemType], newRecipe)
+	tblInsert(_lookup[entType][itemType], newRecipe)
 end
 
 function register(entType, recipesTbl)
