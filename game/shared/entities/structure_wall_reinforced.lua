@@ -16,16 +16,26 @@ reinforced_wall.state = {
 	sheath = 6
 }
 
+local stateToAnim = {
+	[0] = "intact",
+	"support_lines",
+	"cover",
+	"cut_cover",
+	"anchor_bolts",
+	"support_rods",
+	"sheath"
+}
+
 function reinforced_wall:structure_wall_reinforced()
 	structure.structure(self)
 
-	self.d_state = reinforced_wall.state.intact
-
 	if (_CLIENT) then
-		local sprite = assets.loadImage("entities/reinforced_wall.png")
+		local sprite = sprite("images.turf.walls.reinforced_wall")
 		sprite:setFilter("nearest", "nearest")
 		self:setSprite(sprite)
 	end
+
+	self:setDState(reinforced_wall.state.intact)
 end
 
 function reinforced_wall:setDState(dstate)
@@ -33,7 +43,9 @@ function reinforced_wall:setDState(dstate)
 
 	self.d_state = dstate
 
-	-- TODO set anim to reflect dstate. image needs to be updated first
+	if (_CLIENT) then
+		self.sprite:setAnimation(stateToAnim[self.d_state])
+	end
 end
 
 construction.register("structure_wall_reinforced", {
