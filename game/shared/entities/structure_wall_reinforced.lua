@@ -147,7 +147,7 @@ construction.register("structure_wall_reinforced", {
 					-- TODO check that the welder/plasmacutter has enough fuel
 					-- TODO use tool
 					-- TODO make sure the wall still exists and its d_state is support_rods
-					ent:setDState(structure_wall_reinforced.state.anchor_bolts)
+					ent:setDState(structure_wall_reinforced.state.sheath)
 					-- TODO [opt] send player a message telling them that they sliced through the support rods
 				end
 			end
@@ -165,10 +165,13 @@ construction.register("structure_wall_reinforced", {
 					-- TODO make sure the wall still exists and that its d_state is sheath
 
 					-- TODO spawn plasteel stack
-					local girder = structure_girder()
-					girder:setType(structure_girder.state.reinforced)
-					girder:setPosition(ent:getPosition())
+					local pos = ent:getPosition()
 					ent:remove()
+
+					local girder = entity.create("structure_girder")
+					girder:setState(structure_girder.state.reinforced)
+					girder:setPosition(ent:getPosition())
+					girder:spawn()
 
 					-- TODO [opt] send player a message telling them that they pryed off the outer sheath
 				else -- welder
