@@ -101,8 +101,10 @@ function check(ent, activator)
 		if (not found) then return false end
 	end
 
+	local validRecipes = {}
 	for _, recipe in ipairs(itemRecipes) do
 		if (recipe.predicate(ent, activator, item)) then
+			tblInsert(validRecipes, recipe.onActivate)
 			--[[
 			-- DEPRECATED, moved to `onActivate`
 			-- TODO maybe revisit this later. One idea I had was to make `onActivate` return a table of items to spawn,
@@ -124,9 +126,13 @@ function check(ent, activator)
 
 			if (type(recipe.onActivate) == "function") then recipe.onActivate(ent, activator, res) end
 			]]
-
-			recipe.onActivate(ent, activator, item)
 		end
+	end
+
+	if (#validRecipes == 0) then return false end
+
+	for _, callback in ipairs(validRecipes) do
+		callback(ent, activator, item)
 	end
 
 	return true
