@@ -25,7 +25,7 @@ function spriteanim:setSequence(sequence)
 	self.sequence = sequence
 
 	-- `#sequence == 2` should be true only for single frame anims. The first sequence should be the frameTime command, second should be frameIndex.
-	-- This prevents single frame animations from constantly calling `spri:onAnimationEnd`, also single frame animations dont need to loop
+	-- This prevents single frame animations from constantly calling `sprite:onAnimationEnd`, also single frame animations dont need to loop
 	if (#self.sequence == 2) then
 		self.loop = false
 	end

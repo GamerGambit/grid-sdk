@@ -23,6 +23,9 @@ _images = {}
 _sounds = {}
 _animations = {}
 
+-----------------------------------------------------------
+--	FONT
+-----------------------------------------------------------
 function loadFont(relativeFontPath, fontSize, hinting, name)
 	hinting = hinting or "normal"
 	name = name or string.format("%s.%i.%s", prepName(relativeFontPath), fontSize, hinting)
@@ -47,6 +50,9 @@ function getFont(name)
 	return font
 end
 
+-----------------------------------------------------------
+--	IMAGE
+-----------------------------------------------------------
 function loadImage(relativeImagePath, name)
 	name = name or prepName(relativeImagePath)
 
@@ -70,6 +76,9 @@ function getImage(name)
 	return image
 end
 
+-----------------------------------------------------------
+--	SOUND
+-----------------------------------------------------------
 function loadSound(relativeSoundPath, _type, name)
 	_type = _type or "static"
 	name = name or string.format("%s.%s", prepName(relativeSoundPath), _type)
