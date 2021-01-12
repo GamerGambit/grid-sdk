@@ -11,7 +11,7 @@ return {
 		welder_50 = 6,
 		welder_25 = 7,
 		welder_0 = {
-			frametime = 0.2,
+			frameTime = 0.2,
 			frames = {
 		 		8, 9
 			}
